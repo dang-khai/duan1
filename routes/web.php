@@ -16,11 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return File::get(public_path() . '/assets/index.html');
 });
-Route::prefix('admin')->group(function(){
-    Route::get('/', function () {
-        return File::get(public_path() . '/assets/admin/home_admin.html');
-    });
-    Route::get('/index', function () {
-        return File::get(public_path() . '/assets/index.html');
-    });
-});
