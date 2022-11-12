@@ -159,12 +159,10 @@
         document.getElementById("employees").innerHTML = tab;
     }
     </script>
-    <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center">
               <div class="spinner-border"
                   role="status" id="loading">
                   <span class="sr-only">Loading...</span>
               </div>
           </div>
-          <h1>Registered Employees</h1>
-          <!-- table for showing data -->
           <table id="employees"></table>
