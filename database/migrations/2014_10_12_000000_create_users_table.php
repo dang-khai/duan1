@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('phone');
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('address');
-            $table->integer('role')->comment('0: admin, 1: user');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
