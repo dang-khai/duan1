@@ -20,7 +20,6 @@ Route::get('/', function () {
 });
 
 Route::prefix('admin')->group(function () {
-    Route::get('/', [HomeController::class, 'home']);
-    Route::get('product', [ProductController::class, 'product']);
-
+    Route::get('/', [HomeController::class, 'home'])->name('home');
+    Route::get('/product', [ProductController::class, 'product'])->name('product');
 });
