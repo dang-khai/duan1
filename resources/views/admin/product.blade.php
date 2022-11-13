@@ -93,15 +93,38 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Thêm sản phẩm</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <form method="POST" action="http://127.0.0.1:8000/api/addProduct">
+                            <div class="mb-3">
+                                <label class="form-label">Tên sản phẩm</label>
+                                <input type="text" class="form-control" name="name">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Loại</label>
+                                <input type="text" class="form-control" name="id_cate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Đời</label>
+                                <input type="text" class="form-control" name="year">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Màu</label>
+                                <input type="text" class="form-control" name="color">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Giá</label>
+                                <input type="text" class="form-control" name="price">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Mô tả</label>
+                                <textarea class="form-control" rows="3" name="description"></textarea>
+                            </div>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -111,7 +134,7 @@
 
     <script>
     // api url
-    const api_url ="http://127.0.0.1:8000/api/allProduct/";
+    const api_url = "http://127.0.0.1:8000/api/allProduct/";
 
     // Defining async function
     async function getapi(url) {
@@ -159,10 +182,9 @@
         document.getElementById("employees").innerHTML = tab;
     }
     </script>
-        <div class="d-flex justify-content-center">
-              <div class="spinner-border"
-                  role="status" id="loading">
-                  <span class="sr-only">Loading...</span>
-              </div>
-          </div>
-          <table id="employees"></table>
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status" id="loading">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <table id="employees"></table>

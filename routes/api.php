@@ -18,6 +18,6 @@ use App\Http\Controllers\Api\ProductApiController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::post('/addProduct', [ProductApiController::class, 'store']);
+Route::post('/addProduct', [ProductApiController::class, 'store'])->middleware();
 Route::get('/allProduct', [ProductApiController::class, 'index']);
 
