@@ -4,19 +4,22 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use DB;
+use Illuminate\Support\Facades\DB;
+
 class Product extends Model
 {
     use HasFactory;
-    protected $table='product';
-    protected $fillable = ['id', 'id_cate','name','year','color','description','price'];
+    protected $table = 'product';
+    protected $fillable = ['id', 'id_cate', 'name', 'year', 'color', 'description', 'price'];
     public $timestamps = false;
-    
-    public function getAllProducts(){
+
+    public function getAllProducts()
+    {
         return DB::table('product')->get();
     }
 
-    public function addProduct($input){
+    public function addProduct($input)
+    {
         return DB::table('product')->insert($input);
     }
 }
