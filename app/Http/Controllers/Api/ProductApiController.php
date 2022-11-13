@@ -12,9 +12,13 @@ class ProductApiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct(){
+        $this->Product = new Product();
+    }
     public function index()
     {
-        return response()->json(Product::all(), 200);
+        return response()->json($this->Product->getAllProducts(), 200);
     }
 
     /**
@@ -36,10 +40,11 @@ class ProductApiController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        $product = Product::create($input);
-        return response()->json(['status' => true,
-                                'message'=>"Sản phẩm đã lưu thành công",
-                                ], 201);
+        if($this->Product->addProduct($input)){
+            return response()->json(['status' => true,
+                                    'message'=>"Sản phẩm đã lưu thành công",
+                                    ], 201);
+        }
     }
 
     /**

@@ -11,4 +11,12 @@ class Product extends Model
     protected $table='product';
     protected $fillable = ['id', 'id_cate','name','year','color','description','price'];
     public $timestamps = false;
+    
+    public function getAllProducts(){
+        return DB::table('product')->get();
+    }
+
+    public function addProduct($input){
+        return DB::table('product')->insert($input);
+    }
 }
