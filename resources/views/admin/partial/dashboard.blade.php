@@ -1,5 +1,5 @@
-<div class="d-flex flex-column flex-shrink-0 p-3 text-dark vh-100" style="width: 300px; background-color: #FCB000;">
-  <a href="{{ route('home') }}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+<div class="d-flex flex-column flex-shrink-0 p-3 text-dark vh-100 admin-left" style="width: 300px; background-color: #FCB000;">
+  <a href="{{ route('admin_home') }}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
     <svg class="bi me-2" width="40" height="32">
       <use xlink:href="#bootstrap" />
     </svg>
@@ -8,7 +8,7 @@
   <hr>
   <ul class="nav nav-pills flex-column mb-auto">
     <li class="nav-item">
-      <a href="{{ route('home') }}" class="nav-link active" aria-current="page">
+      <a href="{{ route('admin_home') }}" class="nav-link active" aria-current="page">
         <svg class="bi me-2" width="16" height="16">
           <use xlink:href="#home" />
         </svg>
@@ -24,7 +24,7 @@
       </a>
     </li>
     <li>
-      <a href="#" class="nav-link text-dark">
+      <a href="{{ route('admin_orders') }}" class="nav-link text-dark">
         <svg class="bi me-2" width="16" height="16">
           <use xlink:href="#table" />
         </svg>
@@ -32,7 +32,7 @@
       </a>
     </li>
     <li>
-      <a href="{{ route('product') }}" class="nav-link text-dark">
+      <a href="{{ route('admin_product') }}" class="nav-link text-dark">
         <svg class="bi me-2" width="16" height="16">
           <use xlink:href="#grid" />
         </svg>
@@ -40,7 +40,7 @@
       </a>
     </li>
     <li>
-      <a href="customer" class="nav-link text-dark">
+      <a href="{{ route('admin_customers') }}" class="nav-link text-dark">
         <svg class="bi me-2" width="16" height="16">
           <use xlink:href="#people-circle" />
         </svg>
@@ -61,7 +61,7 @@
       <li>
         <hr class="dropdown-divider">
       </li>
-      <li><a class="dropdown-item" href="{{ route('home') }}">Sign out</a></li>
+      <li><a class="dropdown-item" href="{{ route('user_home') }}">Sign out</a></li>
     </ul>
   </div>
 </div>

@@ -2,6 +2,11 @@
 
 @section('title','product')
 
+@section('css')
+<!-- link css -->
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+@endsection
+
 @section('content')
 <section>
   <!-- Button trigger modal -->
@@ -114,4 +119,5 @@
   </div>
 </div>
 <table id="employees"></table>
+<div class="clear-fix"></div>
 @endsection

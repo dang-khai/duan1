@@ -16,10 +16,13 @@ use App\Http\Controllers\Admin\ProductController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('users.index');
+})->name('user_home');
 
 Route::prefix('admin')->group(function () {
-    Route::get('/', [HomeController::class, 'home'])->name('home');
-    Route::get('/product', [ProductController::class, 'product'])->name('product');
+    Route::get('/', [HomeController::class, 'home'])->name('admin_home'); //trang home admin
+    Route::get('/product', [ProductController::class, 'product'])->name('admin_product'); // trang product admin
+    //set trước nào xài mở mấy cái ở dưới ra nha
+    // Route::get('/customers', [ProductController::class, 'customers'])->name('admin_customers'); //trang customers admin
+    // Route::get('/orders', [ProductController::class, 'orders'])->name('admin_orders'); //trang orders admin
 });
