@@ -28,19 +28,18 @@ class ProductValidate extends FormRequest
     {
         return [
             'name' => 'required',
+            'id_cate' => 'required',
             'year' => 'required',
             'color' => 'required',
             'description' => 'required',
             'price' => 'required',
         ];
     }
-    public function failedValidation(Validator $validator){
-       
-    }
     
     public function messages(){
         return [
             'name.required' => 'Name is required',
+            'id_cate' => 'Loại required',
             'year.required' => 'Year is required',
             'color.required' => 'color is required',
             'description.required' => 'description is required',

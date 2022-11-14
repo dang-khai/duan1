@@ -41,17 +41,11 @@ class ProductApiController extends Controller
      */
     public function store(ProductValidate $request)
     {
-        $input = $request->all();
-        // if(ProductValidate::failedValidation()){
-        //     // return response()->json(['status' => true,
-        //     //                         'message'=>"Sản phẩm đã lưu thành công",
-        //     //                         ], 201);
-        //     return redirect()->route('admin_home');
-        //                     //  ->withErrors($validator)
-        //                     //  ->withInput();
-        // }
-        if ($this->Product->addProduct($input)) {
-            return back()->with('message','Thêm sản phẩm thành công');
+        $validated = $request->validated();
+        if ($this->Product->addProduct($validated)) {
+            return redirect()->back()->with('success', 'Add product succesfully'); ;
+        }else{
+            return redirect()->back()->with('error', 'Add product unsuccesfully'); ;
         }
     }
 

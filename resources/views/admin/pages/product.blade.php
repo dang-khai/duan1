@@ -8,16 +8,25 @@
 @endsection
 
 @section('content')
+@if (session('success'))
+    <div class="col-sm-12">
+        <div class="alert  alert-success fade show" role="alert">
+            {{ session('success') }}
+        </div>
+    </div>
+@endif
+@if (session('error'))
+    <div class="col-sm-12">
+        <div class="alert  alert-danger fade show" role="alert">
+            {{ session('error') }}
+        </div>
+    </div>
+@endif
 <section>
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Thêm sản phẩm
     </button>
-    @if(session()->has('message'))
-    <div class="alert alert-success">
-        {{ session()->get('message') }}
-    </div>
-  @endif
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -31,9 +40,6 @@
                         <div class="mb-3">
                             <label class="form-label">Tên sản phẩm</label>
                             <input type="text" class="form-control" name="name">
-                            @if($errors->has('name'))
-                            <span class="error">{{ $errors->get('name') }}</span>
-                            @endif
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Loại</label>
