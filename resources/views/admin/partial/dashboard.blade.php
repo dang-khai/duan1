@@ -24,7 +24,7 @@
       </a>
     </li>
     <li>
-      <a href="{{ route('admin_orders') }}" class="nav-link text-dark">
+      <a href="" class="nav-link text-dark">
         <svg class="bi me-2" width="16" height="16">
           <use xlink:href="#table" />
         </svg>
@@ -40,7 +40,7 @@
       </a>
     </li>
     <li>
-      <a href="{{ route('admin_customers') }}" class="nav-link text-dark">
+      <a href="" class="nav-link text-dark">
         <svg class="bi me-2" width="16" height="16">
           <use xlink:href="#people-circle" />
         </svg>

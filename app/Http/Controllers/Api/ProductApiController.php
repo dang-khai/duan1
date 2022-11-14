@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Http\Requests\ProductValidate;
+
 class ProductApiController extends Controller
 {
     /**
@@ -37,13 +39,19 @@ class ProductApiController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductValidate $request)
     {
         $input = $request->all();
-        if($this->Product->addProduct($input)){
-            return response()->json(['status' => true,
-                                    'message'=>"Sản phẩm đã lưu thành công",
-                                    ], 201);
+        // if(ProductValidate::failedValidation()){
+        //     // return response()->json(['status' => true,
+        //     //                         'message'=>"Sản phẩm đã lưu thành công",
+        //     //                         ], 201);
+        //     return redirect()->route('admin_home');
+        //                     //  ->withErrors($validator)
+        //                     //  ->withInput();
+        // }
+        if ($this->Product->addProduct($input)) {
+            return back()->with('message','Thêm sản phẩm thành công');
         }
     }
 
