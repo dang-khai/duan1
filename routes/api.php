@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/addProduct', [ProductApiController::class, 'store']);
 Route::get('/allProduct', [ProductApiController::class, 'index']);
 
+//cách dùng để xài tất cả function trong ProductApiController mà không cần khai báo nhiều như trên
+Route::resource('products', ProductApiController::class);

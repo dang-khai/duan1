@@ -9,18 +9,18 @@
 
 @section('content')
 @if (session('success'))
-    <div class="col-sm-12">
-        <div class="alert  alert-success fade show" role="alert">
-            {{ session('success') }}
-        </div>
+<div class="col-sm-12">
+    <div class="alert  alert-success fade show" role="alert">
+        {{ session('success') }}
     </div>
+</div>
 @endif
 @if (session('error'))
-    <div class="col-sm-12">
-        <div class="alert  alert-danger fade show" role="alert">
-            {{ session('error') }}
-        </div>
+<div class="col-sm-12">
+    <div class="alert  alert-danger fade show" role="alert">
+        {{ session('error') }}
     </div>
+</div>
 @endif
 <section>
     <!-- Button trigger modal -->
@@ -74,54 +74,53 @@
 
 @section('js')
 <script>
-// api url
-const api_url = "http://127.0.0.1:8000/api/allProduct/";
+    // api url
+    const api_url = "http://127.0.0.1:8000/api/allProduct/";
 
-// Defining async function
-async function getapi(url) {
+    // Defining async function
+    async function getapi(url) {
 
-    // Storing response
-    const response = await fetch(url);
+        // Storing response
+        const response = await fetch(url);
 
-    // Storing data in form of JSON
-    var data = await response.json();
-    console.log(data);
-    if (response) {
-        hideloader();
+        // Storing data in form of JSON
+        var data = await response.json();
+        console.log(data);
+        if (response) {
+            hideloader();
+        }
+        show(data);
     }
-    show(data);
-}
-// Calling that async function
-getapi(api_url);
+    // Calling that async function
+    getapi(api_url);
 
-// Function to hide the loader
-function hideloader() {
-    document.getElementById('loading').style.display = 'none';
-}
-// Function to define innerHTML for HTML table
-function show(data) {
-    let tab =
-        `<tr>
+    // Function to hide the loader
+    function hideloader() {
+        document.getElementById('loading').style.display = 'none';
+    }
+    // Function to define innerHTML for HTML table
+    function show(data) {
+        let tab =
+            `<tr>
           <th>Name</th>
           <th>Year</th>
           <th>Color</th>
           <th>Mô tả</th>
           <th>Giá</th>
           </tr>`;
-
-    // Loop to access all rows
-    for (let r of data) {
-        tab += `<tr>
+        // Loop to access all rows
+        for (let r of data) {
+            tab += `<tr>
       <td>${r.name} </td>
       <td>${r.year}</td>
       <td>${r.color}</td>
       <td>${r.description}</td>
       <td>${r.price}</td>		
   </tr>`;
+        }
+        // Setting innerHTML as tab variable
+        document.getElementById("employees").innerHTML = tab;
     }
-    // Setting innerHTML as tab variable
-    document.getElementById("employees").innerHTML = tab;
-}
 </script>
 @endsection
 
