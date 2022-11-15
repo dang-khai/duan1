@@ -22,4 +22,8 @@ class Product extends Model
     {
         return DB::table('product')->insert($input);
     }
+
+    public function deleteProduct($id){
+        return DB::table('product')->where('id', '=', $id)->delete();
+    }
 }
