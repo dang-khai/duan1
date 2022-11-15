@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\ProductController;
+use RealRashid\SweetAlert\Facades\Aler;
 
 /*
 |--------------------------------------------------------------------------

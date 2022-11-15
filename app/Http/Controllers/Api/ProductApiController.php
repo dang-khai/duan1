@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\Api;
+
 use Illuminate\Http\RedirectResponse;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Http\Requests\ProductValidate;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ProductApiController extends Controller
 {
@@ -15,7 +17,8 @@ class ProductApiController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->Product = new Product();
     }
     public function index()
@@ -43,9 +46,9 @@ class ProductApiController extends Controller
     {
         $validated = $request->validated();
         if ($this->Product->addProduct($validated)) {
-            return redirect()->route('admin_product ')->with('success', 'Add product succesfully'); ;
-        }else{
-            return redirect('admin_product')->with('error', 'Add product unsuccesfully'); ;
+            return redirect()->route('admin_product ')->with('success', 'Add product succesfully');;
+        } else {
+            return redirect('admin_product')->with('error', 'Add product unsuccesfully');;
         }
     }
 
@@ -91,10 +94,9 @@ class ProductApiController extends Controller
      */
     public function destroy($id)
     {
-        if($this->Product->deleteProduct($id)){
-            return redirect()->route('admin_product');
-        }
-        else{
+        if ($this->Product->deleteProduct($id)) {
+            return redirect('admin/product')->with('success', 'successfully');
+        } else {
             return redirect()->route('admin_home');
         }
     }

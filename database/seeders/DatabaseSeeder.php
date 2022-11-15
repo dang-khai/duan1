@@ -16,8 +16,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         DB::table('category')->insert([
-            'id' => 1,
-            'name_cate' => 'Vinfast'
+            [
+                'id' => 1,
+                'name_cate' => 'Vinfast'
+            ],
+            [
+                'id' => 2,
+                'name_cate' => 'Vinfast'
+            ],
         ]);
     }
 }

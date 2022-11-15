@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('year');
             $table->string('color');
             $table->string('description');
-            $table->string('price');            
+            $table->string('price');
         });
     }
 

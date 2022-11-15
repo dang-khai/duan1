@@ -18,10 +18,19 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 1; $i <= 5; $i++) {
             DB::table('product')->insert([
-                'id' => $i + 1,
                 'id_cate' => 1,
+                'name' => 'Vinfast ' . $i,
+                'year' => rand(1970, 2022),
+                'color' => 'màu ' . $i,
+                'description' => 'Xe vinfast ' . $i,
+                'price' => $i * 1000,
+            ]);
+        }
+        for ($i = 1; $i <= 5; $i++) {
+            DB::table('product')->insert([
+                'id_cate' => 2,
                 'name' => 'Vinfast ' . $i,
                 'year' => rand(1970, 2022),
                 'color' => 'màu ' . $i,

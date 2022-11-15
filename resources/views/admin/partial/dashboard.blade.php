@@ -1,4 +1,4 @@
-<div class="d-flex flex-column flex-shrink-0 p-3 text-dark vh-100 admin-left" style="width: 300px; background-color: #FCB000;">
+<div class="d-flex flex-column flex-shrink-0 p-3 text-dark vh-100 admin-left" >
   <a href="{{ route('admin_home') }}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
     <svg class="bi me-2" width="40" height="32">
       <use xlink:href="#bootstrap" />

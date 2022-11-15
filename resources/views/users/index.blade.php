@@ -18,6 +18,8 @@
   cho đở mất công phải /admin chi cho mệt :>> -->
   <h1>Welcome to website buy car</h1>
   <a href="{{ route('admin_home') }}">Click here for go to admin website</a>
+  
+  @include('sweetalert::alert')
 </body>
 
 </html>
