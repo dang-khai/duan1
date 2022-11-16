@@ -25,7 +25,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form method="POST" action="http://127.0.0.1:8000/api/addProduct">
+                            <form method="POST" action="{{ route('apiAddproducts') }}">
                                 <div class="mb-3">
                                     <label class="form-label">Tên sản phẩm</label>
                                     <input type="text" class="form-control" name="name">
