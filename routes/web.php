@@ -22,7 +22,8 @@ Route::get('/', function () {
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'home'])->name('admin_home'); //trang home admin
-    Route::get('/product', [ProductController::class, 'product'])->name('admin_product'); // trang product admin
+    Route::get('/product', [HomeController::class, 'product'])->name('admin_product'); // trang product admin
+    Route::get('/category', [HomeController::class, 'category'])->name('admin_category'); // trang category admin
     //set trước nào xài mở mấy cái ở dưới ra nha
     // Route::get('/customers', [ProductController::class, 'customers'])->name('admin_customers'); //trang customers admin
     // Route::get('/orders', [ProductController::class, 'orders'])->name('admin_orders'); //trang orders admin

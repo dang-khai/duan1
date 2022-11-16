@@ -5,11 +5,10 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Product;
+use App\Models\Category;
 use App\Http\Requests\ProductValidate;
-use RealRashid\SweetAlert\Facades\Alert;
 
-class ProductApiController extends Controller
+class CateApiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,13 +16,12 @@ class ProductApiController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function __construct()
-    {
-        $this->Product = new Product();
+    public function __construct(){
+        $this->Category = new Category();
     }
     public function index()
     {
-        return response()->json($this->Product->getAllProducts(), 200);
+        return response()->json($this->Category->getAllCate(), 200);
     }
 
     /**
@@ -42,11 +40,11 @@ class ProductApiController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProductValidate $request)
+    public function store(Request $request)
     {
-        $validated = $request->validated();
-        if ($this->Product->addProduct($validated)) {
-            return redirect()->route('admin_product')->with('success', 'Add product succesfully');;
+        $input = $request->input();
+        if ($this->Category->addCate($input)) {
+            return redirect()->route('admin_category')->with('success', 'Add product succesfully');;
         } else {
             return redirect('admin_product')->with('error', 'Add product unsuccesfully');;
         }
@@ -94,10 +92,6 @@ class ProductApiController extends Controller
      */
     public function destroy($id)
     {
-        if ($this->Product->deleteProduct($id)) {
-            return redirect('admin/product')->with('success', 'successfully');
-        } else {
-            return redirect()->route('admin_home');
-        }
+        //
     }
 }

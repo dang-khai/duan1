@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 use Nette\Utils\Random;
 use Ramsey\Uuid\Type\Integer;
 
-class ProductSeeder extends Seeder
+class CateSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -19,13 +19,9 @@ class ProductSeeder extends Seeder
     public function run()
     {
         for ($i = 1; $i <= 5; $i++) {
-            DB::table('product')->insert([
-                'id_cate' => 1,
-                'name' => 'Vinfast ' . $i,
-                'year' => rand(1970, 2022),
-                'color' => 'màu ' . $i,
-                'description' => 'Xe vinfast ' . $i,
-                'price' => $i * 1000,
+            DB::table('category')->insert([
+                'id' => $i + 1,
+                'name_cate' => 'Mercedes ' . $i,
             ]);
         }
     }

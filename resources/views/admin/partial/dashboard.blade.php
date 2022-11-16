@@ -16,11 +16,11 @@
       </a>
     </li>
     <li>
-      <a href="#" class="nav-link text-dark">
+      <a href="{{ route('admin_category') }}" class="nav-link text-dark">
         <svg class="bi me-2" width="16" height="16">
           <use xlink:href="#speedometer2" />
         </svg>
-        Dashboard
+        Category
       </a>
     </li>
     <li>
