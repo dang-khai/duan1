@@ -84,7 +84,7 @@
             @method('delete')
             <button type="submit" class="btn btn-secondary">Sửa</button>
         </form>
-        <form method="POST" action="http://127.0.0.1:8000/api/deleteProduct/${r.id}">
+        <form method="POST" action="http://127.0.0.1:8000/api/deleteCategory/${r.id}">
             @csrf
             @method('delete')   
             <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này không !')">Xóa</button>

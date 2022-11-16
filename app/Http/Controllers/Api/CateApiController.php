@@ -92,6 +92,10 @@ class CateApiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if ($this->Category->deleteCategory($id)) {
+            return redirect('admin/category')->with('success', 'successfully');
+        } else {
+            return redirect()->route('admin_home');
+        }
     }
 }

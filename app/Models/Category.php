@@ -22,4 +22,8 @@ class Category extends Model
     {
         return DB::table('category')->insert($input);
     }
+
+    public function deleteCategory($id){
+        return DB::table('category')->where('id', '=', $id)->delete();
+    }
 }

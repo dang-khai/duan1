@@ -28,3 +28,4 @@ Route::resource('products', ProductApiController::class);
 // em hõng có xài resource :)))))
 Route::get('/allCategory', [CateApiController::class, 'index']);
 Route::post('/addCategory', [CateApiController::class, 'store']);
+Route::delete('/deleteCategory/{id}', [CateApiController::class, 'destroy']);
