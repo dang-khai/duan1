@@ -20,7 +20,7 @@ class ProductSeeder extends Seeder
     {
         for ($i = 1; $i <= 5; $i++) {
             DB::table('product')->insert([
-                'id_cate' => 1,
+                'id_cate' => $i,
                 'name' => 'Vinfast ' . $i,
                 'year' => rand(1970, 2022),
                 'color' => 'màu ' . $i,

@@ -19,4 +19,12 @@ class HomeController extends Controller
     {
         return view('admin.pages.category');
     }
+    public function orders()
+    {
+        return view('admin.pages.order');
+    }
+    public function customers()
+    {
+        return view('admin.pages.customer');
+    }
 }

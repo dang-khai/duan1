@@ -20,7 +20,7 @@ class CateSeeder extends Seeder
     {
         for ($i = 1; $i <= 5; $i++) {
             DB::table('category')->insert([
-                'id' => $i + 1,
+                'id' => $i,
                 'name_cate' => 'Mercedes ' . $i,
             ]);
         }

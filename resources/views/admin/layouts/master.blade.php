@@ -16,7 +16,7 @@
 
 <body>
     @include('admin.partial.dashboard')
-    
+
     <div class="container-content">
         @yield('content')
 
@@ -24,6 +24,33 @@
 
         @yield('js')
     </div>
+
+    @if ($title == 'home')
+        <script>
+            document.querySelector('#admin-home').classList.add('active');
+            document.querySelector('#admin-home').classList.remove('text-dark');
+        </script>
+    @elseif ($title == 'category')
+        <script>
+            document.querySelector('#admin-category').classList.add('active');
+            document.querySelector('#admin-category').classList.remove('text-dark');
+        </script>
+    @elseif ($title == 'orders')
+        <script>
+            document.querySelector('#admin-orders').classList.add('active');
+            document.querySelector('#admin-orders').classList.remove('text-dark');
+        </script>
+    @elseif ($title == 'product')
+        <script>
+            document.querySelector('#admin-product').classList.add('active');
+            document.querySelector('#admin-product').classList.remove('text-dark');
+        </script>
+    @elseif ($title == 'customers')
+        <script>
+            document.querySelector('#admin-customers').classList.add('active');
+            document.querySelector('#admin-customers').classList.remove('text-dark');
+        </script>
+    @endif
 
     @include('sweetalert::alert')
 </body>

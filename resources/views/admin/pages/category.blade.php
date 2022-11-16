@@ -1,8 +1,10 @@
 <div class="d-flex justify-content-between align-item-center">
     @extends('admin.layouts.master')
 
-    @section('title', 'product')
-
+    @section('title', 'Category')
+    @php
+        $title = 'category';
+    @endphp
     @section('css')
         <!-- link css -->
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
