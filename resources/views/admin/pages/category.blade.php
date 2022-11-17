@@ -74,7 +74,6 @@
             </tr>
             </thead>`;
                 // Loop to access all rows
-                $stt = 0;
                 for (let r of data) {
                     tab += `
         <tr>

@@ -22,14 +22,13 @@ class ProductApiController extends Controller
     {
         $this->Product = new Product();
         $this->Category = new Category();
-
     }
     public function index()
     {
         // api hiện product và cate
         $product = $this->Product->getAllProducts();
         $cate = $this->Category->getAllCate();
-        $arr = ['product' => $product, 'cate' =>$cate];
+        $arr = ['product' => $product, 'cate' => $cate];
         return response()->json($arr, 200);
     }
 
