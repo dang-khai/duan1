@@ -25,7 +25,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form method="POST" action="http://127.0.0.1:8000/api/addCategory">
+                            <form method="POST" action="{{ url('/') }}/api/addCategory">
                                 <div class="mb-3">
                                     <label class="form-label">Tên danh mục</label>
                                     <input type="text" class="form-control" name="name_cate">
@@ -44,7 +44,7 @@
     @section('js')
         <script>
             // api url
-            const api_url = "http://127.0.0.1:8000/api/allCategory";
+            const api_url = "{{ url('/') }}/api/allCategory";
             // Defining async function
             async function getapi(url) {
                 // Storing response
@@ -84,9 +84,9 @@
       <form method="POST" action="">
             @csrf
             @method('delete')
-            <button type="submit" class="btn btn-secondary">Sửa</button>
+            <button type="submit" class="btn btn-secondary me-2">Sửa</button>
         </form>
-        <form method="POST" action="http://127.0.0.1:8000/api/deleteCategory/${r.id}">
+        <form method="POST" action="{{ url('/') }}/api/deleteCategory/${r.id}">
             @csrf
             @method('delete')   
             <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này không !')">Xóa</button>

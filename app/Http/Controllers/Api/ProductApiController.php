@@ -6,6 +6,7 @@ use Illuminate\Http\RedirectResponse;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
 use App\Http\Requests\ProductValidate;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -20,10 +21,16 @@ class ProductApiController extends Controller
     public function __construct()
     {
         $this->Product = new Product();
+        $this->Category = new Category();
+
     }
     public function index()
     {
-        return response()->json($this->Product->getAllProducts(), 200);
+        // api hiện product và cate
+        $product = $this->Product->getAllProducts();
+        $cate = $this->Category->getAllCate();
+        $arr = ['product' => $product, 'cate' =>$cate];
+        return response()->json($arr, 200);
     }
 
     /**
@@ -44,8 +51,8 @@ class ProductApiController extends Controller
      */
     public function store(ProductValidate $request)
     {
-        $validated = $request->validated();
-        if ($this->Product->addProduct($validated)) {
+        $input = $request->validated();
+        if ($this->Product->addProduct($input)) {
             return redirect()->route('admin_product')->with('success', 'Add product succesfully');;
         } else {
             return redirect('admin_product')->with('error', 'Add product unsuccesfully');;

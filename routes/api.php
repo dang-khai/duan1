@@ -20,8 +20,8 @@ use App\Http\Controllers\Api\CateApiController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/allProduct', [ProductApiController::class, 'index'])->name('apiAddproducts');
-Route::post('/addProduct', [ProductApiController::class, 'store']);
+Route::get('/allProduct', [ProductApiController::class, 'index']);
+Route::post('/addProduct', [ProductApiController::class, 'store'])->name('apiAddproducts');
 Route::delete('/deleteProduct/{id}', [ProductApiController::class, 'destroy'])->name('deleteProduct');
 //cách dùng để xài tất cả function trong ProductApiController mà không cần khai báo nhiều như trên
 Route::resource('products', ProductApiController::class);
