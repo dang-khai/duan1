@@ -33,12 +33,6 @@
                                 <div class="mb-3">
                                     <label class="form-label">Loại</label>
                                     <div id="cate"></div>
-                                    <!--    <input type="text" class="form-control" name="id_cate"> -->
-                                    <!-- <select class="form-select" id="cate" aria-label="Default select example">
-                                                                <script>
-                                                                    document.getElementById("cate").innerHTML = cate;
-                                                                </script>
-                                                            </select> -->
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Đời</label>
@@ -76,7 +70,6 @@
                 if (response) {
                     hideloader();
                 }
-                console.log(data);
                 show(data);
             }
             getapi(api_product_url);
@@ -124,7 +117,7 @@
             @method('delete')   
             <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này không !')">Xóa</button>
         </form>
-      </td>		
+        </td>		
     </tr>`;
                 }
                 // Setting innerHTML as tab variable

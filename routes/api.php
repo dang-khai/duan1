@@ -20,9 +20,13 @@ use App\Http\Controllers\Api\CateApiController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// production routes
 Route::get('/allProduct', [ProductApiController::class, 'index'])->name('apiShowAllproducts');
 Route::post('/addProduct', [ProductApiController::class, 'store'])->name('apiAddproducts');
 Route::delete('/deleteProduct/{id}', [ProductApiController::class, 'destroy'])->name('apiDeleteProduct');
+
+// category routes
 Route::get('/allCategory', [CateApiController::class, 'index'])->name('apiShowAllCategories');
 Route::post('/addCategory', [CateApiController::class, 'store'])->name('apiAddCategories');
 Route::delete('/deleteCategory/{id}', [CateApiController::class, 'destroy'])->name('apiDeleteCategories');
