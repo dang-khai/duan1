@@ -25,7 +25,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form method="POST" action="{{ url('/') }}/api/addCategory">
+                            <form method="POST" action="{{ route('apiAddCategories') }}">
                                 <div class="mb-3">
                                     <label class="form-label">Tên danh mục</label>
                                     <input type="text" class="form-control" name="name_cate">
@@ -44,14 +44,13 @@
     @section('js')
         <script>
             // api url
-            const api_url = "{{ url('/') }}/api/allCategory";
+            const api_url = "{{ route('apiShowAllCategories') }}";
             // Defining async function
             async function getapi(url) {
                 // Storing response
                 const response = await fetch(url);
                 // Storing data in form of JSON
                 var data = await response.json();
-                console.log(data);
                 if (response) {
                     hideloader();
                 }
@@ -69,19 +68,20 @@
                     `<table">
             <thead>
             <tr>
-          <th scope="col">STT</th>
-          <th scope="col">Tên</th>
-          <th scope="col">Handle</th>
-          </tr>
-          </thead>`;
+            <th scope="col">STT</th>
+            <th scope="col">Tên</th>
+            <th scope="col">Handle</th>
+            </tr>
+            </thead>`;
                 // Loop to access all rows
+                $stt = 0;
                 for (let r of data) {
                     tab += `
         <tr>
-      <th scope="row">${r.id} </td>
-      <td>${r.name_cate}</td>	
-      <td class="d-flex">
-      <form method="POST" action="">
+        <th scope="row">${r.id} </td>
+        <td>${r.name_cate}</td>	
+        <td class="d-flex">
+        <form method="POST" action="">
             @csrf
             @method('delete')
             <button type="submit" class="btn btn-secondary me-2">Sửa</button>

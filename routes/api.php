@@ -20,12 +20,9 @@ use App\Http\Controllers\Api\CateApiController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/allProduct', [ProductApiController::class, 'index']);
+Route::get('/allProduct', [ProductApiController::class, 'index'])->name('apiShowAllproducts');
 Route::post('/addProduct', [ProductApiController::class, 'store'])->name('apiAddproducts');
-Route::delete('/deleteProduct/{id}', [ProductApiController::class, 'destroy'])->name('deleteProduct');
-//cách dùng để xài tất cả function trong ProductApiController mà không cần khai báo nhiều như trên
-Route::resource('products', ProductApiController::class);
-// em hõng có xài resource :)))))
-Route::get('/allCategory', [CateApiController::class, 'index']);
-Route::post('/addCategory', [CateApiController::class, 'store']);
-Route::delete('/deleteCategory/{id}', [CateApiController::class, 'destroy']);
+Route::delete('/deleteProduct/{id}', [ProductApiController::class, 'destroy'])->name('apiDeleteProduct');
+Route::get('/allCategory', [CateApiController::class, 'index'])->name('apiShowAllCategories');
+Route::post('/addCategory', [CateApiController::class, 'store'])->name('apiAddCategories');
+Route::delete('/deleteCategory/{id}', [CateApiController::class, 'destroy'])->name('apiDeleteCategories');
