@@ -9,6 +9,6 @@
 
 @section('content')
     <div class="container">
-        <h1>home đây</h1>
+        <h1><a href="{{ route('admin_home') }}">Admin nè</a></h1>
     </div>
 @endsection
