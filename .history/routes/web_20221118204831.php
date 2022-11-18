@@ -24,6 +24,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'home'])->name('admin_home'); //trang home admin
     Route::get('/product', [HomeController::class, 'product'])->name('admin_product'); // trang product admin
 
+    Route::get('/product', [HomeController::class, 'edit_product']); // edit product edit
+
     Route::prefix('/product')->group(function () {
         Route::get('edit/{id}', [HomeController::class, 'edit_product'])->name('admin_edit'); // edit product admin
     });

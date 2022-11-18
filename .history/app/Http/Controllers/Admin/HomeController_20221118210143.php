@@ -21,8 +21,9 @@ class HomeController extends Controller
     public function product()
     {
         $product = $this->Product->getAllProducts();
+        $cate = $this->Category->getAllCate();
         $cates = DB::table('category')->get();
-        return view('admin.pages.product', compact('product', 'cates'));
+        return view('admin.pages.product', compact('product', 'cate'));
     }
     public function category()
     {

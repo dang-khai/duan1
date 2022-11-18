@@ -109,6 +109,7 @@
                                                         <label class="form-label">Loại</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             name="" id="">
+                                                            <!-- chỗ này foreach -->
                                                             @foreach ($cates as $category)
                                                                 <option value="{{ $category->id }}">
                                                                     {{ $category->name_cate }}</option>

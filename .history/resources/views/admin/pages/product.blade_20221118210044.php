@@ -35,7 +35,7 @@
                                     <label class="form-label">Loại</label>
                                     <select class="form-select" aria-label="Default select example" name="id_cate">
                                         <option selected>Open this select menu</option>
-                                        @foreach ($cates as $cate)
+                                        @foreach ($cate as $cate)
                                             <option value="{{ $cate->id }}">{{ $cate->name_cate }}</option>
                                         @endforeach
                                     </select>
@@ -107,9 +107,9 @@
                                                     </div>
                                                     <div class="mb-3">
                                                         <label class="form-label">Loại</label>
-                                                        <select class="form-select" aria-label="Default select example"
-                                                            name="" id="">
-                                                            @foreach ($cates as $category)
+                                                        <select name="" id="">
+                                                            <!-- chỗ này foreach -->
+                                                            @foreach ($cate as $category)
                                                                 <option value="{{ $category->id }}">
                                                                     {{ $category->name_cate }}</option>
                                                             @endforeach

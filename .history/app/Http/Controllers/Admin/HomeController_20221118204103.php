@@ -6,11 +6,9 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Category;
-
 class HomeController extends Controller
 {
-    public function __construct()
-    {
+    public function __construct(){
         $this->Product = new Product();
         $this->Category = new Category();
     }
@@ -21,8 +19,8 @@ class HomeController extends Controller
     public function product()
     {
         $product = $this->Product->getAllProducts();
-        $cates = DB::table('category')->get();
-        return view('admin.pages.product', compact('product', 'cates'));
+        $cate = $this->Category->getAllCate();
+        return view('admin.pages.product', compact('product', 'cate'));
     }
     public function category()
     {
@@ -42,8 +40,7 @@ class HomeController extends Controller
         $stt = 1;
         return view('admin.pages.test')->with(compact('rows', 'stt'));
     }
-    public function edit_product()
-    {
+    public function edit_product(){
         return back()->withInput();
     }
 }

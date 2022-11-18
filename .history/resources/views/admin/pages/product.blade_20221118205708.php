@@ -35,7 +35,7 @@
                                     <label class="form-label">Loại</label>
                                     <select class="form-select" aria-label="Default select example" name="id_cate">
                                         <option selected>Open this select menu</option>
-                                        @foreach ($cates as $cate)
+                                        @foreach ($cate as $cate)
                                             <option value="{{ $cate->id }}">{{ $cate->name_cate }}</option>
                                         @endforeach
                                     </select>
@@ -84,6 +84,8 @@
                     <td>{{ $product->description }}</td>
                     <td>{{ $product->price }}</td>
                     <td class="d-flex">
+                        <button type="button" class="btn btn-secondary me-2" href="{{ route('test_add_product') }}"
+                            data-bs-toggle="modal" data-bs-target="#editModal{{ $product->id }}">Sửa</button>
                         <form>
                             <button type="button" class="btn btn-secondary me-2" data-bs-toggle="modal"
                                 data-bs-target="#editModal{{ $product->id }}">Sửa</button>
@@ -107,12 +109,8 @@
                                                     </div>
                                                     <div class="mb-3">
                                                         <label class="form-label">Loại</label>
-                                                        <select class="form-select" aria-label="Default select example"
-                                                            name="" id="">
-                                                            @foreach ($cates as $category)
-                                                                <option value="{{ $category->id }}">
-                                                                    {{ $category->name_cate }}</option>
-                                                            @endforeach
+                                                        <select name="" id="">
+                                                            <!-- chỗ này foreach -->
                                                         </select>
                                                     </div>
                                                     <div class="mb-3">
