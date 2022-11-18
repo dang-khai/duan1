@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-use App\Models\Product;
+use App\Models\Product as Product;
 use App\Models\Category;
 
 class HomeController extends Controller
@@ -20,13 +20,14 @@ class HomeController extends Controller
     }
     public function product()
     {
-        $product = $this->Product->getAllProducts();
-        $cates = DB::table('category')->get();
-        return view('admin.pages.product', compact('product', 'cates'));
+        $data = DB::table('category')->join('product', 'category.id', '=', 'product.id_cate')->get();
+        $cate = DB::table('category')->get();
+        return view('admin.pages.product', compact('data','cate'));
     }
     public function category()
     {
-        return view('admin.pages.category');
+        $data = DB::table('category')->get();
+        return view('admin.pages.category', compact('data'));
     }
     public function orders()
     {
@@ -42,8 +43,10 @@ class HomeController extends Controller
         $stt = 1;
         return view('admin.pages.test')->with(compact('rows', 'stt'));
     }
-    public function edit_product()
+    public function edit_product(Request $request)
     {
-        return back()->withInput();
+        $input = $request->all();
+        dd($input);
+        // return back()->withInput();
     }
 }

@@ -103,7 +103,7 @@ class ProductApiController extends Controller
         if ($this->Product->deleteProduct($id)) {
             return redirect('admin/product')->with('success', 'successfully');
         } else {
-            return redirect()->route('admin_home');
+            return $id;
         }
     }
 }

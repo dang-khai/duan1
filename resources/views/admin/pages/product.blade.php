@@ -35,8 +35,8 @@
                                     <label class="form-label">Loại</label>
                                     <select class="form-select" aria-label="Default select example" name="id_cate">
                                         <option selected>Open this select menu</option>
-                                        @foreach ($cates as $cate)
-                                            <option value="{{ $cate->id }}">{{ $cate->name_cate }}</option>
+                                        @foreach ($cate as $cates)
+                                            <option value="{{ $cates->id }}">{{ $cates->name_cate }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -69,6 +69,7 @@
             <thead>
                 <tr>
                     <th scope="col">Tên</th>
+                    <th scope="col">Loại</th>
                     <th scope="col">Đời</th>
                     <th scope="col">Màu</th>
                     <th scope="col">Mô tả</th>
@@ -77,19 +78,20 @@
                 </tr>
             </thead>
             <tr>
-                @foreach ($product as $product)
-                    <th scope="row">{{ $product->name }}</td>
-                    <td>{{ $product->year }}</td>
-                    <td>{{ $product->color }}</td>
-                    <td>{{ $product->description }}</td>
-                    <td>{{ $product->price }}</td>
+                @foreach ($data as $data)
+                    <th scope="row">{{ $data->name }}</td>
+                    <td>{{ $data->name_cate }}</td>
+                    <td>{{ $data->year }}</td>
+                    <td>{{ $data->color }}</td>
+                    <td>{{ $data->description }}</td>
+                    <td>{{ $data->price }}</td>
                     <td class="d-flex">
                         <form>
                             <button type="button" class="btn btn-secondary me-2" data-bs-toggle="modal"
-                                data-bs-target="#editModal{{ $product->id }}">Sửa</button>
+                                data-bs-target="#editModal{{ $data->id }}">Sửa</button>
                             <section>
                                 <!-- Modal edit -->
-                                <div class="modal fade" id="editModal{{ $product->id }}" tabindex="-1" aria-labelledby=""
+                                <div class="modal fade" id="editModal{{ $data->id }}" tabindex="-1" aria-labelledby=""
                                     aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
@@ -99,40 +101,40 @@
                                                     aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <form method="POST" action="{{ route('apiAddproducts') }}">
+                        <!-- sửa sp -->
+
+                                                <form method="POST" action="{{ url('/') }}/admin/edit/">
                                                     <div class="mb-3">
                                                         <label class="form-label">Tên sản phẩm</label>
                                                         <input type="text" class="form-control" name="name"
-                                                            value="{{ $product->name }}">
+                                                            value="{{ $data->name }}">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label class="form-label">Loại</label>
-                                                        <select class="form-select" aria-label="Default select example"
-                                                            name="" id="">
-                                                            @foreach ($cates as $category)
-                                                                <option value="{{ $category->id }}">
-                                                                    {{ $category->name_cate }}</option>
+                                                        <select class="form-select" aria-label="Default select example" name="id_cate" id="">
+                                                            @foreach ($cate as $cates)
+                                                                <option value="">{{ $cates->name_cate }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
                                                     <div class="mb-3">
                                                         <label class="form-label">Đời</label>
                                                         <input type="text" class="form-control" name="year"
-                                                            value="{{ $product->year }}">
+                                                            value="{{ $data->year }}">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label class="form-label">Màu</label>
                                                         <input type="text" class="form-control" name="color"
-                                                            value="{{ $product->color }}">
+                                                            value="{{ $data->color }}">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label class="form-label">Giá</label>
                                                         <input type="text" class="form-control" name="price"
-                                                            value="{{ $product->price }}">
+                                                            value="{{ $data->price }}">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label class="form-label">Mô tả</label>
-                                                        <textarea class="form-control" rows="3" name="description" placeholder="{{ $product->description }}"></textarea>
+                                                        <textarea class="form-control" rows="3" name="description" placeholder="{{ $data->description }}"></textarea>
                                                     </div>
                                                     <button type="button" class="btn btn-secondary"
                                                         data-bs-dismiss="modal">Close</button>
@@ -145,7 +147,7 @@
 
                             </section>
                         </form>
-                        <form method="POST" action="{{ url('/') }}/api/deleteProduct/{{ $product->id }}">
+                        <form method="POST" action="{{ url('/') }}/api/deleteProduct/{{ $data->id }}">
                             @csrf
                             @method('delete')
                             <button type="submit" class="btn btn-danger"

@@ -17,7 +17,7 @@ class Category extends Model
     {
         return DB::table('category')->get();
     }
-
+    
     public function addCate($input)
     {
         return DB::table('category')->insert($input);
