@@ -4,16 +4,23 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-
+use App\Models\Product;
+use App\Models\Category;
 class HomeController extends Controller
 {
+    public function __construct(){
+        $this->Product = new Product();
+        $this->Category = new Category();
+    }
     public function home()
     {
         return view('admin.pages.home');
     }
     public function product()
     {
-        return view('admin.pages.product');
+        $product = $this->Product->getAllProducts();
+        $cate = $this->Category->getAllCate();
+        return view('admin.pages.product', compact('product', 'cate'));
     }
     public function category()
     {
@@ -32,5 +39,8 @@ class HomeController extends Controller
         $rows = DB::table('category')->get();
         $stt = 1;
         return view('admin.pages.test')->with(compact('rows', 'stt'));
+    }
+    public function edit_product(){
+        return back()->withInput();
     }
 }

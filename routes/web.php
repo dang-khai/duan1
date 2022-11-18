@@ -23,6 +23,11 @@ Route::get('/', function () {
 Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'home'])->name('admin_home'); //trang home admin
     Route::get('/product', [HomeController::class, 'product'])->name('admin_product'); // trang product admin
+
+    Route::prefix('/product')->group(function (){
+        Route::get('edit/{id}', [HomeController::class, 'edit_product'])->name('admin_edit'); // edit product admin
+    });
+
     Route::get('/category', [HomeController::class, 'category'])->name('admin_category'); // trang category admin
     Route::get('/customers', [HomeController::class, 'customers'])->name('admin_customers'); //trang customers admin
     Route::get('/orders', [HomeController::class, 'orders'])->name('admin_orders'); //trang orders admin

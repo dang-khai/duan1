@@ -41,7 +41,7 @@
         </section>
     @endsection
 
-    @section('js')
+    <!-- @section('js')
         <script>
             // api url
             const api_url = "{{ route('apiShowAllCategories') }}";
@@ -107,5 +107,5 @@
         </div>
         <table id="product" class="table table-striped w-75"></table>
         <div class="clear-fix"></div>
-    @endsection
-</div>
+    @endsection-->
+</div> 
