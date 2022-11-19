@@ -22,11 +22,15 @@ Route::get('/', function () {
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'home'])->name('admin_home'); //trang home admin
-    Route::get('/product', [HomeController::class, 'product'])->name('admin_product'); // trang product admin
-    Route::post('/product/edit', [HomeController::class, 'edit_product'])->name('admin_edit');// edit product admin
-    Route::post('/product/addProduct', [HomeController::class, 'addProduct'])->name('admin_addProduct');// add product admin
-    Route::post('/product/deleteProduct/{id}', [HomeController::class, 'deleteProduct'])->name('admin_deleteProduct');// add product admin
+    //route product
+    Route::get('/product', [ProductController::class, 'product'])->name('admin_product'); // trang product admin
+    Route::post('/product/edit', [ProductController::class, 'edit_product'])->name('admin_edit');// edit product admin
+    Route::post('/product/addProduct', [ProductController::class, 'addProduct'])->name('admin_addProduct');// add product admin
+    Route::post('/product/deleteProduct/{id}', [ProductController::class, 'deleteProduct'])->name('admin_deleteProduct');// add product admin
+    //route category
     Route::get('/category', [HomeController::class, 'category'])->name('admin_category'); // trang category admin
+    
+    
     Route::get('/customers', [HomeController::class, 'customers'])->name('admin_customers'); //trang customers admin
     Route::get('/orders', [HomeController::class, 'orders'])->name('admin_orders'); //trang orders admin
     Route::get('/test', [HomeController::class, 'test']);
