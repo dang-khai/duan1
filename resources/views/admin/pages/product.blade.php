@@ -86,11 +86,13 @@
                     <td>{{ $data->description }}</td>
                     <td>{{ $data->price }}</td>
                     <td class="d-flex">
-                        <form>
+                        
                             <button type="button" class="btn btn-secondary me-2" data-bs-toggle="modal"
                                 data-bs-target="#editModal{{ $data->id }}">Sửa</button>
                             <section>
                                 <!-- Modal edit -->
+                                <form method="POST" action="{{ route('admin_edit') }}" enctype="multipart/form-data">
+                                @csrf
                                 <div class="modal fade" id="editModal{{ $data->id }}" tabindex="-1" aria-labelledby=""
                                     aria-hidden="true">
                                     <div class="modal-dialog">
@@ -102,8 +104,6 @@
                                             </div>
                                             <div class="modal-body">
                         <!-- sửa sp -->
-
-                                                <form method="POST" action="{{ url('/') }}/admin/edit/">
                                                     <div class="mb-3">
                                                         <label class="form-label">Tên sản phẩm</label>
                                                         <input type="text" class="form-control" name="name"
@@ -144,9 +144,7 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </section>
-                        </form>
                         <form method="POST" action="{{ url('/') }}/api/deleteProduct/{{ $data->id }}">
                             @csrf
                             @method('delete')
