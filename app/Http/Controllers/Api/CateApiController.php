@@ -45,7 +45,7 @@ class CateApiController extends Controller
     {
         $input = $request->input();
         if ($this->Category->addCate($input)) {
-            return redirect()->route('admin_category')->with('success', 'Add product succesfully');;
+            return redirect()->route('admin_category')->with('success', 'Product add successfully');
         } else {
             return redirect('admin_product')->with('error', 'Add product unsuccesfully');;
         }

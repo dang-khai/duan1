@@ -4,8 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-use App\Models\Product as Product;
+use App\Models\Product;
 use App\Models\Category;
+use Illuminate\Http\Request;
+use App\Http\Requests\ProductValidate;
+
 
 class HomeController extends Controller
 {
@@ -24,6 +27,24 @@ class HomeController extends Controller
         $cate = DB::table('category')->get();
         return view('admin.pages.product', compact('data','cate'));
     }
+
+    public function addProduct(ProductValidate $request){
+        $input = $request->validated();
+        if ($this->Product->addProduct($input)) {
+            return redirect()->route('admin_product')->with('success', 'Add product succesfully');;
+        } else {
+            return redirect('admin_product')->with('error', 'Add product unsuccesfully');;
+        }
+    }
+    
+    public function deleteProduct($id){
+        if ($this->Product->deleteProduct($id)) {
+            return redirect('admin/product')->with('success', 'Delete Successfully');
+        } else {    
+            return redirect('admin/product')->with('error', 'unsuccessfully');;
+        }
+    }
+
     public function category()
     {
         $data = DB::table('category')->get();
@@ -45,8 +66,17 @@ class HomeController extends Controller
     }
     public function edit_product(Request $request)
     {
-        $input = $request->all();
-        dd($input);
-        // return back()->withInput();
+        $input = [
+            'id' => $request->id,
+            'id_cate' => $request->id_cate,
+            'name' => $request->name,
+            'year' => $request->year,
+            'color' => $request->color,
+            'description' => $request->description,
+            'price' => $request->price,
+        ];
+        if($this->Product->updateProduct($request->id, $input)){
+            return back()->with('success', 'Product updated successfully');
+        };
     }
 }
