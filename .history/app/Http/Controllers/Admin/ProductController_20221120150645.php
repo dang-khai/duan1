@@ -20,28 +20,26 @@ class ProductController extends Controller
     {
         $data = DB::table('category')->join('product', 'category.id', '=', 'product.id_cate')->get();
         $cate = DB::table('category')->get();
-        return view('admin.pages.product', compact('data', 'cate'));
+        return view('admin.pages.product', compact('data','cate'));
     }
 
-    public function addProduct(ProductValidate $request)
-    {
+    public function addProduct(ProductValidate $request){
         $input = $request->validated();
         if ($this->Product->addProduct($input)) {
-            toast('Add product successfully!', 'success')->autoClose(1500);
+            toast('Add product successfully!','success')->autoClose(1500);
             return redirect()->route('admin_product');
         } else {
             return redirect('admin_product')->with('error', 'Add product unsuccesfully')->withInput($input);
         }
     }
-
-    public function deleteProduct($id)
-    {
+    
+    public function deleteProduct($id){
         if ($this->Product->deleteProduct($id)) {
             // return redirect('admin/product')->with('success', 'Delete Successfully');
-            toast('Delete product successfully!', 'success')->autoClose(1500);
+            toast('Delete product successfully!','success')->autoClose(1500);
             return redirect('admin/product');
-        } else {
-            return redirect('admin/product')->with('error', 'unsuccessfully');
+        } else {    
+            return redirect('admin/product')->with('error','unsuccessfully');
         }
     }
 
@@ -56,8 +54,8 @@ class ProductController extends Controller
             'description' => $request->description,
             'price' => $request->price,
         ];
-        if ($this->Product->updateProduct($request->id, $input)) {
-            toast('Change product successfully!', 'success')->autoClose(1500);
+        if($this->Product->updateProduct($request->id, $input)){
+            toast('Change product successfully!','success')->autoClose(1500);
             return back();
         };
     }

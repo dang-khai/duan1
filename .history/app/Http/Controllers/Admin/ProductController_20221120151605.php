@@ -30,7 +30,7 @@ class ProductController extends Controller
             toast('Add product successfully!', 'success')->autoClose(1500);
             return redirect()->route('admin_product');
         } else {
-            return redirect('admin_product')->with('error', 'Add product unsuccesfully')->withInput($input);
+            return redirect('admin_product')->with('error', 'Add product unsuccesfully')->withInput();
         }
     }
 

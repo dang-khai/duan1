@@ -92,6 +92,7 @@
                                 data-bs-target="#editModal{{ $data->id }}">Sửa</button>
                             <section>
                                 <!-- Modal edit -->
+
                                 <div class="modal fade" id="editModal{{ $data->id }}" tabindex="-1" aria-labelledby=""
                                     aria-hidden="true">
                                     <div class="modal-dialog">
@@ -114,7 +115,8 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label">Loại</label>
-                                                    <select class="form-select" aria-label="Default select example">
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        name="id_cate" id="">
                                                         <!-- <option selected>{{ $data->name_cate }}</option> -->
                                                         @foreach ($cate as $cates)
                                                             <option value="{{ $cates->id }}">{{ $cates->name_cate }}
@@ -139,7 +141,9 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label">Mô tả</label>
-                                                    <textarea class="form-control" rows="3" name="description" placeholder="{{ $data->description }}"></textarea>
+                                                    <textarea class="form-control" rows="3" name="description"
+                                                        placeholder="{{ $data->description }}
+                                                        "></textarea>
                                                 </div>
                                                 <button type="button" class="btn btn-secondary"
                                                     data-bs-dismiss="modal">Close</button>

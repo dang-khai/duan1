@@ -35,12 +35,11 @@ class ProductValidate extends FormRequest
             'price' => 'required',
         ];
     }
-
-    public function messages()
-    {
+    
+    public function messages(){
         return [
             'name.required' => 'Name is required',
-            'id_cate.required' => 'Loại required',
+            'id_cate' => 'Loại required',
             'year.required' => 'Year is required',
             'color.required' => 'color is required',
             'description.required' => 'description is required',

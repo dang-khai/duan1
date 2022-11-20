@@ -114,7 +114,8 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label">Loại</label>
-                                                    <select class="form-select" aria-label="Default select example">
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        name="id_cate" id="">
                                                         <!-- <option selected>{{ $data->name_cate }}</option> -->
                                                         @foreach ($cate as $cates)
                                                             <option value="{{ $cates->id }}">{{ $cates->name_cate }}
