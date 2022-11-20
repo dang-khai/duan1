@@ -25,6 +25,10 @@ Route::get('login', function () {
     return view('users.pages.login');
 });
 
+Route::get('register', function () {
+    return view('users.pages.register');
+});
+
 Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'home'])->name('admin_home'); //trang home admin
     //route product
