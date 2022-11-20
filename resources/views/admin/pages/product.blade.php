@@ -56,7 +56,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Mô tả</label>
                                 <textarea class="form-control" rows="3" name="description"></textarea>
-                            </div>
+                            </div>             
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary">Save changes</button>
                         </form>
@@ -64,7 +64,6 @@
                 </div>
             </div>
         </div>
-
     </section>
     <table class="table table-striped w-75">
         <thead>
@@ -87,12 +86,13 @@
             <td>{{ $data->description }}</td>
             <td>{{ $data->price }}</td>
             <td class="d-flex">
+            <form method="POST" action="{{ route('admin_edit') }}" enctype="multipart/form-data">
+                        @csrf
                 <button type="button" class="btn btn-secondary me-2" data-bs-toggle="modal"
                     data-bs-target="#editModal{{ $data->id }}">Sửa</button>
                 <section>
                     <!-- Modal edit -->
-                    <form method="POST" action="{{ route('admin_edit') }}" enctype="multipart/form-data">
-                        @csrf
+                    
                         <div class="modal fade" id="editModal{{ $data->id }}" tabindex="-1" aria-labelledby=""
                             aria-hidden="true">
                             <div class="modal-dialog">
@@ -105,8 +105,7 @@
                                     <div class="modal-body">
                                         <!-- sửa sp -->
                                         <div class="mb-3">
-                                            <input type="hidden" class="form-control" name="id"
-                                                value="{{ $data->id }}">
+                                            <input type="hidden" class="form-control" name="id" value="{{ $data->id }}">
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Tên sản phẩm</label>
@@ -119,7 +118,7 @@
                                                 name="id_cate" id="">
                                                 <!-- <option selected>{{ $data->name_cate }}</option> -->
                                                 @foreach ($cate as $cates)
-                                                <option value="{{ $cates->id }}" >{{ $cates->name_cate }}</option>
+                                                <option value="{{ $cates->id }}">{{ $cates->name_cate }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -146,12 +145,12 @@
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Close</button>
                                         <button type="submit" class="btn btn-primary">Save changes</button>
-                    </form>
-</div>
-</div>
-</div>
-</div>
-</section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </form> 
 <form method="POST" action="{{ route('admin_deleteProduct', $data->id) }}">
     @csrf
     <button type="submit" class="btn btn-danger"
@@ -161,7 +160,7 @@
 </tr>
 @endforeach
 @if (!empty($success))
-    <h1>{{$success}}</h1>
+<h1>{{$success}}</h1>
 @endif
 </table>
 @endsection
