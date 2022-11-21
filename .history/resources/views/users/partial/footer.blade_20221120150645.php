@@ -1,6 +1,6 @@
 <footer>
     <div class="container_footer">
-        <a class="logo_footer" href="#"><img src="{{ asset('storage/img/car_logo.png') }}" alt=""></a>
+        <a class="logo_footer" href="#"><img src="{{ asset('img/car_logo.png') }}" alt=""></a>
         <img class="lines" src="{{ asset('icon/gr27.svg') }}" alt="">
         <div class="menu_footer">
             <div class="block-1_menu_footer">
@@ -18,15 +18,15 @@
                     lô 24, QTSC,
                     Quận 12,
                     TP Hồ Chí Minh</p>
-                <a style="margin-left: 0px;" href=""><img src="{{ asset('storage/icon/facebook.svg') }}"
+                <a style="margin-left: 0px;" href=""><img src="{{ asset('icon/facebook.svg') }}"
                         alt=""></a>
-                <a style="padding-top: 1px;" href=""><img src="{{ asset('storage/icon/instagram.svg') }}"
+                <a style="padding-top: 1px;" href=""><img src="{{ asset('icon/instagram.svg') }}"
                         alt=""></a>
-                <a style="padding-top: 3px;" href=""><img src="{{ asset('storage/icon/youtube.svg') }}"
+                <a style="padding-top: 3px;" href=""><img src="{{ asset('icon/youtube.svg') }}"
                         alt=""></a>
             </div>
         </div>
-        <img class="lines" src="{{ asset('storage/icon/gr27.svg') }}" alt="">
+        <img class="lines" src="{{ asset('icon/gr27.svg') }}" alt="">
         <p class="copyright">2021 Autohunt. All Rights reserved</p>
     </div>
 </footer>
