@@ -482,7 +482,6 @@ input[type="range"]::-ms-thumb {
     width: 17.625rem;
     height: 11.813rem;
     border-radius: 0.188rem;
-    object-fit: cover;
 }
 
 .car-box .info-car {
@@ -689,7 +688,6 @@ input[type="range"]::-ms-thumb {
     width: 23.438rem;
     height: 11.813rem;
     border-radius: 0.188rem;
-    object-fit: cover;
 }
 
 .car-box-2 .info-car-2 {
@@ -959,7 +957,6 @@ input[type="range"]::-ms-thumb {
     width: 28.375rem;
     height: 12.438rem;
     border-radius: 0.188rem 0px 0px 0.188rem;
-    object-fit: cover;
 }
 
 .box-news-reviews-1 .date-bnr1 {
@@ -1042,7 +1039,6 @@ input[type="range"]::-ms-thumb {
     width: 12.25rem;
     height: 12.25rem;
     border-radius: 0.188rem 0 0 0.188rem;
-    object-fit: cover;
 }
 
 .box-1-bnr2 .content-b1bnr2 {
@@ -1196,7 +1192,6 @@ input[type="range"]::-ms-thumb {
     height: 36.938rem;
     border-radius: 0.188rem;
     margin-left: 4.688rem;
-    object-fit: cover;
 }
 
 /* end code phần about us */

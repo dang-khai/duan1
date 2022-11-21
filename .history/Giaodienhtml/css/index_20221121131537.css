@@ -959,7 +959,6 @@ input[type="range"]::-ms-thumb {
     width: 28.375rem;
     height: 12.438rem;
     border-radius: 0.188rem 0px 0px 0.188rem;
-    object-fit: cover;
 }
 
 .box-news-reviews-1 .date-bnr1 {
@@ -1196,7 +1195,6 @@ input[type="range"]::-ms-thumb {
     height: 36.938rem;
     border-radius: 0.188rem;
     margin-left: 4.688rem;
-    object-fit: cover;
 }
 
 /* end code phần about us */
