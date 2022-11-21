@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Slideshow</title>
+
+		<link
+			href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+  <style>
+    * {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	background-color: #dadada;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.container {
+	margin: 50px auto;
+	height: 80%;
+	width: 70%;
+	box-shadow: 0 0 10px #bbb;
+}
+
+.main {
+	height: 85%;
+	position: relative;
+}
+
+.control {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 80px;
+	color: white;
+	cursor: pointer;
+}
+
+.prev {
+	left: -10px;
+}
+
+.next {
+	right: -10px;
+}
+
+.img-wrap {
+	width: 100%;
+	height: 100%;
+}
+
+.list-img {
+	display: flex;
+}
+
+.list-img div {
+	cursor: pointer;
+	padding: 5px;
+	background-color: #bbb;
+	flex: 1;
+}
+
+.list-img div.active {
+	background-color: rgb(220, 86, 86);
+}
+  </style>
+	<body>
+		<div class="container">
+			<div class="main">
+				<span class="control prev">
+					<i class="bx bx-chevron-left"></i>
+				</span>
+				<span class="control next">
+					<i class="bx bx-chevron-right"></i>
+				</span>
+				<div class="img-wrap">
+					<img src="../img/Tesla_Model_3_2021-01.jpg" alt="" />
+				</div>
+			</div>
+			<div class="list-img">
+				<div>
+					<img src="../img/Tesla_Model_3_2021-01.jpg" alt="" />
+				</div>
+				<div>
+					<img src="../img/Tesla_Model_3_2021-02.jpg" alt="" />
+				</div>
+				<div>
+					<img src="../img/Tesla_Model_3_2021-03.jpg" alt="" />
+				</div>
+				<div>
+					<img src="../img/Tesla_Model_3_2021-04.jpg" alt="" />
+				</div>
+				<div>
+					<img src="../img/Tesla_Model_3_2021-05.jpg" alt="" />
+				</div>
+				<div>
+					<img src="../img/Tesla_Model_3_2021-06.jpg" alt="" />
+				</div>
+				<div>
+					<img src="../img/Tesla_Model_3_2021-07.jpg" alt="" />
+				</div>
+				<div>
+					<img src="../img/Tesla_Model_3_2021-08.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<script>
+		let listDivImg = document.querySelectorAll('.list-img div')
+      let next = document.querySelector('.next')
+      let prev = document.querySelector('.prev')
+      let imgWrap = document.querySelector('.img-wrap img')
+      
+      let currentIndex = 0
+      
+      setCurrent(currentIndex)
+      
+      function setCurrent(index) {
+        currentIndex = index
+        imgWrap.src = listDivImg[currentIndex].querySelector('img').src
+      
+        // remove all active img
+        listDivImg.forEach((item) => {
+          item.classList.remove('active')
+        })
+      
+        // set active
+        listDivImg[currentIndex].classList.add('active')
+      }
+      
+      listDivImg.forEach((img, index) => {
+        img.addEventListener('click', (e) => {
+          setCurrent(index)
+        })
+      })
+      
+      next.addEventListener('click', () => {
+        if (currentIndex == listDivImg.length - 1) {
+          currentIndex = 0
+        } else currentIndex++
+      
+        setCurrent(currentIndex)
+      })
+      
+      prev.addEventListener('click', () => {
+        if (currentIndex == 0) currentIndex = listDivImg.length - 1
+        else currentIndex--
+      
+        setCurrent(currentIndex)
+      })
+      </script>
+	</body>
+</html>
