@@ -471,7 +471,6 @@ input[type="range"]::-ms-thumb{
 
 .recommended-car .car-product{
     max-width: 62.781rem;
-    height: 31.938rem;
     margin: 1.5rem 1.5rem 0px 0.719rem;
     display: flex;
     overflow: hidden;
@@ -479,7 +478,6 @@ input[type="range"]::-ms-thumb{
 
 .car-product .car-box{
     width: 19.625rem;
-    height: 31.938rem;
     padding: 1rem;
     background: #0B0C10;
     border: 0.125rem solid #12232E;
@@ -697,7 +695,6 @@ input[type="range"]::-ms-thumb{
 
 .info-comparison .car-box-2{
     width: 25.438rem;
-    height: 31.938rem;
     padding: 1rem;
     background: #0B0C10;
     border: 0.125rem solid #12232E;
