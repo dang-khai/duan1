@@ -688,7 +688,6 @@ input[type="range"]::-ms-thumb{
 }
 
 .car-comparison .info-comparison{
-    height: 31.938rem;
     margin-top: 1.5rem;
     display: flex;
 }
@@ -876,6 +875,10 @@ input[type="range"]::-ms-thumb{
 }
 
 .info-comparison .and-comparison{
+    height: 31.938rem;
+}
+
+.info-comparison .and-comparison-2{
     width: 6.625rem;
     height: 6.625rem;
     background: #4DA8DA;    
@@ -887,7 +890,7 @@ input[type="range"]::-ms-thumb{
     cursor: context-menu;
 }
 
-.and-comparison p{
+.and-comparison-2 p{
     font-weight: 600;
     font-size: 2.25rem;
     line-height: 6.625rem;
