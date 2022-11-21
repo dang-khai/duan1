@@ -2,7 +2,9 @@
     @extends('admin.layouts.master')
 
     @section('title', 'Category')
-
+    @php
+        $title = 'category';
+    @endphp
     @section('css')
         <!-- link css -->
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">

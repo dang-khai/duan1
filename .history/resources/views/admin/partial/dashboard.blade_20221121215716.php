@@ -1,5 +1,5 @@
 @php
-    $nameRoute = request()
+    $url = request()
         ->route()
         ->getName();
 @endphp
@@ -14,9 +14,7 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a href="{{ route('admin_home') }}"
-                class="nav-link {{ $nameRoute == 'admin_home' ? 'active' : 'text-dark' }}" id="admin-home"
-                aria-current="page">
+            <a href="{{ route('admin_home') }}" class="nav-link text-dark" id="admin-home" aria-current="page">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#home" />
                 </svg>
@@ -24,8 +22,7 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('admin_category') }}"
-                class="nav-link {{ $nameRoute == 'admin_category' ? 'active' : 'text-dark' }}" id="admin-category">
+            <a href="{{ route('admin_category') }}" class="nav-link text-dark" id="admin-category">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#speedometer2" />
                 </svg>
@@ -33,8 +30,7 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('admin_orders') }}"
-                class="nav-link {{ $nameRoute == 'admin_orders' ? 'active' : 'text-dark' }}" id="admin-orders">
+            <a href="{{ route('admin_orders') }}" class="nav-link text-dark" id="admin-orders">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#table" />
                 </svg>
@@ -42,8 +38,7 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('admin_product') }}"
-                class="nav-link {{ $nameRoute == 'admin_product' ? 'active' : 'text-dark' }}" id="admin-product">
+            <a href="{{ route('admin_product') }}" class="nav-link text-dark" id="admin-product">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#grid" />
                 </svg>
@@ -51,8 +46,7 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('admin_customers') }}"
-                class="nav-link {{ $nameRoute == 'admin_customers' ? 'active' : 'text-dark' }}" id="admin-customers">
+            <a href="{{ route('admin_customers') }}" class="nav-link text-dark" id="admin-customers">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#people-circle" />
                 </svg>
