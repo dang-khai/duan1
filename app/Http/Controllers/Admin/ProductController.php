@@ -26,12 +26,12 @@ class ProductController extends Controller
     public function addProduct(ProductValidate $request)
     {
         $input = $request->validated();
+
         if ($this->Product->addProduct($input)) {
             toast('Add product successfully!', 'success')->autoClose(1500);
             return redirect()->route('admin_product');
-        } else {
-            return redirect('admin_product')->with('error', 'Add product unsuccesfully')->withInput($input);
         }
+        
     }
 
     public function deleteProduct($id)
