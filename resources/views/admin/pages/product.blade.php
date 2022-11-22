@@ -35,7 +35,7 @@
                                 @csrf
                                 <div class="mb-3">
                                     <label class="form-label">Tên sản phẩm</label>
-                                    <input type="text" class="form-control" name="name">
+                                    <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                                     @error('name')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
@@ -54,28 +54,28 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Đời</label>
-                                    <input type="text" class="form-control" name="year">
+                                    <input type="text" class="form-control" name="year" value="{{ old('year') }}">
                                     @error('year')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Màu</label>
-                                    <input type="text" class="form-control" name="color">
+                                    <input type="text" class="form-control" name="color" value="{{ old('color') }}">
                                     @error('color')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Giá</label>
-                                    <input type="text" class="form-control" name="price">
+                                    <input type="text" class="form-control" name="price" value="{{ old('price') }}">
                                     @error('price')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Mô tả</label>
-                                    <textarea class="form-control" rows="3" name="description"></textarea>
+                                    <textarea class="form-control" rows="3" name="description">{{ old('description') }}</textarea>
                                     @error('description')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
@@ -91,6 +91,7 @@
         <table class="table table-striped w-75">
             <thead>
                 <tr>
+                    <th scope="col">STT</th>
                     <th scope="col">Tên</th>
                     <th scope="col">Loại</th>
                     <th scope="col">Đời</th>
@@ -102,6 +103,7 @@
             </thead>
             <tr>
                 @foreach ($data as $data)
+                    <th scope="row">{{ $stt++ }}</td>
                     <th scope="row">{{ $data->name }}</td>
                     <td>{{ $data->name_cate }}</td>
                     <td>{{ $data->year }}</td>

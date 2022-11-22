@@ -20,7 +20,8 @@ class ProductController extends Controller
     {
         $data = DB::table('category')->join('product', 'category.id', '=', 'product.id_cate')->get();
         $cate = DB::table('category')->get();
-        return view('admin.pages.product', compact('data', 'cate'));
+        $stt = 1;
+        return view('admin.pages.product', compact('data', 'cate', 'stt'));
     }
 
     public function addProduct(ProductValidate $request)
