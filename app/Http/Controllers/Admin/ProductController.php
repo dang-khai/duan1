@@ -46,7 +46,7 @@ class ProductController extends Controller
         }
     }
 
-    public function edit_product(Request $request)
+    public function edit_product(ProductValidate $request)
     {
         $input = [
             'id' => $request->id,
