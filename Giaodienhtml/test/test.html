@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	
+ * {
+	 box-sizing: border-box;
+}
+ body {
+	 background-color: #fff;
+}
+ .wrap {
+	 font-family: 'Source Sans Pro', sans-serif;
+	 font-size: 16px;
+	 font-weight: normal;
+	 line-height: 1.4;
+	 padding: 4rem;
+}
+ .wrap > * {
+	 display: block;
+	 margin: 0 auto;
+	 max-width: 33.333%;
+}
+ .read-more {
+	 position: relative;
+	 color: #34495e;
+	 text-decoration: none;
+	 cursor: text;
+}
+ .read-more .trigger {
+	 display: block;
+	 position: absolute;
+	 bottom: 0;
+	 cursor: pointer;
+	 color: #2980b9;
+	 font-weight: bold;
+}
+ .read-more .content {
+	 position: relative;
+	 overflow: hidden;
+	 max-height: 89.6px;
+	 transition: max-height 500ms ease;
+}
+ .read-more .content::before {
+	 content: '';
+	 background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+	 position: absolute;
+	 bottom: 0;
+	 width: 100%;
+	 height: 44.8px;
+	 transition: opactiy 500ms ease, visibility 500ms ease;
+}
+ .read-more.expanded .content {
+	 max-height: 600px;
+}
+ .read-more.expanded .content::before, .read-more.expanded .trigger {
+	 opacity: 0;
+	 visibility: hidden;
+}
+ 
+</style>
+<body>
+	<div class="wrap">
+		<div class="read-more" onclick="this.classList.add('expanded')">
+		  <div class="content">
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc</p>
+		  </div>
+		  <span class="trigger">+ read more</span>
+		</div>
+	  </div>
+</body>
+</html>
