@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/header-footer-style.css">
+    <link rel="stylesheet" href="./css/login-style.css">
+    <script src="./js/register_Validator.js"></script>
+</head>
+<body>
+     
+    <header>
+        <nav>
+            <div class="navbar">
+                <ul class="nav-control nav-flex">
+                    <li class="nav-item">
+                        <div class="img-logo">
+                            <a href="">
+                                <img src="./img/car logo.png" alt="Logo" width="118" height="32">
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="" class="">Xe mới </a></li>
+                    <li class="nav-item"><a href="" class="">Xe Cũ </a></li>
+                    <li class="nav-item"><a href="" class="">Đấu giá xe </a></li>
+                    <li class="nav-item"><a href="" class="">Bán xe </a></li>
+                    <li class="nav-item"><a href="" class="">Kinh nghiệm </a><i class="fa-solid fa-chevron-down"></i> </li>
+                    <li class="nav-item"><a href="" class=""><i class="fa-solid fa-user"></i>  Đăng nhập </a></li>
+                    <li class="nav-item"><a href="" class=""><i class="fa-solid fa-globe"></i> VIE </a><i class="fa-solid fa-chevron-down"></i></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-login flex-center">    
+            <div class="main-content container--1024 flex-center flex-around">
+                <div class="form-login row">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="" >Tên tài khoản</label>
+                            <input type="text" placeholder="Nhập tên tài khoản" class="row form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="" >Mật khẩu</label>
+                            <input type="password" placeholder="Nhập mật khẩu" class="row form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="" ><br></label>
+                            <input type="button" value="Đăng nhập" class="row form-control bg-submit" onclick="submit()">
+                        </div>
+                        <div class="form-group">
+                            <p class="text-center" style="color:#FFF;">Chưa có tài khoản? <span><a href="./register.html">Đăng ký</a></span></p>
+                        </div>
+                    </form>
+                    <div id="Success"></div>
+                </div>
+                <div class="logo-Welcome">
+                    <div class="box-background flex-center">
+                        <div class="in-box-welcome flex-col">
+                            <div class="row flex-center">
+                                <img src="./img/car logo.png" alt="" width="236" height="63">
+                            </div>
+                            
+                            <div class="row label-box text-center">
+                                <p>Đăng nhập</p>
+                                <p>Chào mừng tới Autohunt</p>
+                            </div>
+                            <div class="row flex-center">
+                                <div class="flex-start item-footer">
+                                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="">
+        <div class="logo-footer flex-center">
+            <img src="./img/car logo.png" alt="" width="138" height="37">
+        </div>
+        <div id="line" class="flex-center ">
+            <img src="./img/line_left.png" alt="">
+            <img src="./img/line_right.png" alt="">
+        </div>
+
+        <!-- Three Col in Footer -->
+        <div class="content-footer flex-3-col">
+            <div class="col-l">
+                <p><a href="#" name="FAQ">VỀ CHÚNG TÔI</a></p>
+                <p><a href="#" name="CONTACT">CÂU HỎI THƯỜNG GẶP</a></p>
+                <p><a href="#" name="ABOUT US">LIÊN HỆ</a></p>
+            </div>
+            <div class="col-m">
+                <p><a href="#" name="CUSTOMER SERVICE">DỊCH VỤ KHÁCH HÀNG</a></p>
+                <p><a href="#" name="EMAIL">info@car.com</a></p>
+                <p><a href="#" name="PHONE">+84 823.787.551</a></p>
+            </div>
+            <div class="col-r">
+                <p>Tòa nhà Innovation, lô 24, Công viên QTSC, Quận 12, TP Hồ Chí Minh</p>
+                <div class="flex-start item-footer">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <!-- Three Col in Footer -->
+        <div id="line" class="flex-center ">
+            <img src="./img/line_left.png" alt="">
+            <img src="./img/line_right.png" alt="">
+        </div>
+        <div class="bot-footer flex-center">
+            <p>2021 Autohunt. All Rights reserved</p>
+        </div>
+    </footer>
+<script>
+    
+</script>
+</body>
+</html>

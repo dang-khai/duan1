@@ -1,0 +1,49 @@
+.content-register{
+    min-height: 664px;
+}
+
+.invalid{
+    display: block;
+    margin-top: 16px;
+    color:red;
+}
+
+input{
+    margin-bottom: 4px;
+}
+/* .valid::after{
+    display: none;
+    margin-top: 6px;
+    content:" hợp lệ";
+    color:green;
+} */
+
+
+.successRegister{
+    display:none;
+    color:green;
+}
+/*
+input + span {
+    position: relative;
+  }
+  
+  input + span::before {
+    position: absolute;
+    right: -20px;
+    top: 5px;
+  }
+  
+  input:invalid {
+    border: 2px solid red;
+  }
+  
+  input:invalid + span::before {
+    content: "✖";
+    color: red;
+  }
+  
+  input:valid + span::before {
+    content: "✓";
+    color: green;
+  } */
