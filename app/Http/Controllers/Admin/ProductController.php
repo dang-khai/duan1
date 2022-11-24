@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Image;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductValidate;
 
@@ -15,6 +16,7 @@ class ProductController extends Controller
     {
         $this->Product = new Product();
         $this->Category = new Category();
+        $this->Image = new Image();
     }
     public function product()
     {
@@ -27,12 +29,21 @@ class ProductController extends Controller
     public function addProduct(ProductValidate $request)
     {
         $input = $request->validated();
-
-        if ($this->Product->addProduct($input)) {
+        $new_product = $this->Product->addProduct($input);
+        if($request->has('images')){
+            foreach($request->file('images') as $image){
+                $imageName = $input['name'].'-image-'.time().rand(1,1000).'.'.$image->extension();
+                $image->move(public_path('product_images'),$imageName);
+                $this->Image->addImage([
+                    'id_product' => DB::table('product')->latest('id')->first()->id,
+                    'url' => $imageName
+                ]);
+            }
+        }
+        if ($new_product) {
             toast('Add product successfully!', 'success')->autoClose(1500);
             return redirect()->route('admin_product');
         }
-        
     }
 
     public function deleteProduct($id)

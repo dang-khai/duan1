@@ -30,4 +30,8 @@ class Product extends Model
     public function updateProduct($id, $input){
         return DB::table('product')->where('id', '=', $id)->update($input);
     }
+
+    public function images(){
+        return $this->hasMany(Image::class);
+    }
 }
