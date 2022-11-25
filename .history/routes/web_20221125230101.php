@@ -20,11 +20,11 @@ use App\Http\Controllers\HomeController as HomeController_user;
 
 Route::get('/', function () {
     return view('users.pages.home');
-})->name('user_home'); // Trang home guests
+})->name('user_home');
 
 Route::get('/details', function () {
     return view('users.pages.product-detail')->name('details');
-}); //Trang product details
+});
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'home'])->name('admin_home'); //trang home admin
@@ -45,4 +45,4 @@ Route::prefix('admin')->group(function () {
 
 Auth::routes();
 
-Route::get('/home', [HomeController_user::class, 'index'])->name('home'); //Trang home guests and users
+Route::get('/home', [HomeController_user::class, 'index'])->name('home');

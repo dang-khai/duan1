@@ -45,4 +45,4 @@ Route::prefix('admin')->group(function () {
 
 Auth::routes();
 
-Route::get('/home', [HomeController_user::class, 'index'])->name('home'); //Trang home guests and users
+Route::get('/home', [HomeController_user::class, 'index'])->name('home'); //Trang home user
