@@ -107,77 +107,77 @@
                 ></div>
             </div>
             <script src="js/slideshow.js"></script>
+            <form action="">
             <div class="filter">
-                <form method="POST" action="">
-                    <div id="select-car" class="select-car">
-                        <a
-                            class="all-car text-select-car active-text-select-car"
-                            >Tất cả</a
-                        >
-                        <a class="new-car text-select-car">Xe mới</a>
-                        <a class="old-car text-select-car">Xe cũ</a>
-                    </div>
-                    <div class="search-model-brand">
-                        <input
-                            type="search"
-                            class="search"
-                            placeholder="Tìm kiếm"
-                        />
-                        <select class="model" name="" id="">
-                            <option value="">Dòng xe</option>
-                        </select>
-                        <select class="brand" name="" id="">
-                            <option value="">Hãng xe</option>
-                        </select>
-                    </div>
-                    <div class="location-price-submit">
-                        <input
-                            type="text"
-                            name=""
-                            id=""
-                            class="location"
-                            placeholder="Địa điểm"
-                        />
-                        <div class="price">
-                            <div class="values">
-                                <span class="text-note-price"
-                                    >Mức Giá
-                                    <span class="note-price"
-                                        >(triệu)</span
-                                    ></span
-                                >
-                                <br />
-                                <span class="text-range"
-                                    >₫.<span id="range1">0</span> - ₫<span
-                                        id="range2"
-                                        >100</span
-                                    ></span
-                                >
-                            </div>
-                            <div class="scroll-bar">
-                                <div class="slider-track">
-                                    <input
-                                        type="range"
-                                        min="0"
-                                        max="9000"
-                                        value="0"
-                                        id="slider-1"
-                                        oninput="slideOne()"
-                                    />
-                                    <input
-                                        type="range"
-                                        min="0"
-                                        max="9000"
-                                        value="9000"
-                                        id="slider-2"
-                                        oninput="slideTwo()"
-                                    />
-                                </div>
+                <div id="select-car" class="select-car">
+                    <a class="all-car text-select-car active-text-select-car"
+                        >Tất cả</a
+                    >
+
+                    <a class="new-car text-select-car">Xe mới</a>
+
+                    <a class="old-car text-select-car">Xe cũ</a>
+                </div>
+                <div class="search-model-brand">
+                    <input
+                        type="search"
+                        class="search"
+                        placeholder="Tìm kiếm"
+                    />
+                    <select class="model" name="" id="">
+                        <option value="">Dòng xe</option>
+                    </select>
+                    <select class="brand" name="" id="">
+                        <option value="">Hãng xe</option>
+                    </select>
+                </div>
+                <div class="location-price-submit">
+                    <input
+                        type="text"
+                        name=""
+                        id=""
+                        class="location"
+                        placeholder="Địa điểm"
+                    />
+                    <div class="price">
+                        <div class="values">
+                            <span class="text-note-price"
+                                >Mức Giá
+                                <span class="note-price">(triệu)</span></span
+                            >
+                            <br />
+                            <span class="text-range"
+                                >₫.<span id="range1">0</span> - ₫<span
+                                    id="range2"
+                                    >100</span
+                                ></span
+                            >
+                        </div>
+                        <div class="scroll-bar">
+                            <div class="slider-track">
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="9000"
+                                    value="0"
+                                    id="slider-1"
+                                    oninput="slideOne()"
+                                />
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="9000"
+                                    value="9000"
+                                    id="slider-2"
+                                    oninput="slideTwo()"
+                                />
                             </div>
                         </div>
-                        <button class="submit" type="submit">Tìm kiếm</button>
                     </div>
-                </form>
+                    <button class="submit" type="submit">Tìm kiếm</button>
+                </div>
+                </div>
+            </form>
                 <script src="js/scroll-bar.js"></script>
                 <script src="js/select-car-active.js"></script>
             </div>
