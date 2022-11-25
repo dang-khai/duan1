@@ -1,0 +1,270 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    font-family:'Lato';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+} */
+body .container {
+    width: 100%;
+    background-color: #0B0C10;
+    padding: auto;
+}
+.row{
+    width: 100%;
+}
+
+.container{
+    width: 1440px;
+}
+
+.container--1260{
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.container--1024{
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-around{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.flex-start{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/*-------------- Header - Navigation - Header ----------*/
+header {
+    width: 100%;
+    height: 54px;
+    margin: auto;
+    background-color: #12232e;
+}
+
+header .logo_header {
+    width: 117.63px;
+    height: 32px;
+    margin-left: 188.69px;
+    margin-top: 11px;
+    float: left;
+}
+
+header .logo_header img {
+    width: 100%;
+}
+
+header .menu_header {
+    list-style-type: none;
+    float: left;
+    line-height: 54px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.menu_header li {
+    display: inline-block;
+    margin-left: 72px;
+}
+
+.menu_header li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu_header li a .ic_exp {
+    margin-left: 12px;
+}
+
+header .login-language_header {
+    float: left;
+    margin-left: 72px;
+    color: #ffffff;
+    line-height: 54px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.login-language_header .login {
+    float: left;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.login-language_header .login .ic_login {
+    float: left;
+    margin-top: 17px;
+}
+
+.login-language_header .login .text_login {
+    float: left;
+    margin-left: 3px;
+}
+
+.login-language_header .language {
+    float: left;
+    margin-left: 38px;
+}
+
+.login-language_header .language .ic_language {
+    float: left;
+    margin-top: 18px;
+}
+
+.login-language_header .language .text_language {
+    float: left;
+    margin-left: 4px;
+}
+
+.login-language_header .language .ic_language-2 {
+    float: left;
+    margin-top: 22px;
+    margin-left: 8px;
+}
+
+/* --------------------- End Navigation ------------------*/
+
+/* ------------- Main - Content - Main --------------- */
+main{
+    width: 100%;
+    background: #0B0C10;
+}
+
+/* -------------------- End Main ------------------ */
+
+/* ------------- Footer - Footer ------------ */
+footer {
+    width: 100%;
+    height: 306px;
+    background: #12232e;
+}
+
+footer .container_footer {
+    width: 1440px;
+    height: 306px;
+    margin: auto;
+}
+
+.container_footer .logo_footer {
+    display: block;
+    width: 138px;
+    height: 37px;
+    padding: 24px 0;
+    margin: auto;
+}
+
+.container_footer .logo_footer img {
+    width: 100%;
+}
+
+.container_footer .lines {
+    display: block;
+}
+
+.container_footer .menu_footer {
+    width: 1059px;
+    height: 104px;
+    margin: 36px auto;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.menu_footer .block-1_menu_footer {
+    width: 158px;
+    height: 99px;
+    margin-top: 0.5px;
+    float: left;
+}
+
+.block-1_menu_footer a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin-top: 24px;
+}
+
+.menu_footer .block-2_menu_footer {
+    width: 158px;
+    height: 99px;
+    margin-top: 2.5px;
+    float: left;
+    margin-left: 275px;
+}
+
+.block-2_menu_footer a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    font-weight: 400;
+}
+
+.block-2_menu_footer p {
+    color: #ffffff;
+    margin-top: 24px;
+    font-weight: 500;
+}
+
+.menu_footer .block-3_menu_footer {
+    width: 128px;
+    height: 104px;
+    float: right;
+}
+
+.block-3_menu_footer p {
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.block-3_menu_footer a {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin-top: 12px;
+    float: left;
+    margin-left: 24px;
+}
+
+.block-3_menu_footer a img {
+    width: 100%;
+}
+
+.container_footer .copyright {
+    font-weight: 500;
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 15px;
+}
+.item-footer{
+    gap:20px;
+}
+/* --------------- END Footer -------------- */
+
