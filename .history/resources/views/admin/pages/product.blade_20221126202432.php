@@ -92,30 +92,29 @@
                 </div>
             </div>
         </section>
-        <table class="table table-striped w-75">
+        <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">STT</th>
-                    <th scope="col">Tên</th>
-                    <th scope="col">Loại</th>
-                    <th scope="col">Đời</th>
-                    <th scope="col">Màu</th>
-                    <th scope="col">Mô tả</th>
-                    <th scope="col">Giá</th>
-                    <th scope="col">Handle</th>
+                    <th>STT</th>
+                    <th>Tên</th>
+                    <th>Loại</th>
+                    <th>Đời</th>
+                    <th>Màu</th>
+                    <th>Mô tả</th>
+                    <th>Giá</th>
+                    <th>Handle</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($data as $data)
-                    <tr>
-                        <th scope="row">{{ $stt++ }}</td>
+                <tr>
+                    @foreach ($data as $data)
+                        <th>{{ $stt++ }}</td>
                         <td>{{ $data->name }}</td>
                         <td>{{ $data->name_cate }}</td>
                         <td>{{ $data->year }}</td>
                         <td>{{ $data->color }}</td>
                         <td>{{ $data->description }}</td>
                         <td>{{ $data->price }}</td>
-                        <td class="d-flex">
                             <form method="POST" action="{{ route('admin_edit') }}" enctype="multipart/form-data">
                                 @csrf
                                 <button type="button" class="btn btn-secondary me-2" data-bs-toggle="modal"
@@ -189,12 +188,12 @@
                             </form>
                             <form action="{{ route('admin_imgProduct', $data->id) }}"><button
                                     class="btn btn-primary">Hình
-                                    ảnh</button>
-                            </form>
+                                    ảnh</button></form>
                         </td>
-                    </tr>
-                @endforeach
+                    @endforeach
+                </tr>
             </tbody>
         </table>
+
     @endsection
 </div>

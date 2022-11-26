@@ -108,7 +108,7 @@
             <tbody>
                 @foreach ($data as $data)
                     <tr>
-                        <th scope="row">{{ $stt++ }}</td>
+                        <th>{{ $stt++ }}</td>
                         <td>{{ $data->name }}</td>
                         <td>{{ $data->name_cate }}</td>
                         <td>{{ $data->year }}</td>

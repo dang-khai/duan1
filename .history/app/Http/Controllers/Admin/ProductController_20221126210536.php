@@ -49,7 +49,6 @@ class ProductController extends Controller
     public function deleteProduct($id)
     {
         if ($this->Product->deleteProduct($id)) {
-            $this->DeleteAllImages($id);
             // return redirect('admin/product')->with('success', 'Delete Successfully');
             toast('Delete product successfully!', 'success')->autoClose(1500);
             return redirect('admin/product');
@@ -84,8 +83,9 @@ class ProductController extends Controller
     public function DeleteAllImages($id)
     {
         $products = Product::find($id);
-        foreach ($products as $product) {
-            $file_path = public_path('product_images/') . $product->url;
+        $imgs = $products->images;
+        foreach ($imgs as $img) {
+            $file_path = public_path('product_images/') . $img->url;
             unlink($file_path);
         }
     }

@@ -92,15 +92,15 @@
                 </div>
             </div>
         </section>
-        <table class="table table-striped w-75">
+        <table class="table table-striped">
             <thead>
-                <tr>
+                <tr style="overflow: auto">
                     <th scope="col">STT</th>
                     <th scope="col">Tên</th>
                     <th scope="col">Loại</th>
                     <th scope="col">Đời</th>
                     <th scope="col">Màu</th>
-                    <th scope="col">Mô tả</th>
+                    <th scope="col" style="width:20%">Mô tả</th>
                     <th scope="col">Giá</th>
                     <th scope="col">Handle</th>
                 </tr>
@@ -108,7 +108,7 @@
             <tbody>
                 @foreach ($data as $data)
                     <tr>
-                        <th scope="row">{{ $stt++ }}</td>
+                        <th>{{ $stt++ }}</td>
                         <td>{{ $data->name }}</td>
                         <td>{{ $data->name_cate }}</td>
                         <td>{{ $data->year }}</td>
@@ -189,12 +189,12 @@
                             </form>
                             <form action="{{ route('admin_imgProduct', $data->id) }}"><button
                                     class="btn btn-primary">Hình
-                                    ảnh</button>
-                            </form>
+                                    ảnh</button></form>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
+
     @endsection
 </div>

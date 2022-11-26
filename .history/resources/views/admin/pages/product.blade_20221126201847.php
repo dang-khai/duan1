@@ -92,23 +92,23 @@
                 </div>
             </div>
         </section>
-        <table class="table table-striped w-75">
+        <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">STT</th>
-                    <th scope="col">Tên</th>
-                    <th scope="col">Loại</th>
-                    <th scope="col">Đời</th>
-                    <th scope="col">Màu</th>
-                    <th scope="col">Mô tả</th>
-                    <th scope="col">Giá</th>
-                    <th scope="col">Handle</th>
+                    <th class="col">STT</th>
+                    <th class="col">Tên</th>
+                    <th class="col">Loại</th>
+                    <th class="col">Đời</th>
+                    <th class="col">Màu</th>
+                    <th class="col">Mô tả</th>
+                    <th class="col">Giá</th>
+                    <th class="col">Handle</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($data as $data)
-                    <tr>
-                        <th scope="row">{{ $stt++ }}</td>
+                <tr>
+                    @foreach ($data as $data)
+                        <td>{{ $stt++ }}</td>
                         <td>{{ $data->name }}</td>
                         <td>{{ $data->name_cate }}</td>
                         <td>{{ $data->year }}</td>
@@ -189,12 +189,12 @@
                             </form>
                             <form action="{{ route('admin_imgProduct', $data->id) }}"><button
                                     class="btn btn-primary">Hình
-                                    ảnh</button>
-                            </form>
+                                    ảnh</button></form>
                         </td>
-                    </tr>
-                @endforeach
+                    @endforeach
+                </tr>
             </tbody>
         </table>
+
     @endsection
 </div>

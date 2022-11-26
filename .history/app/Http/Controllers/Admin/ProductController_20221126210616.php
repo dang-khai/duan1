@@ -17,6 +17,7 @@ class ProductController extends Controller
         $this->Product = new Product();
         $this->Category = new Category();
         $this->Image = new Image();
+        $this->deleteProduct = new DeleteProduct();
     }
     public function product()
     {
@@ -49,7 +50,6 @@ class ProductController extends Controller
     public function deleteProduct($id)
     {
         if ($this->Product->deleteProduct($id)) {
-            $this->DeleteAllImages($id);
             // return redirect('admin/product')->with('success', 'Delete Successfully');
             toast('Delete product successfully!', 'success')->autoClose(1500);
             return redirect('admin/product');

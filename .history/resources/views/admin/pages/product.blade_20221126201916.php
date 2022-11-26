@@ -92,7 +92,7 @@
                 </div>
             </div>
         </section>
-        <table class="table table-striped w-75">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">STT</th>
@@ -106,14 +106,14 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($data as $data)
-                    <tr>
+                <tr>
+                    @foreach ($data as $data)
                         <th scope="row">{{ $stt++ }}</td>
                         <td>{{ $data->name }}</td>
                         <td>{{ $data->name_cate }}</td>
                         <td>{{ $data->year }}</td>
                         <td>{{ $data->color }}</td>
-                        <td>{{ $data->description }}</td>
+                        <td class="w-75">{{ $data->description }}</td>
                         <td>{{ $data->price }}</td>
                         <td class="d-flex">
                             <form method="POST" action="{{ route('admin_edit') }}" enctype="multipart/form-data">
@@ -189,12 +189,12 @@
                             </form>
                             <form action="{{ route('admin_imgProduct', $data->id) }}"><button
                                     class="btn btn-primary">Hình
-                                    ảnh</button>
-                            </form>
+                                    ảnh</button></form>
                         </td>
-                    </tr>
-                @endforeach
+                    @endforeach
+                </tr>
             </tbody>
         </table>
+
     @endsection
 </div>

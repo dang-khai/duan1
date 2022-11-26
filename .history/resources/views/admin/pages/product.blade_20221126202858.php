@@ -92,7 +92,7 @@
                 </div>
             </div>
         </section>
-        <table class="table table-striped w-75">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">STT</th>
@@ -108,7 +108,7 @@
             <tbody>
                 @foreach ($data as $data)
                     <tr>
-                        <th scope="row">{{ $stt++ }}</td>
+                        <th>{{ $stt++ }}</td>
                         <td>{{ $data->name }}</td>
                         <td>{{ $data->name_cate }}</td>
                         <td>{{ $data->year }}</td>
@@ -189,12 +189,12 @@
                             </form>
                             <form action="{{ route('admin_imgProduct', $data->id) }}"><button
                                     class="btn btn-primary">Hình
-                                    ảnh</button>
-                            </form>
+                                    ảnh</button></form>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
+
     @endsection
 </div>

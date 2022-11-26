@@ -92,7 +92,7 @@
                 </div>
             </div>
         </section>
-        <table class="table table-striped w-75">
+        {{-- <table class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">STT</th>
@@ -108,7 +108,7 @@
             <tbody>
                 @foreach ($data as $data)
                     <tr>
-                        <th scope="row">{{ $stt++ }}</td>
+                        <th>{{ $stt++ }}</td>
                         <td>{{ $data->name }}</td>
                         <td>{{ $data->name_cate }}</td>
                         <td>{{ $data->year }}</td>
@@ -195,6 +195,95 @@
                     </tr>
                 @endforeach
             </tbody>
-        </table>
+        </table> --}}
+        <div class="container">
+            @foreach ($data as $data)
+                <div class="row">
+                    <div class="col p-3">{{ $stt++ }}</div>
+                    <div class="col p-3">{{ $data->name }}</div>
+                    <div class="col  p-3">{{ $data->name_cate }}</div>
+                    <div class="col p-3">{{ $data->year }}</div>
+                    <div class="col p-3">{{ $data->color }}</div>
+                    <div class="col p-3">{{ $data->description }}</div>
+                    <div class="col p-3">{{ $data->price }}</div>
+                    <div class="col p-3">
+                        <form method="POST" action="{{ route('admin_edit') }}" enctype="multipart/form-data">
+                            @csrf
+                            <button type="button" class="btn btn-secondary me-2" data-bs-toggle="modal"
+                                data-bs-target="#editModal{{ $data->id }}">Sửa</button>
+                            <section>
+                                <!-- Modal edit -->
+                                <div class="modal fade" id="editModal{{ $data->id }}" tabindex="-1"
+                                    aria-labelledby="" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Chỉnh sửa sản phẩm</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- sửa sp -->
+                                                <div class="mb-3">
+                                                    <input type="hidden" class="form-control" name="id"
+                                                        value="{{ $data->id }}">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Tên sản phẩm</label>
+                                                    <input type="text" class="form-control" name="name"
+                                                        value="{{ $data->name }}">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Loại</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        name="id_cate">
+                                                        <!-- <option selected>{{ $data->name_cate }}</option> -->
+                                                        @foreach ($cate as $cates)
+                                                            <option value="{{ $cates->id }}">
+                                                                {{ $cates->name_cate }}
+                                                            </option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Đời</label>
+                                                    <input type="text" class="form-control" name="year"
+                                                        value="{{ $data->year }}">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Màu</label>
+                                                    <input type="text" class="form-control" name="color"
+                                                        value="{{ $data->color }}">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Giá</label>
+                                                    <input type="text" class="form-control" name="price"
+                                                        value="{{ $data->price }}">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Mô tả</label>
+                                                    <textarea class="form-control" rows="3" name="description">{{ $data->description }}</textarea>
+                                                </div>
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </form>
+                        <form method="POST" action="{{ route('admin_deleteProduct', $data->id) }}">
+                            @csrf
+                            <button type="submit" class="btn btn-danger me-2"
+                                onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này không !')">Xóa</button>
+                        </form>
+                        <form action="{{ route('admin_imgProduct', $data->id) }}"><button class="btn btn-primary">Hình
+                                ảnh</button>
+                        </form>
+                    </div>
+                </div>
+            @endforeach
+        </div>
     @endsection
 </div>
