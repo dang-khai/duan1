@@ -33,6 +33,7 @@ Route::prefix('admin')->group(function () {
     Route::post('/product/edit', [ProductController::class, 'edit_product'])->name('admin_edit'); // edit product admin
     Route::post('/product/addProduct', [ProductController::class, 'addProduct'])->name('admin_addProduct'); // add product admin
     Route::post('/product/deleteProduct/{id}', [ProductController::class, 'deleteProduct'])->name('admin_deleteProduct'); // add product admin
+    Route::get('/product/image/{id}', [ProductController::class, 'image'])->name('admin_imgProduct'); // product image admin
     //route category
     Route::get('/category', [CategoryController::class, 'category'])->name('admin_category'); // trang category admin
     Route::post('/category/edit', [CategoryController::class, 'editCategory'])->name('admin_editCategory'); // edit product admin

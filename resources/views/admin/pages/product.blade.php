@@ -183,9 +183,10 @@
                 </form>
                 <form method="POST" action="{{ route('admin_deleteProduct', $data->id) }}">
                     @csrf
-                    <button type="submit" class="btn btn-danger"
+                    <button type="submit" class="btn btn-danger me-2"
                         onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này không !')">Xóa</button>
                 </form>
+                <form action="{{ route('admin_imgProduct', $data->id) }}" ><button class="btn btn-primary">Hình ảnh</button></form>
             </td>
         </tr>
         @endforeach
