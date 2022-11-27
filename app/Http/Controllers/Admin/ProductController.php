@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\Image;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductValidate;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -33,7 +34,7 @@ class ProductController extends Controller
         if ($request->has('images')) {
             foreach ($request->file('images') as $image) {
                 $imageName = $input['name'] . '-image-' . time() . rand(1, 1000) . '.' . $image->extension();
-                $image->move(public_path('product_images'), $imageName);
+                $image->move(public_path('storage/'), $imageName);
                 $this->Image->addImage([
                     'id_product' => DB::table('product')->latest('id')->first()->id,
                     'url' => $imageName
@@ -48,8 +49,8 @@ class ProductController extends Controller
 
     public function deleteProduct($id)
     {
+        $this->deleteAllImage($id);
         if ($this->Product->deleteProduct($id)) {
-            $this->DeleteAllImages($id);
             // return redirect('admin/product')->with('success', 'Delete Successfully');
             toast('Delete product successfully!', 'success')->autoClose(1500);
             return redirect('admin/product');
@@ -81,12 +82,18 @@ class ProductController extends Controller
         $img = $product->images;
         return view('admin/pages/image', compact('img'));
     }
-    public function DeleteAllImages($id)
+    public function deleteAllImage($id)
     {
-        $products = Product::find($id);
-        foreach ($products as $product) {
-            $file_path = public_path('product_images/') . $product->url;
-            unlink($file_path);
-        }
+        $images = image::where('id_product', '=', $id)->get();
+        foreach ($images as $img) {
+            $url = $img->url;
+            if(Storage::disk('public')->exists($url)){
+                Storage::disk('public')->delete($url);
+            }else{
+                return "asasdas";
+            }
+        };
+        return redirect()->route('admin_imgProduct', $id);
+
     }
 }
