@@ -30,7 +30,7 @@ class ProductController extends Controller
     public function addProduct(ProductValidate $request)
     {
         $input = $request->validated();
-        $new_product = $this->Product->addProduct($input);
+        $add_product = $this->Product->addProduct($input);
         if ($request->has('images')) {
             foreach ($request->file('images') as $image) {
                 $imageName = $input['name'] . '-image-' . time() . rand(1, 1000) . '.' . $image->extension();
@@ -41,9 +41,24 @@ class ProductController extends Controller
                 ]);
             }
         }
-        if ($new_product) {
+        if ($add_product) {
             toast('Add product successfully!', 'success')->autoClose(1500);
             return redirect()->route('admin_product');
+        }
+    }
+
+    public function addImage(Request $request, $id){
+        $product = Product::find($id);
+        if ($request->has('images')) {
+            foreach ($request->file('images') as $image) {
+                $imageName = $product->name . '-image-' . time() . rand(1, 1000) . '.' . $image->extension();
+                $image->move(public_path('storage/'), $imageName);
+                $this->Image->addImage([
+                    'id_product' => $product->id,
+                    'url' => $imageName
+                ]);
+            }
+            return redirect()->back();
         }
     }
 
@@ -87,13 +102,8 @@ class ProductController extends Controller
         $images = image::where('id_product', '=', $id)->get();
         foreach ($images as $img) {
             $url = $img->url;
-            if(Storage::disk('public')->exists($url)){
-                Storage::disk('public')->delete($url);
-            }else{
-                return "asasdas";
-            }
+            Storage::disk('public')->delete($url);
         };
         return redirect()->route('admin_imgProduct', $id);
-
     }
 }

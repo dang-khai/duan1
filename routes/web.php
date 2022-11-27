@@ -36,6 +36,7 @@ Route::prefix('admin')->group(function () {
 
     // route images
     Route::get('/product/image/{id}', [ProductController::class, 'image'])->name('admin_imgProduct'); // product image admin
+    Route::post('product/addImage/{id}', [ProductController::class, 'addImage'])->name('admin_addImage'); // add product image admin
     Route::post('product/deleteImg/{id}', [ProductController::class, 'deleteAllImage'])->name('admin_deleteImage'); // product image admin
     //route category
     Route::get('/category', [CategoryController::class, 'category'])->name('admin_category'); // trang category admin
