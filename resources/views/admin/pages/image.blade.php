@@ -15,7 +15,7 @@
         <div class="col-md-3">
             <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
                 <div class="card-body">
-                    <img src="{{ asset('storage') . '/' . $image->url }}" class="card-img-top">
+                    <img src="{{ asset('storage') . '/' . $image->url }}" class="card-img" style="width: 15.4rem; height: 10rem;">
                 </div>
             </div>
         </div>

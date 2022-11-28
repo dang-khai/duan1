@@ -97,13 +97,15 @@ class ProductController extends Controller
         $img = $product->images;
         return view('admin/pages/image', compact('img'));
     }
+
     public function deleteAllImage($id)
     {
         $images = image::where('id_product', '=', $id)->get();
+        $delete =  image::where('id_product', '=', $id)->delete();
         foreach ($images as $img) {
             $url = $img->url;
             Storage::disk('public')->delete($url);
         };
-        return redirect()->route('admin_imgProduct', $id);
+        return redirect()->back();
     }
 }
