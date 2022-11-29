@@ -21,7 +21,7 @@
     .text-desc {
         white-space: nowrap;
         overflow: auto;
-        width: 300px;
+        width: 250px;
     }
     </style>
     <section>
@@ -108,7 +108,7 @@
                 <th scope="col">Loại</th>
                 <th scope="col">Đời</th>
                 <th scope="col">Màu</th>
-                <th scope="col" style="width: 35%;">Mô tả</th>
+                <th scope="col" style="width: 30%;">Mô tả</th>
                 <th scope="col">Giá</th>
                 <th scope="col">Handle</th>
             </tr>
