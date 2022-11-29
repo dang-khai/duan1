@@ -48,7 +48,7 @@ Route::prefix('admin')->group(function () {
 Auth::routes();
 
 Route::get('/home', [HomeController_user::class, 'index'])->name('home'); //Trang home guests and users
-
+Route::get('/getlogout', [LoginController::class, 'logout']);
 Route::get('/details', function () {
     return view('users.pages.product-detail');
 });

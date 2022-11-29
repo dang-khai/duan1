@@ -1,6 +1,6 @@
 @extends('users.master.master')
 
-@section('title', 'Forgot Password')
+@section('title', 'Register')
 
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
@@ -22,12 +22,12 @@
                             </div>
                             <div class="form-group">
                                 <label for=""><br></label>
-                                <input type="button" name="check" value="Reset Password"
-                                    class="row form-control bg-submit">
+                                <input type="button" name="check" value="Reset" class="row form-control bg-submit"
+                                    onclick="checkEmail()">
                             </div>
                             <div class="form-group">
-                                <p class="text-center" style="color:#FFF;">Chưa có tài khoản? <span><a href="">Đăng
-                                            ký</a></span></p>
+                                <p class="text-center" style="color:#FFF;">Chưa có tài khoản? <span><a
+                                            href="">Đăng ký</a></span></p>
                             </div>
                         </form>
                         <div id="Success"></div>

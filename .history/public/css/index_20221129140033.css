@@ -69,6 +69,9 @@ header {
     position: absolute;
 }
 
+header .container {
+}
+
 .logo_header {
     display: block;
     padding: 0.688rem 0;

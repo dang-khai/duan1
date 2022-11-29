@@ -23,6 +23,10 @@ Route::get('/', function () {
     return view('users.pages.home');
 })->name('user_home'); // Trang home guests
 
+Route::get('/details', function () {
+    return view('users.pages.product-detail')->name('details');
+}); //Trang product details
+
 Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'home'])->name('admin_home'); //trang home admin
     //route product
@@ -48,7 +52,4 @@ Route::prefix('admin')->group(function () {
 Auth::routes();
 
 Route::get('/home', [HomeController_user::class, 'index'])->name('home'); //Trang home guests and users
-
-Route::get('/details', function () {
-    return view('users.pages.product-detail');
-});
+Route::('/getlogout',[LoginController::class,'logout']);

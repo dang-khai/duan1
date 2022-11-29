@@ -1,6 +1,6 @@
 @extends('users.master.master')
 
-@section('title', 'Forgot Password')
+@section('title', 'Register')
 
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
@@ -18,7 +18,7 @@
                             <div class="form-group">
                                 <label for="">Nhập Email của bạn</label>
                                 <input type="text" name="email" id="email" placeholder="Nhập email"
-                                    class="row form-control">
+                                    class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for=""><br></label>

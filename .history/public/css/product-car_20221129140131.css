@@ -25,6 +25,9 @@ header {
     background-color: #12232e;
 }
 
+header .container {
+}
+
 .logo_header {
     display: block;
     padding: 0.688rem 0;
@@ -228,6 +231,7 @@ header {
         #d7d7d7 40.07%,
         rgba(215, 215, 215, 0.2) 100%
     );
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     max-height: 171px;
 }
@@ -242,6 +246,7 @@ header {
         #d7d7d7 100%,
         rgba(215, 215, 215, 0.2) 100%
     );
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -440,6 +445,9 @@ header {
     max-width: 664px;
 }
 
+.form-input .input-name {
+}
+
 .input-name .title-input-name {
     font-weight: 500;
     font-size: 16px;
@@ -626,6 +634,9 @@ header {
     align-items: center;
 }
 
+.reviews-product .star {
+}
+
 .star img {
     width: 32px;
     height: 32px;
@@ -770,6 +781,9 @@ footer {
 .container-center-footer {
     display: flex;
     justify-content: center;
+}
+
+footer .container_footer {
 }
 
 .container_footer .logo_footer {

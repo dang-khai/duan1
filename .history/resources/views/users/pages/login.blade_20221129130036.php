@@ -1,6 +1,6 @@
 @extends('users.master.master')
 
-@section('title', 'Forgot Password')
+@section('title', 'Login')
 
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
@@ -14,20 +14,28 @@
             <div class="content-login flex-center">
                 <div class="main-content container--1024 flex-center flex-around">
                     <div class="form-login row">
-                        <form action="">
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
                             <div class="form-group">
-                                <label for="">Nhập Email của bạn</label>
-                                <input type="text" name="email" id="email" placeholder="Nhập email"
-                                    class="row form-control">
+                                <label for="">Tên tài khoản</label>
+                                <input type="text" name="email" value="{{ old('email') }}"
+                                    placeholder="Nhập tên tài khoản" class="row form-control" />
                             </div>
                             <div class="form-group">
-                                <label for=""><br></label>
-                                <input type="button" name="check" value="Reset Password"
-                                    class="row form-control bg-submit">
+                                <label for="">Mật khẩu</label>
+                                <input type="password" name="password" placeholder="Nhập mật khẩu"
+                                    class="row form-control" />
                             </div>
                             <div class="form-group">
-                                <p class="text-center" style="color:#FFF;">Chưa có tài khoản? <span><a href="">Đăng
-                                            ký</a></span></p>
+                                <label for=""><br /></label>
+                                <input type="button" value="Đăng nhập" class="row form-control bg-submit"
+                                    onclick="submit()" />
+                            </div>
+                            <div class="form-group">
+                                <p class="text-center" style="color: #fff">
+                                    Chưa có tài khoản?
+                                    <span><a href="">Đăng ký</a></span>
+                                </p>
                             </div>
                         </form>
                         <div id="Success"></div>
@@ -36,15 +44,15 @@
                         <div class="box-background flex-center">
                             <div class="in-box-welcome flex-col">
                                 <div class="flex-center">
-                                    <img src="{{ asset('img/car_logo.png') }}" alt="" width="236" height="63">
+                                    <img srcset="{{ asset('img/car_logo.png') }} 2x" alt="" style="width:80%" />
                                 </div>
 
                                 <div class="label-box text-center">
-                                    <p>Quên mật khẩu</p>
+                                    <p>Đăng nhập</p>
                                     <p>Chào mừng tới Autohunt</p>
                                 </div>
                                 <div class="flex-center">
-                                    <div class="flex-start item-footer">
+                                    <div class="flex-start item-footer icon-ft">
                                         <a href=""><i class="fa-brands fa-facebook"></i></a>
                                         <a href=""><i class="fa-brands fa-instagram"></i></a>
                                         <a href=""><i class="fa-brands fa-youtube"></i></a>
