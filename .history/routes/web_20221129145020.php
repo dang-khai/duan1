@@ -22,7 +22,6 @@ Route::get('/', function () {
     return view('users.pages.home');
 })->name('user_home'); // Trang home guests
 
-//Route admin
 Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'home'])->name('admin_home'); //trang home admin
 
@@ -40,12 +39,10 @@ Route::prefix('admin')->group(function () {
     });
 
     //route category
-    Route::prefix('category')->group(function () {
-        Route::get('/', [CategoryController::class, 'category'])->name('admin_category'); // trang category admin
-        Route::post('/edit', [CategoryController::class, 'editCategory'])->name('admin_editCategory'); // edit product admin
-        Route::post('/addcategory', [CategoryController::class, 'addCategory'])->name('admin_addCategory'); // add product admin
-        Route::post('/deletecategory/{id}', [CategoryController::class, 'deleteCategory'])->name('admin_deleteCategory'); // add product admin
-    });
+    Route::get('/category', [CategoryController::class, 'category'])->name('admin_category'); // trang category admin
+    Route::post('/category/edit', [CategoryController::class, 'editCategory'])->name('admin_editCategory'); // edit product admin
+    Route::post('/category/addcategory', [CategoryController::class, 'addCategory'])->name('admin_addCategory'); // add product admin
+    Route::post('/category/deletecategory/{id}', [CategoryController::class, 'deleteCategory'])->name('admin_deleteCategory'); // add product admin
 
     Route::get('/customers', [HomeController::class, 'customers'])->name('admin_customers'); //trang customers admin
     Route::get('/orders', [HomeController::class, 'orders'])->name('admin_orders'); //trang orders admin

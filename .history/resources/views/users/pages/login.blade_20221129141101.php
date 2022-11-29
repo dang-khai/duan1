@@ -19,7 +19,7 @@
                             <div class="form-group">
                                 <label for="">Email</label>
                                 <input type="text" name="email" value="{{ old('email') }}" placeholder="Nhập email.."
-                                    class="row form-control" />
+                                    class="row form-control @error('email') is-invalid @enderror" />
                             </div>
                             @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -29,7 +29,7 @@
                             <div class="form-group">
                                 <label for="">Mật khẩu</label>
                                 <input type="password" name="password" placeholder="Nhập mật khẩu"
-                                    class="row form-control" />
+                                    class="row form-control @error('password') is-invalid @enderror" />
                             </div>
                             @error('password')
                                 <span class="invalid-feedback" role="alert">

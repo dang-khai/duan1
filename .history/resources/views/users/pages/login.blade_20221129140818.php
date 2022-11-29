@@ -18,24 +18,14 @@
                             @csrf
                             <div class="form-group">
                                 <label for="">Email</label>
-                                <input type="text" name="email" value="{{ old('email') }}" placeholder="Nhập email.."
-                                    class="row form-control" />
+                                <input type="text" name="email" value="{{ old('email') }}"
+                                    placeholder="Nhập tên tài khoản" class="row form-control" />
                             </div>
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
                             <div class="form-group">
                                 <label for="">Mật khẩu</label>
                                 <input type="password" name="password" placeholder="Nhập mật khẩu"
                                     class="row form-control" />
                             </div>
-                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
                             <div class="form-group">
                                 <label for=""><br /></label>
                                 <input type="submit" value="Đăng nhập" class="row form-control bg-submit" />

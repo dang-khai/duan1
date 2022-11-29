@@ -22,7 +22,6 @@ Route::get('/', function () {
     return view('users.pages.home');
 })->name('user_home'); // Trang home guests
 
-//Route admin
 Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'home'])->name('admin_home'); //trang home admin
 

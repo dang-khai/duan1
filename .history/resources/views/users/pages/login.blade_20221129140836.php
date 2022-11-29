@@ -31,11 +31,6 @@
                                 <input type="password" name="password" placeholder="Nhập mật khẩu"
                                     class="row form-control" />
                             </div>
-                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
                             <div class="form-group">
                                 <label for=""><br /></label>
                                 <input type="submit" value="Đăng nhập" class="row form-control bg-submit" />
