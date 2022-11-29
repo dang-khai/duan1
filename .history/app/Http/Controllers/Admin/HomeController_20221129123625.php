@@ -21,6 +21,9 @@ class HomeController extends Controller
     {
         return view('admin.pages.home');
     }
+
+
+
     public function orders()
     {
         return view('admin.pages.order');
@@ -28,5 +31,15 @@ class HomeController extends Controller
     public function customers()
     {
         return view('admin.pages.customer');
+    }
+    public function test()
+    {
+        $rows = DB::table('category')->get();
+        $stt = 1;
+        return view('admin.pages.test')->with(compact('rows', 'stt'));
+    }
+    public function forgot()
+    {
+        return view('users.pages.forgot');
     }
 }

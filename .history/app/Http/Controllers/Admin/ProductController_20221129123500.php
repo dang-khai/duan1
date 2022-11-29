@@ -109,4 +109,8 @@ class ProductController extends Controller
         };
         return redirect()->back();
     }
+    public function forgot()
+    {
+        return view('users.pages.forgot');
+    }
 }

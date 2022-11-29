@@ -48,6 +48,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/orders', [HomeController::class, 'orders'])->name('admin_orders'); //trang orders admin
 });
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', [HomeController_user::class, 'index'])->name('home'); //Trang home guests and users
+
+Route::get('/forgot', [HomeController::class, 'forgot']);

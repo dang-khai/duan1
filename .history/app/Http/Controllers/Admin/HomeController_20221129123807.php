@@ -21,6 +21,9 @@ class HomeController extends Controller
     {
         return view('admin.pages.home');
     }
+
+
+
     public function orders()
     {
         return view('admin.pages.order');
