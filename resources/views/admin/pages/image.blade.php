@@ -6,6 +6,25 @@
 <!-- link css -->
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 @endsection
+<style>
+.container{
+    position: relative;
+}
+.container:hover .card-img{
+    opacity: .5;
+    cursor: pointer;
+}
+.container:hover .btn-delete{
+    opacity: 1;
+}
+.btn-delete{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>
 @section('content')
 <section>
     <a href="{{ route('admin_product') }}"><button class="btn btn-primary">Trở về</button></a>
@@ -14,8 +33,9 @@
         @foreach ($img as $image)
         <div class="col-md-3">
             <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
-                <div class="card-body">
+                <div class="card-body container">
                     <img src="{{ asset('storage') . '/' . $image->url }}" class="card-img" style="width: 15.4rem; height: 10rem;">
+                    <button class="btn-delete btn-lg btn btn-danger">  Xóa  </button>
                 </div>
             </div>
         </div>
