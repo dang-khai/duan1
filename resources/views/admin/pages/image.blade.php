@@ -54,4 +54,4 @@
     </div>
 </section>
 @endsection
-            <!-- <div>{{ request()->route('id') }}</div> -->
+<!-- <div>{{ request()->route('id') }}</div> -->
