@@ -217,3 +217,12 @@
 <!-- End code slide show mobile -->
 
 <!-- End code slide-show -->
+@section('js')
+    <script>
+        $logout = document.querySelector('.login-language_header');
+        $hover = document.querySelector('.logout');
+        $logout.addEventListener('click', function() {
+            $hover.style.display = "block";
+        });
+    </script>
+@endsection

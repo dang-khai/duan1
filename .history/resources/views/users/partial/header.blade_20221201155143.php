@@ -59,11 +59,11 @@
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a> --}}
-                    <a class="login" style="cursor: pointer">
+                    <a class="login" href="{{ route('get.login') }}">
                         {{ Auth::user()->name }}
                     </a>
                     <div class="logout">
-                        <a class="logout-txt" href="{{ route('logout') }}">
+                        <a class="login" href="{{ route('logout') }}">
                             Đăng xuất
                         </a>
                     </div>

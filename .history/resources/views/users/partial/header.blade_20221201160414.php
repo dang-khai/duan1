@@ -59,7 +59,7 @@
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a> --}}
-                    <a class="login" style="cursor: pointer">
+                    <a class="login" href="{{ route('get.login') }}">
                         {{ Auth::user()->name }}
                     </a>
                     <div class="logout">
@@ -217,3 +217,12 @@
 <!-- End code slide show mobile -->
 
 <!-- End code slide-show -->
+@section('js')
+    <script>
+        $logout = document.querySelector('.login-language_header');
+        $hover = document.querySelector('.logout');
+        $logout.addEventListener('click', function() {
+            $hover.style.display = "block";
+        });
+    </script>
+@endsection

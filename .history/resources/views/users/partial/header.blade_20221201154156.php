@@ -59,15 +59,10 @@
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a> --}}
-                    <a class="login" style="cursor: pointer">
+                    <a class="login" href="{{ route('get.login') }}">
                         {{ Auth::user()->name }}
                     </a>
-                    <div class="logout">
-                        <a class="logout-txt" href="{{ route('logout') }}">
-                            Đăng xuất
-                        </a>
-                    </div>
-                    {{-- <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             Đăng xuất
@@ -75,7 +70,7 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
-                    </div> --}}
+                    </div>
                 @endguest
                 {{-- <a class="login" href="#">
                     <img class="ic_login" src="icon/bx_bxs-user.svg" alt="">

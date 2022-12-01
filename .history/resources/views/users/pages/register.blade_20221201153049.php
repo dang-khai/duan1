@@ -14,7 +14,8 @@
         <div class="content-register flex-center">
             <div class="main-content container--1024 flex-center flex-around">
                 <div class="form row">
-                    <form action="{{ route('post.register') }}" id="register-form" name="registration" method="POST">
+                    <form action="{{ route('post.register') }}" id="register-form" name="registration" method="POST"
+                        onsubmit="return formValidation();">
                         @csrf
                         <div class="form-group">
                             <label for="username">Tên Tài Khoản</label>

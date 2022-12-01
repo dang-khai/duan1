@@ -499,10 +499,12 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
     height: 0.313rem;
 }
 
 input[type="range"]::-moz-range-track {
+    -moz-appearance: none;
     height: 0.313rem;
 }
 input[type="range"]::-ms-track {
@@ -510,6 +512,7 @@ input[type="range"]::-ms-track {
     height: 0.313rem;
 }
 input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
     height: 1.5rem;
     width: 1.5rem;
     background-color: #4da8da;
@@ -519,6 +522,7 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 50%;
 }
 input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
     height: 1.5rem;
     width: 1.5rem;
     cursor: pointer;
@@ -1624,6 +1628,9 @@ footer {
     background: #12232e;
 }
 
+footer .container_footer {
+}
+
 .container_footer .logo_footer {
     display: block;
     width: 8.625rem;
@@ -1729,33 +1736,6 @@ footer {
 }
 
 /* end code phần footer */
-
-/* logout css */
-.login-language_header {
-    position: relative;
-}
-
-.logout {
-    position: absolute;
-    top: 30px;
-    background-color: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    display: none;
-}
-
-.logout-txt {
-    text-decoration: none;
-    color: #333;
-}
-
-.logout:hover {
-    background-color: #333;
-}
-.logout:hover .logout-txt {
-    color: #fff;
-}
 
 /* Responsive Media Query Start */
 

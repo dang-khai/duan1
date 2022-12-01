@@ -1741,8 +1741,6 @@ footer {
     background-color: #fff;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: all 0.3s ease;
-    display: none;
 }
 
 .logout-txt {
@@ -1752,8 +1750,6 @@ footer {
 
 .logout:hover {
     background-color: #333;
-}
-.logout:hover .logout-txt {
     color: #fff;
 }
 

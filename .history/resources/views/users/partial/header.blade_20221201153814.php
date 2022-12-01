@@ -48,39 +48,35 @@
             </ul>
             <div class="login-language_header">
                 @guest
-                    @if (Route::has('get.login'))
-                        <a class="login" href="{{ route('get.login') }}">
-                            <img class="ic_login" src="icon/bx_bxs-user.svg" alt="">
-                            Đăng nhập
-                        </a>
-                    @endif
-                @else
-                    {{-- <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }}
-                    </a> --}}
-                    <a class="login" style="cursor: pointer">
-                        {{ Auth::user()->name }}
-                    </a>
-                    <div class="logout">
-                        <a class="logout-txt" href="{{ route('logout') }}">
-                            Đăng xuất
-                        </a>
-                    </div>
-                    {{-- <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            Đăng xuất
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div> --}}
-                @endguest
-                {{-- <a class="login" href="#">
+                            @if (Route::has('get.login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('get.login') }}">
+                                        <img class="ic_login" src="{{ asset('icon/bx_bxs-user.svg') }}" alt="" />
+                                        Đăng nhập</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        Đăng xuất
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                <a class="login" href="#">
                     <img class="ic_login" src="icon/bx_bxs-user.svg" alt="">
                     Đăng nhập
-                </a> --}}
+                </a>
                 <div class="language">
                     <img class="ic_language" src="icon/clarity_world-line.svg" alt="">
                     VIE

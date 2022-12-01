@@ -49,33 +49,28 @@
             <div class="login-language_header">
                 @guest
                     @if (Route::has('get.login'))
-                        <a class="login" href="{{ route('get.login') }}">
+                        <a class="login" href="#">
                             <img class="ic_login" src="icon/bx_bxs-user.svg" alt="">
                             Đăng nhập
                         </a>
                     @endif
                 @else
-                    {{-- <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }}
-                    </a> --}}
-                    <a class="login" style="cursor: pointer">
-                        {{ Auth::user()->name }}
-                    </a>
-                    <div class="logout">
-                        <a class="logout-txt" href="{{ route('logout') }}">
-                            Đăng xuất
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
                         </a>
-                    </div>
-                    {{-- <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            Đăng xuất
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div> --}}
+
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                Đăng xuất
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
                 @endguest
                 {{-- <a class="login" href="#">
                     <img class="ic_login" src="icon/bx_bxs-user.svg" alt="">
