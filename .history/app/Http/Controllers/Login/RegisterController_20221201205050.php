@@ -20,7 +20,6 @@ class RegisterController extends Controller
             'email' => $request->email,
             'password' => $request->password,
         ];
-        User::create($arr);
-        return redirect()->route('user_home');
+        User::create();
     }
 }

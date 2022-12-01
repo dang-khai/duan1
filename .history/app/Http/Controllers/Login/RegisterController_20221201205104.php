@@ -21,6 +21,5 @@ class RegisterController extends Controller
             'password' => $request->password,
         ];
         User::create($arr);
-        return redirect()->route('user_home');
     }
 }

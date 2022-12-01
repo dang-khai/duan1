@@ -21,10 +21,7 @@
                             <input id="username" type="text" name="name" placeholder="Nhập tên tài khoản..."
                                 class="row form-control" />
                             <span class="form-message"></span>
-                            @error('name')
-                                <p style="color: red">{{ $message }}</p>
-                            @enderror
-                            @error('name')
+                            @error('email')
                                 <p style="color: red">{{ $message }}</p>
                             @enderror
                         </div>
@@ -34,27 +31,18 @@
                                 class="row form-control" />
                             <span class="form-message"></span>
                         </div>
-                        @error('email')
-                                <p style="color: red">{{ $message }}</p>
-                            @enderror
                         <div class="form-group">
                             <label for="password">Mật khẩu</label>
                             <input id="password" type="password" name="password" placeholder="Nhập mật khẩu..."
                                 class="row form-control" />
                             <span class="form-message"></span>
                         </div>
-                        @error('password')
-                                <p style="color: red">{{ $message }}</p>
-                            @enderror
                         <div class="form-group">
                             <label for="re-password">Xác nhận mật khẩu</label>
                             <input id="repassword" type="password" name="re-password" placeholder="Nhập lại mật khẩu..."
                                 class="row form-control" />
                             <span class="form-message"></span>
                         </div>
-                        @error('re-password')
-                                <p style="color: red">{{ $message }}</p>
-                            @enderror
                         <div id="successMessage" class="successRegister text-center">
                             Tạo tài khoản thành công!
                         </div>

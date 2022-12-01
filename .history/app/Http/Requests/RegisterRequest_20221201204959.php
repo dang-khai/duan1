@@ -36,8 +36,7 @@ class RegisterRequest extends FormRequest
             'email.required' => 'Phải nhập email',
             'email.email' => 'Email phải đúng định dạng',
             'password.required' => 'Phải nhập mật khẩu',
-            'password.min' => 'Mật khẩu phải có ít nhất 6 kí tự',
-            'password.confirmed' => 'Mật khẩu không khớp với nhau'
+            'password.min' => 'Mật khẩu phải có ít nhất 6 kí tự'
         ];
     }
 }
