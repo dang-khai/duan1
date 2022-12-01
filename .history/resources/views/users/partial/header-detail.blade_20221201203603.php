@@ -50,7 +50,7 @@
                 </div>
 
             </div>
-            <a class="logo_header" href="{{ route('user_home') }}"><img src="img/car_logo2.png" alt=""></a>
+            <a class="logo_header" href="#"><img src="img/car_logo2.png" alt=""></a>
             <div class="notification_mobile">
                 <img src="icon/codicon_bell-dot.svg" alt="">
             </div>
@@ -72,6 +72,10 @@
                         </a>
                     @endif
                 @else
+                    {{-- <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                    </a> --}}
                     <a class="login" style="cursor: pointer">
                         {{ Auth::user()->name }}
                     </a>
@@ -98,126 +102,3 @@
 <script src="js/menu-mobile-show.js"></script>
 
 <!-- End code header -->
-
-<div class="slideshow-container">
-    <div class="switch-button">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-    </div>
-
-    <div class="mySlides ">
-        <div class="img-slideshow" style="background-image: url('img/1.png');"></div>
-    </div>
-
-    <div class="mySlides ">
-        <div class="img-slideshow" style="background-image: url('img/2.png');"></div>
-    </div>
-
-    <div class="mySlides ">
-        <div class="img-slideshow" style="background-image: url('img/3.png');"></div>
-    </div>
-
-    <div class="mySlides ">
-        <div class="img-slideshow" style="background-image: url('img/4.png');"></div>
-    </div>
-
-    <script src="js/slideshow.js"></script>
-
-</div>
-
-<!-- Start code filter -->
-
-<div class="container-filter">
-    <div class="filter container">
-        <form action="" method="post">
-            <div id="select-car" class="select-car">
-                <a class="all-car text-select-car active-text-select-car">Tất cả</a>
-
-                <a class="new-car text-select-car">Xe mới</a>
-
-                <a class="old-car text-select-car">Xe cũ</a>
-
-            </div>
-            <div class="search-model-brand">
-                <input type="search" class="search" placeholder="Tìm kiếm">
-                <select class="model" name="" id="">
-                    <option value="">Dòng xe</option>
-                </select>
-                <select class="brand" name="" id="">
-                    <option value="">Hãng xe</option>
-                </select>
-            </div>
-            <div class="location-price-submit">
-                <input type="text" name="" id="" class="location" placeholder="Địa điểm">
-                <div class="price">
-                    <div class="values">
-                        <span class="text-note-price">Mức Giá </span> <br>
-                        <span class="text-range">₫.<span id="range1">0</span> - ₫<span
-                                id="range2">100</span></span>
-                    </div>
-                    <div class="scroll-bar">
-                        <div class="slider-track">
-                            <input type="range" min="0" max="9000" value="0" id="slider-1"
-                                oninput="slideOne()">
-                            <input type="range" min="0" max="9000" value="9000" id="slider-2"
-                                oninput="slideTwo()">
-                        </div>
-                    </div>
-                </div>
-                <button class="submit" type="submit">Tìm kiếm</button>
-            </div>
-        </form>
-        <script src="js/scroll-bar.js"></script>
-        <script src="js/select-car-active.js"></script>
-    </div>
-</div>
-
-
-<div class="container">
-    <form action="" method="post">
-        <div class="search-filter-mobile">
-            <input type="search" class="search-mobile" placeholder="Tìm kiếm">
-            <img src="icon/filter-icon.svg" alt="">
-        </div>
-    </form>
-</div>
-
-<!-- End code filter -->
-
-<!-- Start code slide show mobile -->
-
-<div class="container">
-    <div class="slideshow-container-mobile">
-        <div class="switch-button-mobile">
-            <span class="dot-mobile" onclick="currentSlideMobile(1)"></span>
-            <span class="dot-mobile" onclick="currentSlideMobile(2)"></span>
-            <span class="dot-mobile" onclick="currentSlideMobile(3)"></span>
-            <span class="dot-mobile" onclick="currentSlideMobile(4)"></span>
-        </div>
-
-        <div class="mySlides-mobile ">
-            <div class="img-slideshow-mobile" style="background-image: url('img/1.png');"></div>
-        </div>
-
-        <div class="mySlides-mobile ">
-            <div class="img-slideshow-mobile" style="background-image: url('img/2.png');"></div>
-        </div>
-
-        <div class="mySlides-mobile ">
-            <div class="img-slideshow-mobile" style="background-image: url('img/3.png');"></div>
-        </div>
-
-        <div class="mySlides-mobile ">
-            <div class="img-slideshow-mobile" style="background-image: url('img/4.png');"></div>
-        </div>
-
-        <script src="js/slideshow-mobile.js"></script>
-
-    </div>
-</div>
-
-<!-- End code slide show mobile -->
-
-<!-- End code slide-show -->

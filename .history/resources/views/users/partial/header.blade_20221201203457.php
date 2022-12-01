@@ -50,7 +50,7 @@
                 </div>
 
             </div>
-            <a class="logo_header" href="{{ route('user_home') }}"><img src="img/car_logo2.png" alt=""></a>
+            <a class="logo_header" href="#"><img src="img/car_logo2.png" alt=""></a>
             <div class="notification_mobile">
                 <img src="icon/codicon_bell-dot.svg" alt="">
             </div>

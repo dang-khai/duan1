@@ -21,27 +21,10 @@
                         </a> </li>
                 </ul>
                 <div class="login-language_header_mobile">
-                    @guest
-                        @if (Route::has('get.login'))
-                            <a class="login" href="{{ route('get.login') }}">
-                                <img class="ic_login" src="icon/bx_bxs-user.svg" alt="">
-                                Đăng nhập
-                            </a>
-                        @endif
-                    @else
-                        <a class="login" style="cursor: pointer">
-                            {{ Auth::user()->name }}
-                        </a>
-                        <div class="logout">
-                            <a class="login" style="cursor: pointer"
-                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                Đăng xuất
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
-                                @csrf
-                            </form>
-                        </div>
-                    @endguest
+                    <a class="login" href="#">
+                        <img class="ic_login" src="icon/bx_bxs-user.svg" alt="">
+                        Đăng nhập
+                    </a>
                     <div class="language">
                         <img class="ic_language" src="icon/clarity_world-line.svg" alt="">
                         VIE
@@ -50,7 +33,7 @@
                 </div>
 
             </div>
-            <a class="logo_header" href="{{ route('user_home') }}"><img src="img/car_logo2.png" alt=""></a>
+            <a class="logo_header" href="#"><img src="img/car_logo2.png" alt=""></a>
             <div class="notification_mobile">
                 <img src="icon/codicon_bell-dot.svg" alt="">
             </div>
