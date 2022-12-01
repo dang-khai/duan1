@@ -65,4 +65,3 @@
 <script src="js/menu-mobile-show.js"></script>
 
 <!-- Header End -->
-<script src="js/menu-mobile-show.js"></script>

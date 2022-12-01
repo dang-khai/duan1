@@ -1,25 +1,93 @@
-@extends('users.master.master')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Model 3 Standard Range Plus</title>
+    <link rel="stylesheet" href="css/product-car.css">
 
-@section('title', 'Product Details')
+</head>
+<body style="background: #0B0C10;">
 
-@section('css')
-    <link rel="stylesheet" href="{{ asset('css/product-car.css') }}">
-@endsection
+    <!-- Header Start -->
+    <div class="header-container">
+        <div class="container">
+            <header>
+                <div id="menu_header_mobile" class="menu_header_mobile">
+                    <img src="icon/bx_bx-menu.svg" alt="">
+                </div>
+                <div id="menu-header-mobile-select" class="menu-header-mobile-select">
+                    <img id="clear-menu-mobile" class="clear" src="icon/clear.svg" alt="">
+                    <div class="mobile-link-mxh">
+                        <a  href=""><img src="icon/facebook.svg" alt=""></a>
+                        <a  href=""><img src="icon/instagram.svg" alt=""></a>
+                        <a  href=""><img src="icon/youtube.svg" alt=""></a>
+                    </div>
+                    <ul >
+                        <li><a href="#">Xe mới</a></li>
+                        <li><a href="#">Xe cũ</a></li>
+                        <li><a href="#">Đấu giá xe</a></li>
+                        <li><a href="#">Bán xe</a></li>
+                        <li><a href="#"><p>Kinh nghiệm</p>  </a> </li>
+                    </ul>
+                    <div class="login-language_header_mobile">
+                        <a class="login" href="#">
+                            <img class="ic_login" src="icon/bx_bxs-user.svg" alt="">
+                            Đăng nhập
+                        </a>
+                        <div class="language">  
+                            <img class="ic_language" src="icon/clarity_world-line.svg" alt="">
+                            VIE 
+                            <img class="ic_language-2" src="icon/akar-icons_chevron-down.svg" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+                <a class="logo_header" href="#"><img  src="img/car_logo2.png" alt=""></a>
+                <div class="notification_mobile">
+                    <img src="icon/codicon_bell-dot.svg" alt="">
+                </div>
+                <ul class="menu_header">
+                    <li><a href="#">Xe mới</a></li>
+                    <li><a href="#">Xe cũ</a></li>
+                    <li><a href="#">Đấu giá xe</a></li>
+                    <li><a href="#">Bán xe</a></li>
+                    <li><a class="drop-down" href="#"><p>Kinh nghiệm</p> <img class="ic_exp" src="icon/akar-icons_chevron-down.svg" alt=""> </a> </li>
+                </ul>
+                <div class="login-language_header">
+                    <a class="login" href="#">
+                        <img class="ic_login" src="icon/bx_bxs-user.svg" alt="">
+                        Đăng nhập
+                    </a>
+                    <div class="language">  
+                        <img class="ic_language" src="icon/clarity_world-line.svg" alt="">
+                        VIE 
+                        <img class="ic_language-2" src="icon/akar-icons_chevron-down.svg" alt="">
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+    
+    <script src="js/menu-mobile-show.js"></script>
+    
+    <!-- Header End -->
 
-@section('content')
+
+    <!-- Title name car product start -->
     <div class="container">
         <h1 class="title-name-car-product">
             Tesla Model 3 Standard Range Plus
-        </h1>
+        </h1>    
     </div>
     <!-- Title name car product end -->
 
     <!-- Breadcrumbs start -->
     <div class="container">
         <p class="breadcrumbs">
-            <a href="">Trang Chủ</a> - <a href="">Xe Mới</a> - <a href="">Tesla Model 3 Standard Range
-                Plus</a>
-        </p>
+            <a href="">Trang Chủ</a> - <a href="">Xe Mới</a> - <a href="">Tesla Model 3 Standard Range Plus</a>
+        </p>    
     </div>
     <!-- Breadcrumbs end -->
 
@@ -40,26 +108,25 @@
         <div class="container">
             <div class="list-img-show">
                 <div class="img-show-mini" style="background-image: url('img/2022_Hyundai_Elantra_Hybrid.jpg');">
-
+                    
                 </div>
                 <div class="img-show-mini" style="background-image: url('img/car-on-a-forest-path-photo.jpg');">
-
+                    
                 </div>
                 <div class="img-show-mini" style="background-image: url('img/customer.png');">
-
+                    
                 </div>
                 <div class="img-show-mini" style="background-image: url('img/hinh-anh-xe-lamborghini-dep-nhat-34.jpg');">
-
+                    
                 </div>
                 <div class="img-show-mini" style="background-image: url('img/hinh-anh-xe-oto-dep-3.jpg');">
-
+                    
                 </div>
                 <div class="img-show-mini" style="background-image: url('img/pexels-pixabay-358070.jpg');">
-
+                    
                 </div>
-                <div class="img-show-mini"
-                    style="background-image: url('img/suv-automobile-driving-through-foggy-and-rainy-forest-road-CAVF75458.jpg');">
-
+                <div class="img-show-mini" style="background-image: url('img/suv-automobile-driving-through-foggy-and-rainy-forest-road-CAVF75458.jpg');">
+                    
                 </div>
             </div>
         </div>
@@ -72,8 +139,8 @@
 
     <div class="container">
         <div class="price-car-mobile">
-            <p>₫1 tỷ 410 triệu</p>
-        </div>
+        <p>₫1 tỷ 410 triệu</p>
+    </div>
     </div>
 
     <div class="container">
@@ -85,20 +152,10 @@
                     </h3>
                     <div class="content-description" onclick="this.classList.add('expanded')">
                         <p class="content-description-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas diam nam eu nulla a.
-                            Vestibulum aliquet facilisi interdum nibh blandit. Leo amet ultricies cum cras sit sed curabitur
-                            ultrices faucibus. Ultrices pellentesque ultricies semper leo maecenas. Amet, et sagittis
-                            consectetur at euismod iaculis. <br>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas diam nam eu nulla a.
-                            Vestibulum aliquet facilisi interdum nibh blandit. Leo amet ultricies cum cras sit sed curabitur
-                            ultrices faucibus. Ultrices pellentesque ultricies semper leo maecenas. Amet, et sagittis
-                            consectetur at euismod iaculis. <br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas diam nam eu nulla a. Vestibulum aliquet facilisi interdum nibh blandit. Leo amet ultricies cum cras sit sed curabitur ultrices faucibus. Ultrices pellentesque ultricies semper leo maecenas. Amet, et sagittis consectetur at euismod iaculis. <br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas diam nam eu nulla a. Vestibulum aliquet facilisi interdum nibh blandit. Leo amet ultricies cum cras sit sed curabitur ultrices faucibus. Ultrices pellentesque ultricies semper leo maecenas. Amet, et sagittis consectetur at euismod iaculis. <br>
                             Id non velit auctor p
-                            Id non velit auctor praesent a amet risus facilisis. Lobortis nisl placerat orci, eu nisl
-                            ornare. Eu vitae pellentesque rhoncus eros vivamus est purus enim dui. Leo ac pharetra massa
-                            tristique. Libero aliquam pellentesque laoreet dui pulvinar facilisis. Id lectus mauris senectus
-                            sodales porta malesuada tincidunt et. Quam dui nulla venenatis suscipit nulla lectus volutpat,
-                            augue purus. Sed condimentum parturient maecenas viverra pulvinar leo augue nunc.
+                            Id non velit auctor praesent a amet risus facilisis. Lobortis nisl placerat orci, eu nisl ornare. Eu vitae pellentesque rhoncus eros vivamus est purus enim dui. Leo ac pharetra massa tristique. Libero aliquam pellentesque laoreet dui pulvinar facilisis. Id lectus mauris senectus sodales porta malesuada tincidunt et. Quam dui nulla venenatis suscipit nulla lectus volutpat, augue purus. Sed condimentum parturient maecenas viverra pulvinar leo augue nunc.
                         </p>
                         <a class="read-more">Đọc thêm</a>
                     </div>
@@ -108,7 +165,7 @@
                         Tính năng
                     </h3>
                     <div class="content-car-features" onclick="this.classList.add('expanded')">
-                        <div class="box-content-car-features">
+                        <div class="box-content-car-features" >
                             <div class="box-features">
                                 <img src="icon/check_box.svg" alt="">
                                 <span class="name-box-features">
@@ -136,7 +193,7 @@
                             <div class="box-features">
                                 <img src="icon/check_box.svg" alt="">
                                 <span class="name-box-features">
-                                    Màn hình cảm ứng 15 inch
+                                    Màn hình cảm ứng 15 inch 
                                 </span>
                             </div>
                             <div class="box-features">
@@ -158,7 +215,7 @@
                 <div class="vehicle-details-mobile">
                     <div class="block-vehicle-details">
                         <h3 class="title-block-vd">
-                            Chi tiết xe
+                            Chi tiết xe 
                         </h3>
                         <div class="text-block-vehicle">
                             <div class="text-1-block-vd">
@@ -439,13 +496,10 @@
                         Toà nhà Innovation, lô 24, Công viên QTSC, Quận 12, TP Hồ Chí Minh
                     </p>
                     <div class="map-link">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.455157251696!2d106.62735075098296!3d10.852944360704951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2328d1d1acc3b11a!2sFPT%20Polytechnic%20-%20T%C3%B2a%20F!5e0!3m2!1svi!2s!4v1669225938550!5m2!1svi!2s"
-                            width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.455157251696!2d106.62735075098296!3d10.852944360704951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2328d1d1acc3b11a!2sFPT%20Polytechnic%20-%20T%C3%B2a%20F!5e0!3m2!1svi!2s!4v1669225938550!5m2!1svi!2s" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-            </div>
+            </div>  
             <div class="car-information-block-2">
                 <div class="price-car">
                     <p>₫1 tỷ 410 triệu</p>
@@ -453,7 +507,7 @@
                 <div class="vehicle-details">
                     <div class="block-vehicle-details">
                         <h3 class="title-block-vd">
-                            Chi tiết xe
+                            Chi tiết xe 
                         </h3>
                         <div class="text-block-vehicle">
                             <div class="text-1-block-vd">
@@ -677,69 +731,107 @@
                         <p class="title-box">
                             Giá xe
                         </p>
-                        <input type="text" onchange="calculatePayments()"
-                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                            id="vehiclePrice" name="">
+                        <input type="text" onchange="calculatePayments()" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="vehiclePrice" name="" >
                     </div>
-                    <div class="box box2">
+                    <div class="box box2" >
                         <p class="title-box">
                             Lãi suất (%)
                         </p>
-                        <input type="text" onchange="calculatePayments()"
-                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                            id="intRate" name="">
+                        <input type="text" onchange="calculatePayments()" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="intRate" name="" >
                     </div>
-                    <div class="box box-bottom">
+                    <div class="box box-bottom" >
                         <p class="title-box">
                             Thời gian vay (tháng)
                         </p>
-                        <input type="text" onchange="calculatePayments()"
-                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                            id="loanTerm" name="">
+                        <input type="text" onchange="calculatePayments()" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="loanTerm" name="" >
                     </div>
-                    <div class="box box2 box-bottom">
+                    <div class="box box2 box-bottom" >
                         <p class="title-box">
                             Tiền trả trước
                         </p>
-                        <input type="text" onchange="calculatePayments()"
-                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                            id="downPayment" name="">
+                        <input type="text" onchange="calculatePayments()" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="downPayment" name="" >
                     </div>
                 </div>
-                <div id="paymentResults" class="output-box-interest">
+                <div id="paymentResults" class="output-box-interest">   
                     <p class="title-output">Thanh Toán Hàng Tháng</p>
                     <div class="line-1-output-box-interest"></div>
                     <div class="line-2-output-box-interest"></div>
                     <p id="results" class="value-output">
-
+                        
                     </p>
                 </div>
             </div>
         </div>
     </div>
-@endsection
 
-@section('js')
     <script>
-        function calculatePayments() {
-            var vehiclePrice = document.getElementById('vehiclePrice').value,
-                loanTerm = document.getElementById('loanTerm').value,
-                intRate = document.getElementById('intRate').value,
-                downPayment = document.getElementById('downPayment').value,
-                amount = parseInt(vehiclePrice),
-                months = parseInt(loanTerm),
-                down = parseInt(downPayment),
-                totalDown = down
+        function calculatePayments(){
+        var vehiclePrice = document.getElementById('vehiclePrice').value,
+            loanTerm = document.getElementById('loanTerm').value,
+            intRate = document.getElementById('intRate').value,
+            downPayment = document.getElementById('downPayment').value,
+            amount = parseInt(vehiclePrice),
+            months = parseInt(loanTerm),
+            down  = parseInt(downPayment),
+            totalDown  = down 
             annInterest = parseFloat(intRate),
-                monInt = annInterest / 1200;
+            monInt = annInterest / 1200;
 
-            var calc = ((monInt + (monInt / (Math.pow((1 + monInt), months) - 1))) * (amount - (totalDown || 0))).toFixed(
-                2);
+            var calc = ((monInt + (monInt / (Math.pow((1 + monInt), months) -1))) * (amount - (totalDown || 0))).toFixed(2);
 
             var paymentResults = document.getElementById('paymentResults');
             var results = document.getElementById('results');
             results.innerText = calc;
-        }
+
+
+}
+
     </script>
-    {{-- <script src="{{ asset('js/slide-show-product.js') }}"></script> --}}
-@endsection
+
+    <!-- Loan interest calculation end -->
+
+    <footer>
+        <div class="container">
+            <div class="container-center-footer">
+                <div class="container_footer">
+                    <a class="logo_footer" href="#"><img src="img/car_logo2.png" alt="" ></a>
+                    <img class="lines" src="icon/gr27.svg" alt="">
+                    <div class="container">
+                        <div class="menu_footer">
+                            <div class="block-1_menu_footer">
+                                <a  href="">VỀ CHÚNG TÔI</a>
+                                <a href="">CÂU HỎI THƯỜNG GẶP</a>
+                                <a href="">LIÊN HỆ</a>
+                            </div>
+                            <div class="block-2_menu_footer">
+                                <a href="">DỊCH VỤ KHÁCH HÀNG</a>
+                                <p>contact@autohunt.com</p>
+                                <p>+84 823.787.551</p>
+                            </div>
+                            <div class="block-3_menu_footer">
+                                <p>Toà nhà Innovation,
+                                    lô 24, QTSC, <br>
+                                    Quận 12, <br>
+                                    TP Hồ Chí Minh</p>
+                                <div class="link-mxh">
+                                    <a  href=""><img src="icon/facebook.svg" alt=""></a>
+                                    <a  href=""><img src="icon/instagram.svg" alt=""></a>
+                                    <a  href=""><img src="icon/youtube.svg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="lines" src="icon/gr27.svg" alt="">
+                    <p class="copyright">2021 Autohunt. All Rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+
+
+</body>
+</html>

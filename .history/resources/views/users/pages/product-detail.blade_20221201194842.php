@@ -3,6 +3,7 @@
 @section('title', 'Product Details')
 
 @section('css')
+    {{-- <link rel="stylesheet" href="{{ asset('bootstrap-5.2.2-dist/css/bootstrap.min.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('css/product-car.css') }}">
 @endsection
 

@@ -3,6 +3,7 @@
 @section('title', 'Product Details')
 
 @section('css')
+    <link rel="stylesheet" href="{{ asset('bootstrap-5.2.2-dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/product-car.css') }}">
 @endsection
 
@@ -88,11 +89,11 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas diam nam eu nulla a.
                             Vestibulum aliquet facilisi interdum nibh blandit. Leo amet ultricies cum cras sit sed curabitur
                             ultrices faucibus. Ultrices pellentesque ultricies semper leo maecenas. Amet, et sagittis
-                            consectetur at euismod iaculis. <br>
+                            consectetur at euismod iaculis. </br>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas diam nam eu nulla a.
                             Vestibulum aliquet facilisi interdum nibh blandit. Leo amet ultricies cum cras sit sed curabitur
                             ultrices faucibus. Ultrices pellentesque ultricies semper leo maecenas. Amet, et sagittis
-                            consectetur at euismod iaculis. <br>
+                            consectetur at euismod iaculis. </br>
                             Id non velit auctor p
                             Id non velit auctor praesent a amet risus facilisis. Lobortis nisl placerat orci, eu nisl
                             ornare. Eu vitae pellentesque rhoncus eros vivamus est purus enim dui. Leo ac pharetra massa
@@ -741,5 +742,5 @@
             results.innerText = calc;
         }
     </script>
-    {{-- <script src="{{ asset('js/slide-show-product.js') }}"></script> --}}
+    <script src="{{ asset('js/slide-show-product.js') }}"></script>
 @endsection

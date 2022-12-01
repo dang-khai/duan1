@@ -1734,6 +1734,12 @@ footer {
 
 /* end code phần footer */
 
+/* Set dl, ol, ul from bootstrap to default */
+dl,
+ol,
+ul {
+    margin-bottom: 0;
+}
 
 /* Responsive Media Query Start */
 
