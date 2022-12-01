@@ -5,7 +5,6 @@
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     {{-- <link rel="stylesheet" href="{{ asset('bootstrap-5.2.2-dist/css/bootstrap.min.css') }}"> --}}
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     <link rel="stylesheet" href="{{ asset('css/product-car.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login-style.css') }}" />
 @endsection
@@ -43,6 +42,7 @@
                                     nhớ</label>
                             </div>
                             <div class="form-group">
+                                <label for=""><br /></label>
                                 <input type="submit" value="Đăng nhập" class="form-control bg-submit" />
                             </div>
                             <div class="form-group">

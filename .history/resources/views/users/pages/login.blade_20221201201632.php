@@ -43,6 +43,7 @@
                                     nhớ</label>
                             </div>
                             <div class="form-group">
+                                <label for=""><br /></label>
                                 <input type="submit" value="Đăng nhập" class="form-control bg-submit" />
                             </div>
                             <div class="form-group">

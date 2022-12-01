@@ -10,7 +10,8 @@
 @endsection
 
 @section('content')
-    <main class="main-container">
+<div class="container">
+    <main>
         <div class="content-register flex-center">
             <div class="main-content container--1024 flex-center flex-around">
                 <div class="form row">
@@ -44,6 +45,7 @@
                             Tạo tài khoản thành công!
                         </div>
                         <div class="form-group">
+                            <label for="submit"><br /></label>
                             <input type="submit" name="submit" value="Tạo Tài Khoản" class="row form-control bg-submit" />
                         </div>
                         <div class="form-group">
@@ -78,4 +80,5 @@
             </div>
         </div>
     </main>
+</div>
 @endsection

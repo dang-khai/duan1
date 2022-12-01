@@ -63,15 +63,28 @@
                         {{ Auth::user()->name }}
                     </a>
                     <div class="logout">
-                        <a class="login" style="cursor: pointer"
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                            <input class="logout-txt" type="submit">
+                            Đăng xuất
+                        </form>
+
+                    </div>
+
+                    {{-- <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             Đăng xuất
                         </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
-                    </div>
+                    </div> --}}
                 @endguest
+                {{-- <a class="login" href="#">
+                    <img class="ic_login" src="icon/bx_bxs-user.svg" alt="">
+                    Đăng nhập
+                </a> --}}
                 <div class="language">
                     <img class="ic_language" src="icon/clarity_world-line.svg" alt="">
                     VIE

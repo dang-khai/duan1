@@ -22,7 +22,6 @@ body{
 .header-container{
     width: 100%;
     background-color: #12232E;
-    position: relative;
 }
 
 
@@ -968,6 +967,10 @@ footer{
 .container-center-footer{
     display: flex;
     justify-content: center;
+}
+
+footer .container_footer{
+    
 }
 
 .container_footer .logo_footer{
