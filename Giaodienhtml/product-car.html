@@ -5,26 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tesla Model 3 Standard Range Plus</title>
-    <link href="bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="css/product-car.css">
 
 </head>
 <body style="background: #0B0C10;">
 
     <!-- Header Start -->
-    <header>
-        <div class="container bg-header">
-            <div class="row">
-                <div class="col-lg-2 col-md-2 "><a class="logo_header" href="#"><img  src="img/car_logo2.png" alt=""></a></div>
-                <div class="col-lg-7 col-md-8 "><ul class="menu_header">
-                    <li><a href="#">Xe mới</a></li>
-                    <li><a href="#">Xe cũ</a></li>
-                    <li><a href="#">Đấu giá xe</a></li>
-                    <li><a href="#">Bán xe</a></li>
-                    <li><a href="#">Kinh nghiệm <img class="ic_exp" src="icon/akar-icons_chevron-down.svg" alt=""></a></li>
-                </ul></div>
-                <div class="col-lg-3 col-md-2 ">
-                    <div class="login-language_header">
+    <div class="header-container">
+        <div class="container">
+            <header>
+                <div id="menu_header_mobile" class="menu_header_mobile">
+                    <img src="icon/bx_bx-menu.svg" alt="">
+                </div>
+                <div id="menu-header-mobile-select" class="menu-header-mobile-select">
+                    <img id="clear-menu-mobile" class="clear" src="icon/clear.svg" alt="">
+                    <div class="mobile-link-mxh">
+                        <a  href=""><img src="icon/facebook.svg" alt=""></a>
+                        <a  href=""><img src="icon/instagram.svg" alt=""></a>
+                        <a  href=""><img src="icon/youtube.svg" alt=""></a>
+                    </div>
+                    <ul >
+                        <li><a href="#">Xe mới</a></li>
+                        <li><a href="#">Xe cũ</a></li>
+                        <li><a href="#">Đấu giá xe</a></li>
+                        <li><a href="#">Bán xe</a></li>
+                        <li><a href="#"><p>Kinh nghiệm</p>  </a> </li>
+                    </ul>
+                    <div class="login-language_header_mobile">
                         <a class="login" href="#">
                             <img class="ic_login" src="icon/bx_bxs-user.svg" alt="">
                             Đăng nhập
@@ -35,10 +42,36 @@
                             <img class="ic_language-2" src="icon/akar-icons_chevron-down.svg" alt="">
                         </div>
                     </div>
+                    
                 </div>
-            </div>
+                <a class="logo_header" href="#"><img  src="img/car_logo2.png" alt=""></a>
+                <div class="notification_mobile">
+                    <img src="icon/codicon_bell-dot.svg" alt="">
+                </div>
+                <ul class="menu_header">
+                    <li><a href="#">Xe mới</a></li>
+                    <li><a href="#">Xe cũ</a></li>
+                    <li><a href="#">Đấu giá xe</a></li>
+                    <li><a href="#">Bán xe</a></li>
+                    <li><a class="drop-down" href="#"><p>Kinh nghiệm</p> <img class="ic_exp" src="icon/akar-icons_chevron-down.svg" alt=""> </a> </li>
+                </ul>
+                <div class="login-language_header">
+                    <a class="login" href="#">
+                        <img class="ic_login" src="icon/bx_bxs-user.svg" alt="">
+                        Đăng nhập
+                    </a>
+                    <div class="language">  
+                        <img class="ic_language" src="icon/clarity_world-line.svg" alt="">
+                        VIE 
+                        <img class="ic_language-2" src="icon/akar-icons_chevron-down.svg" alt="">
+                    </div>
+                </div>
+            </header>
         </div>
-    </header>
+    </div>
+    
+    <script src="js/menu-mobile-show.js"></script>
+    
     <!-- Header End -->
 
 
@@ -103,6 +136,12 @@
     <!-- Slide show product end -->
 
     <!-- Car information start -->
+
+    <div class="container">
+        <div class="price-car-mobile">
+        <p>₫1 tỷ 410 triệu</p>
+    </div>
+    </div>
 
     <div class="container">
         <div class="car-information">
@@ -173,6 +212,214 @@
                         <a class="read-more-box-car-features">Xem thêm</a>
                     </div>
                 </div>
+                <div class="vehicle-details-mobile">
+                    <div class="block-vehicle-details">
+                        <h3 class="title-block-vd">
+                            Chi tiết xe 
+                        </h3>
+                        <div class="text-block-vehicle">
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Hãng Xe
+                                </p>
+                                <p class="text-right-block-vd">
+                                    Tesla
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Dòng Xe
+                                </p>
+                                <p class="text-right-block-vd">
+                                    Model 3
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Tình Trạng
+                                </p>
+                                <p class="text-right-block-vd">
+                                    Xe mới
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Năm SX
+                                </p>
+                                <p class="text-right-block-vd">
+                                    2019
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Kiểu Thân Xe
+                                </p>
+                                <p class="text-right-block-vd">
+                                    Sedan
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Số Chỗ Ngồi
+                                </p>
+                                <p class="text-right-block-vd">
+                                    5 chỗ
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Màu Xe
+                                </p>
+                                <p class="text-right-block-vd">
+                                    Đỏ
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-vehicle-details">
+                        <h3 class="title-block-vd">
+                            Động Cơ
+                        </h3>
+                        <div class="text-block-vehicle">
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Loại Nhiên Liệu
+                                </p>
+                                <p class="text-right-block-vd">
+                                    Điện
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Số Km Đã Chạy
+                                </p>
+                                <p class="text-right-block-vd">
+                                    340 km
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Loại Hộp Số
+                                </p>
+                                <p class="text-right-block-vd">
+                                    Tự động
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Hệ Thống Truyền Lực
+                                </p>
+                                <p class="text-right-block-vd">
+                                    Rear-wheel Drive
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Mã Lực
+                                </p>
+                                <p class="text-right-block-vd">
+                                    283 hp (211 kW)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-vehicle-details">
+                        <h3 class="title-block-vd">
+                            Pin Và Sạc
+                        </h3>
+                        <div class="text-block-vehicle">
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Dung Lượng Pin
+                                </p>
+                                <p class="text-right-block-vd">
+                                    55.0-kWh
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Tốc Độ Sạc
+                                </p>
+                                <p class="text-right-block-vd">
+                                    64 km/h
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Cổng Sạc
+                                </p>
+                                <p class="text-right-block-vd">
+                                    Type 2
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Thời Gian Sạc (0->Đầy)
+                                </p>
+                                <p class="text-right-block-vd">
+                                    330 phút
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-vehicle-details">
+                        <h3 class="title-block-vd">
+                            Kích Thước
+                        </h3>
+                        <div class="text-block-vehicle">
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Chiều Dài
+                                </p>
+                                <p class="text-right-block-vd">
+                                    4694 mm
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Chiều Rộng
+                                </p>
+                                <p class="text-right-block-vd">
+                                    1849 mm
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Chiều Cao
+                                </p>
+                                <p class="text-right-block-vd">
+                                    1443 mm
+                                </p>
+                            </div>
+                            <div class="text-1-block-vd">
+                                <p class="text-left-block-vd">
+                                    Dung Tích
+                                </p>
+                                <p class="text-right-block-vd">
+                                    542 L
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-history">
+                        <a href="">Lịch Sử Phương Tiện</a>
+                        <img src="icon/akar-icons_arrow-up-right.svg" alt="">
+                    </div>
+                    <div class="reviews-product">
+                        <div class="star">
+                            <img src="icon/star_product.svg" alt="">
+                            <img src="icon/star_product.svg" alt="">
+                            <img src="icon/star_product.svg" alt="">
+                            <img src="icon/star_product.svg" alt="">
+                            <img src="icon/star_border_product.svg" alt="">
+                        </div>
+                        <p>(12 Đánh giá)</p>
+                    </div>
+                    <div class="car-comparison">
+                        <img src="icon/compare_arrows.svg" alt="">
+                        <p>So Sánh Xe</p>
+                    </div>
+                </div>
                 <div class="agent-information">
                     <h3 class="agent-information-title">
                         Thông tin đại lý
@@ -232,7 +479,7 @@
                                 <option value="">Chọn tiêu đề</option>
                             </select>
                         </div>
-                        <div class="input-name">
+                        <div class="input-name input-textarea">
                             <p class="title-input-name">
                                 Email
                             </p>
@@ -486,19 +733,19 @@
                         </p>
                         <input type="text" onchange="calculatePayments()" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="vehiclePrice" name="" >
                     </div>
-                    <div class="box" style="margin-left: 24px;">
+                    <div class="box box2" >
                         <p class="title-box">
                             Lãi suất (%)
                         </p>
                         <input type="text" onchange="calculatePayments()" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="intRate" name="" >
                     </div>
-                    <div class="box" style="margin-top: 23px;">
+                    <div class="box box-bottom" >
                         <p class="title-box">
                             Thời gian vay (tháng)
                         </p>
                         <input type="text" onchange="calculatePayments()" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="loanTerm" name="" >
                     </div>
-                    <div class="box" style="margin-left: 24px; margin-top: 23px;">
+                    <div class="box box2 box-bottom" >
                         <p class="title-box">
                             Tiền trả trước
                         </p>
@@ -585,6 +832,6 @@
 
 
 
-    <script src="bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js" ></script>
+
 </body>
 </html>
