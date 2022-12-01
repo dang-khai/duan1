@@ -1,5 +1,5 @@
       // Code slideshow
-      let slideIndexMobile = 1;
+      // let slideIndexMobile = 1;
       auToSlidesMobile()
       showSlides(slideIndexMobile);
 

@@ -23,6 +23,7 @@
 
     @yield('js')
 
+    <script src="{{ asset('bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js') }}"></script>
 </body>
 
 </html>

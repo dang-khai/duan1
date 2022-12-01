@@ -1,6 +1,7 @@
-$(".car-product").slick({
+$('.car-product').slick({
+
     infinite: true,
     dot: false,
     arrow: false,
     slidesToShow: 3,
-});
+  });

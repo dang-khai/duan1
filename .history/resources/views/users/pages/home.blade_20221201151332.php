@@ -7,13 +7,61 @@
 @endsection
 
 @section('content')
+    <div class="container">
+        <form action="" method="post">
+            <div class="search-filter-mobile">
+                <input type="search" class="search-mobile" placeholder="Tìm kiếm">
+                <img src="icon/filter-icon.svg" alt="">
+            </div>
+        </form>
+    </div>
+
+    <!-- End code filter -->
+
+    <!-- Start code slide show mobile -->
+
+    <div class="container">
+        <div class="slideshow-container-mobile">
+            <div class="switch-button-mobile">
+                <span class="dot-mobile" onclick="currentSlideMobile(1)"></span>
+                <span class="dot-mobile" onclick="currentSlideMobile(2)"></span>
+                <span class="dot-mobile" onclick="currentSlideMobile(3)"></span>
+                <span class="dot-mobile" onclick="currentSlideMobile(4)"></span>
+            </div>
+
+            <div class="mySlides-mobile ">
+                <div class="img-slideshow-mobile" style="background-image: url('img/1.png');"></div>
+            </div>
+
+            <div class="mySlides-mobile ">
+                <div class="img-slideshow-mobile" style="background-image: url('img/2.png');"></div>
+            </div>
+
+            <div class="mySlides-mobile ">
+                <div class="img-slideshow-mobile" style="background-image: url('img/3.png');"></div>
+            </div>
+
+            <div class="mySlides-mobile ">
+                <div class="img-slideshow-mobile" style="background-image: url('img/4.png');"></div>
+            </div>
+
+
+        </div>
+        <script src="js/slideshow-mobile.js"></script>
+    </div>
+
+    <!-- End code slide show mobile -->
+
+    <!-- End code slide-show -->
+
     <!-- Recommended Car start -->
 
     <div class="container">
         <div class="recommended-car">
             <h2 class="text-title">Xe Được Đề Xuất</h2>
             <div id="select-new-old-car-filter" class="select-more">
-                <a onclick="filterSelection('newcarfilter')" class="new-car select-new-old-car active-new-old-car">Xe mới</a>
+                <a onclick="filterSelection('newcarfilter')" class="new-car select-new-old-car active-new-old-car">Xe
+                    mới</a>
                 <a onclick="filterSelection('oldcarfilter')" class="old-car select-new-old-car">Xe cũ</a>
                 <a class="more-car" href="">Xem thêm <img src="icon/arrow-right-more.svg" alt=""></a>
             </div>
@@ -814,6 +862,4 @@
             </div>
         </div>
     </div>
-
-    <!-- Partner image end -->
 @endsection

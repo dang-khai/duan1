@@ -1,3 +1,6 @@
+<!-- Start code slide-show -->
+
+<!-- Start code header -->
 <div class="header-container">
     <div class="container">
         <header>
@@ -47,34 +50,10 @@
                     </a> </li>
             </ul>
             <div class="login-language_header">
-                <ul class="navbar-nav ms-auto">
-                    @guest
-                        @if (Route::has('get.login'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('get.login') }}">
-                                    <img class="ic_login" src="{{ asset('icon/bx_bxs-user.svg') }}" alt="" />
-                                    Đăng nhập</a>
-                            </li>
-                        @endif
-                    @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    Đăng xuất
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                    @endguest
-                </ul>
+                <a class="login" href="#">
+                    <img class="ic_login" src="icon/bx_bxs-user.svg" alt="">
+                    Đăng nhập
+                </a>
                 <div class="language">
                     <img class="ic_language" src="icon/clarity_world-line.svg" alt="">
                     VIE
@@ -85,7 +64,7 @@
     </div>
 </div>
 
-<script src="js/menu-mobile-show.js"></script>
+<script src="{{ asset('js/slideshow-mobile.js') }}"></script>
 
 <!-- End code header -->
 
@@ -113,7 +92,7 @@
         <div class="img-slideshow" style="background-image: url('img/4.png');"></div>
     </div>
 
-    <script src="js/slideshow.js"></script>
+    <script src="{{ asset('js/slideshow.js') }}"></script>
 
 </div>
 
@@ -163,51 +142,3 @@
         <script src="js/select-car-active.js"></script>
     </div>
 </div>
-
-
-<div class="container">
-    <form action="" method="post">
-        <div class="search-filter-mobile">
-            <input type="search" class="search-mobile" placeholder="Tìm kiếm">
-            <img src="icon/filter-icon.svg" alt="">
-        </div>
-    </form>
-</div>
-
-<!-- End code filter -->
-
-<!-- Start code slide show mobile -->
-
-<div class="container">
-    <div class="slideshow-container-mobile">
-        <div class="switch-button-mobile">
-            <span class="dot-mobile" onclick="currentSlideMobile(1)"></span>
-            <span class="dot-mobile" onclick="currentSlideMobile(2)"></span>
-            <span class="dot-mobile" onclick="currentSlideMobile(3)"></span>
-            <span class="dot-mobile" onclick="currentSlideMobile(4)"></span>
-        </div>
-
-        <div class="mySlides-mobile ">
-            <div class="img-slideshow-mobile" style="background-image: url('img/1.png');"></div>
-        </div>
-
-        <div class="mySlides-mobile ">
-            <div class="img-slideshow-mobile" style="background-image: url('img/2.png');"></div>
-        </div>
-
-        <div class="mySlides-mobile ">
-            <div class="img-slideshow-mobile" style="background-image: url('img/3.png');"></div>
-        </div>
-
-        <div class="mySlides-mobile ">
-            <div class="img-slideshow-mobile" style="background-image: url('img/4.png');"></div>
-        </div>
-
-        <script src="js/slideshow-mobile.js"></script>
-
-    </div>
-</div>
-
-<!-- End code slide show mobile -->
-
-<!-- End code slide-show -->

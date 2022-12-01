@@ -20,7 +20,7 @@
         for (i = 0; i < dots.length; i++) {
           dots[i].className = dots[i].className.replace(" active-mobile", "");
         }
-        slides[slideIndexMobile-1].style.display = "block";
+        slides[slideIndexMobile-1].style.display = "block";  
         dots[slideIndexMobile-1].className += " active-mobile";
       }
 
