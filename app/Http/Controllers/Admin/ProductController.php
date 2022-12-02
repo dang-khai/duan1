@@ -102,11 +102,19 @@ class ProductController extends Controller
     public function deleteAllImage($id)
     {
         $images = image::where('id_product', '=', $id)->get();
-        $delete =  image::where('id_product', '=', $id)->delete();
+        $delete = image::where('id_product', '=', $id)->delete();
         foreach ($images as $img) {
             $url = $img->url;
             Storage::disk('public')->delete($url);
         };
         return redirect()->back();
+    }
+    public function deleteImage($id){
+        $image = image::where('id', '=', $id)->get();
+        Storage::disk('public')->delete($image[0]->url);
+        if(image::where('id', '=', $id)->delete()) {
+            toast('Delete image successfully', 'success')->autoClose(1500);
+            return redirect()->back();
+        }
     }
 }

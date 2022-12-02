@@ -35,14 +35,17 @@
             <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
                 <div class="card-body container">
                     <img src="{{ asset('storage') . '/' . $image->url }}" class="card-img" style="width: 15.4rem; height: 10rem;">
-                    <button class="btn-delete btn-lg btn btn-danger">  Xóa  </button>
+                    <form action="{{ route('admin_deleteImage', $image->id) }}" method="POST">
+                        @csrf
+                        <button type="submit" class="btn-delete btn-lg btn btn-danger">  Xóa  </button>
+                    </form>
                 </div>
             </div>
         </div>
         @endforeach
     </div>
     <div class="d-flex">
-        <form method="POST" action=" {{ route('admin_deleteImage', request()->route('id') ) }} ">
+        <form method="POST" action=" {{ route('admin_deleteImages', request()->route('id') ) }} ">
             @csrf
             <button type="submit" class="btn btn-danger me-3"
                 onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này không !')">Xóa tất cả</button>
