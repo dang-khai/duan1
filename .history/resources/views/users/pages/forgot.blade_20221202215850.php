@@ -20,7 +20,8 @@
                             <div class="form-group">
                                 <label for="email">Nhập Email của bạn</label>
                                 <input type="text" name="email" id="email" placeholder="Nhập email"
-                                    class="row form-control" value="{{ old('email') }}" autocomplete="email" autofocus>
+                                    class="row form-control" value="{{ old('email') }}" autocomplete="email"
+                                    autofocus>
                             </div>
                             @error('email')
                                 <p style="color: red">{{ $message }}</p>
