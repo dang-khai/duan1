@@ -25,7 +25,7 @@ Route::get('/', function () {
 })->name('user_home'); // Trang home guests
 
 //Route admin
-Route::prefix('admin')->middleware(['auth', 'isAdmin', 'verified'])->group(function () {
+Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/', [HomeController::class, 'home'])->name('admin_home'); //trang home admin
 
     //route product
@@ -60,7 +60,7 @@ Route::get('/home', [HomeController_user::class, 'index'])->name('home'); //Tran
 
 Route::get('/details', function () {
     return view('users.pages.product-detail');
-})->middleware('verified');
+});
 
 Route::get('/login', [LoginController::class, 'ShowFormLogin'])->name('get.login');
 Route::post('/login', [LoginController::class, 'PostLogin'])->name('post.login');

@@ -60,7 +60,7 @@ Route::get('/home', [HomeController_user::class, 'index'])->name('home'); //Tran
 
 Route::get('/details', function () {
     return view('users.pages.product-detail');
-})->middleware('verified');
+});
 
 Route::get('/login', [LoginController::class, 'ShowFormLogin'])->name('get.login');
 Route::post('/login', [LoginController::class, 'PostLogin'])->name('post.login');
