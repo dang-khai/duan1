@@ -61,19 +61,22 @@
                 <li><a href="#">Đấu giá xe</a></li>
                 <li><a href="#">Bán xe</a></li>
                 <li><a class="drop-down" href="#">
-                        <p>Kinh nghiệm</p> <img class="ic_exp" src="{{ asset('icon/akar-icons_chevron-down.svg') }}"
-                            alt="">
+                        <p>Kinh nghiệm</p> <img class="ic_exp" src="icon/akar-icons_chevron-down.svg" alt="">
                     </a> </li>
             </ul>
             <div class="login-language_header">
                 @guest
                     @if (Route::has('get.login'))
                         <a class="login" href="{{ route('get.login') }}">
-                            <img class="ic_login" src="{{ asset('icon/bx_bxs-user.svg') }}" alt="">
+                            <img class="ic_login" src="icon/bx_bxs-user.svg" alt="">
                             Đăng nhập
                         </a>
                     @endif
                 @else
+                    {{-- <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                    </a> --}}
                     <a class="login" style="cursor: pointer">
                         {{ Auth::user()->name }}
                     </a>
@@ -88,9 +91,9 @@
                     </div>
                 @endguest
                 <div class="language">
-                    <img class="ic_language" src="{{ asset('icon/clarity_world-line.svg') }}" alt="">
+                    <img class="ic_language" src="icon/clarity_world-line.svg" alt="">
                     VIE
-                    <img class="ic_language-2" src="{{ asset('icon/akar-icons_chevron-down.svg') }}" alt="">
+                    <img class="ic_language-2" src="icon/akar-icons_chevron-down.svg" alt="">
                 </div>
             </div>
         </header>

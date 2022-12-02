@@ -1,6 +1,6 @@
 @extends('users.master.master')
 
-@section('title', 'Forgot Password')
+@section('title', 'Reset Password')
 
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
@@ -15,10 +15,34 @@
             <div class="content-login flex-center">
                 <div class="main-content container--1024 flex-center flex-around">
                     <div class="form-login row">
-                        <form method="POST" action="{{ route('password.email') }}">
+                        <form method="POST" action="{{ route('password.update') }}">
                             @csrf
+                            <input type="hidden" name="token" value="{{ $token }}">
                             <div class="form-group">
                                 <label for="email">Nhập Email của bạn</label>
+                                <input type="text" name="email" id="email" placeholder="Nhập email"
+                                    class="row form-control" value="{{ $email ?? old('email') }}" required autocomplete="email"
+                                    autofocus>
+                            </div>
+                            @error('email')
+                                <p style="color: red">{{ $message }}</p>
+                            @enderror
+                            <div class="form-group">
+                                <input type="submit" class="row form-control bg-submit">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Nhập Email của bạn</label>
+                                <input type="password" name="password" id="password" placeholder="Nhập mật khẩu"
+                                    class="row form-control">
+                            </div>
+                            @error('password')
+                                <p style="color: red">{{ $message }}</p>
+                            @enderror
+                            <div class="form-group">
+                                <input type="submit" class="row form-control bg-submit">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Nhập Email của bạn</label>
                                 <input type="text" name="email" id="email" placeholder="Nhập email"
                                     class="row form-control" value="{{ old('email') }}" required autocomplete="email"
                                     autofocus>
@@ -35,7 +59,8 @@
                         <div class="box-background flex-center">
                             <div class="in-box-welcome flex-col">
                                 <div class="flex-center">
-                                    <img src="{{ asset('img/car_logo.png') }}" alt="" width="236" height="63">
+                                    <img src="{{ asset('img/car_logo.png') }}" alt="" width="236"
+                                        height="63">
                                 </div>
 
                                 <div class="label-box text-center">

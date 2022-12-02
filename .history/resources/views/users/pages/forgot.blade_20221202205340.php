@@ -4,7 +4,6 @@
 
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     <link rel="stylesheet" href="{{ asset('css/product-car.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login-style.css') }}" />
 @endsection
@@ -15,10 +14,10 @@
             <div class="content-login flex-center">
                 <div class="main-content container--1024 flex-center flex-around">
                     <div class="form-login row">
-                        <form method="POST" action="{{ route('password.email') }}">
+                        <form action="">
                             @csrf
                             <div class="form-group">
-                                <label for="email">Nhập Email của bạn</label>
+                                <label for="">Nhập Email của bạn</label>
                                 <input type="text" name="email" id="email" placeholder="Nhập email"
                                     class="row form-control" value="{{ old('email') }}" required autocomplete="email"
                                     autofocus>
@@ -30,6 +29,12 @@
                                 <input type="submit" class="row form-control bg-submit">
                             </div>
                         </form>
+                        <div class="form-group">
+                            <p class="text-center" style="color:#FFF;">Chưa có tài khoản? <span><a
+                                        href="{{ route('get.register') }}">Đăng
+                                        ký</a></span></p>
+                        </div>
+                        <div id="Success"></div>
                     </div>
                     <div class="logo-Welcome">
                         <div class="box-background flex-center">

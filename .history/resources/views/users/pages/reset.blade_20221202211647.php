@@ -1,6 +1,6 @@
 @extends('users.master.master')
 
-@section('title', 'Forgot Password')
+@section('title', 'Reset Password')
 
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
@@ -15,10 +15,10 @@
             <div class="content-login flex-center">
                 <div class="main-content container--1024 flex-center flex-around">
                     <div class="form-login row">
-                        <form method="POST" action="{{ route('password.email') }}">
+                        <form method="POST" action="{{ route('password.update') }}">
                             @csrf
                             <div class="form-group">
-                                <label for="email">Nhập Email của bạn</label>
+                                <label for="">Nhập Email của bạn</label>
                                 <input type="text" name="email" id="email" placeholder="Nhập email"
                                     class="row form-control" value="{{ old('email') }}" required autocomplete="email"
                                     autofocus>

@@ -18,7 +18,7 @@
                         <form method="POST" action="{{ route('password.email') }}">
                             @csrf
                             <div class="form-group">
-                                <label for="email">Nhập Email của bạn</label>
+                                <label for="">Nhập Email của bạn</label>
                                 <input type="text" name="email" id="email" placeholder="Nhập email"
                                     class="row form-control" value="{{ old('email') }}" required autocomplete="email"
                                     autofocus>

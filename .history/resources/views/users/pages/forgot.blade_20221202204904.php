@@ -4,7 +4,6 @@
 
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     <link rel="stylesheet" href="{{ asset('css/product-car.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login-style.css') }}" />
 @endsection
@@ -15,21 +14,24 @@
             <div class="content-login flex-center">
                 <div class="main-content container--1024 flex-center flex-around">
                     <div class="form-login row">
-                        <form method="POST" action="{{ route('password.email') }}">
-                            @csrf
+                        <form action="">
                             <div class="form-group">
-                                <label for="email">Nhập Email của bạn</label>
+                                <label for="">Nhập Email của bạn</label>
                                 <input type="text" name="email" id="email" placeholder="Nhập email"
                                     class="row form-control" value="{{ old('email') }}" required autocomplete="email"
                                     autofocus>
                             </div>
-                            @error('email')
-                                <p style="color: red">{{ $message }}</p>
-                            @enderror
                             <div class="form-group">
-                                <input type="submit" class="row form-control bg-submit">
+                                <label for=""><br></label>
+                                <input type="button" name="check" value="Reset Password"
+                                    class="row form-control bg-submit">
+                            </div>
+                            <div class="form-group">
+                                <p class="text-center" style="color:#FFF;">Chưa có tài khoản? <span><a href="">Đăng
+                                            ký</a></span></p>
                             </div>
                         </form>
+                        <div id="Success"></div>
                     </div>
                     <div class="logo-Welcome">
                         <div class="box-background flex-center">

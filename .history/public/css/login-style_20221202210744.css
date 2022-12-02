@@ -164,7 +164,7 @@ input {
     display: flex;
     justify-content: space-between;
 }
-.a-link {
+.a-link{
+    color: #fff;
     text-decoration: none;
-    color: blue;
 }

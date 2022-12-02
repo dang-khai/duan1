@@ -56,7 +56,7 @@
                     <div class="form-group">
                         <p class="text-center" style="color: #fff">
                             Bạn đã có tài khoản?
-                            <span><a class="a-link" href="{{ route('get.login') }}">Đăng nhập ngay</a></span>
+                            <span><a class="a-link" href="{{ route('get.login') }}">Đăng nhập</a></span>
                         </p>
                     </div>
                 </div>

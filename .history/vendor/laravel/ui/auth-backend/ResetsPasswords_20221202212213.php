@@ -28,7 +28,7 @@ trait ResetsPasswords
     {
         $token = $request->route()->parameter('token');
 
-        return view('users.pages.reset')->with(
+        return view('auth.passwords.reset')->with(
             ['token' => $token, 'email' => $request->email]
         );
     }

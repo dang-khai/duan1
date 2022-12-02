@@ -53,7 +53,7 @@
                             <div class="form-group">
                                 <p class="text-center" style="color: #fff">
                                     Chưa có tài khoản?
-                                    <span><a class="a-link" href="{{ route('get.register') }}">Đăng ký ngay</a></span>
+                                    <span><a class="a-link" href="{{ route('get.register') }}">Đăng ký</a></span>
                                 </p>
                             </div>
                         </form>

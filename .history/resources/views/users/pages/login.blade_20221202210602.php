@@ -39,12 +39,10 @@
                                 <p style="color: red">{{ $message }}</p>
                             @enderror
                             <div class="rememer-me">
-                                <div>
-                                    <input type="checkbox" value="rememberme" id="rememberme"> <label for="rememberMe">Ghi
-                                        nhớ</label>
-                                </div>
-                                <a class="a-link" href="{{ route('password.request') }}">
-                                    Quên mật khẩu?
+                                <input type="checkbox" value="rememberme" id="rememberme"><label for="rememberMe">Ghi
+                                    nhớ</label>
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    {{ __('Forgot Your Password?') }}
                                 </a>
                             </div>
                             <div class="form-group">
@@ -53,7 +51,7 @@
                             <div class="form-group">
                                 <p class="text-center" style="color: #fff">
                                     Chưa có tài khoản?
-                                    <span><a class="a-link" href="{{ route('get.register') }}">Đăng ký ngay</a></span>
+                                    <span><a href="{{ route('get.register') }}">Đăng ký</a></span>
                                 </p>
                             </div>
                         </form>

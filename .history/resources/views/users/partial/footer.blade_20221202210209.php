@@ -3,7 +3,7 @@
         <div class="container-center-footer">
             <div class="container_footer">
                 <a class="logo_footer" href="#"><img src="{{ asset('img/car_logo2.png') }}" alt="" /></a>
-                <img class="lines" src="{{ asset('icon/gr27.svg') }}" alt="" />
+                <img class="lines" src="icon/gr27.svg" alt="" />
                 <div class="container">
                     <div class="menu_footer">
                         <div class="block-1_menu_footer">
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                 </div>
-                <img class="lines" src="{{ asset('icon/gr27.svg') }}" alt="" />
+                <img class="lines" src="icon/gr27.svg" alt="" />
                 <p class="copyright">
                     2021 Autohunt. All Rights reserved
                 </p>

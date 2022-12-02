@@ -18,7 +18,10 @@
                         <form method="POST" action="{{ route('password.email') }}">
                             @csrf
                             <div class="form-group">
-                                <label for="email">Nhập Email của bạn</label>
+                                <label>Quên mật khẩu</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Nhập Email của bạn</label>
                                 <input type="text" name="email" id="email" placeholder="Nhập email"
                                     class="row form-control" value="{{ old('email') }}" required autocomplete="email"
                                     autofocus>
@@ -30,6 +33,12 @@
                                 <input type="submit" class="row form-control bg-submit">
                             </div>
                         </form>
+                        <div class="form-group">
+                            <p class="text-center" style="color:#FFF;">Chưa có tài khoản? <span><a
+                                        href="{{ route('get.register') }}">Đăng
+                                        ký</a></span></p>
+                        </div>
+                        <div id="Success"></div>
                     </div>
                     <div class="logo-Welcome">
                         <div class="box-background flex-center">
