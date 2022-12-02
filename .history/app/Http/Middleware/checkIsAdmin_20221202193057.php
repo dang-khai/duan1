@@ -19,12 +19,12 @@ class checkIsAdmin
     {
         // kiểm tra xem đăng nhập chưa
         if (Auth::check()) {
-            // Admin -> role = 1
-            //user -> role = 0
-            if (Auth::user()->role == '1') {
+            // nếu role là 0 (admin) đi tiếp
+            if (Auth::user()->role == 1) {
                 return $next($request);
             } else {
-                return redirect('/'); // Không phải admin -> trang home
+                Auth::logout();
+                return redirect()->route('user_home');
             }
         } else
             return redirect('/login'); // chưa đăng nhập -> login

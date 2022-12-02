@@ -29,4 +29,8 @@ class HomeController extends Controller
     {
         return view('admin.pages.customer');
     }
+    public function forgot()
+    {
+        return view('users.pages.forgot');
+    }
 }

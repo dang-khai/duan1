@@ -54,7 +54,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/orders', [HomeController::class, 'orders'])->name('admin_orders'); //trang orders admin
 });
 
-Auth::routes(['login' => false, 'register' => false]);
+Auth::routes(['register' => false]);
 
 Route::get('/home', [HomeController_user::class, 'index'])->name('home'); //Trang home guests and users
 

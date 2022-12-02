@@ -14,6 +14,7 @@ class HomeController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('auth');
         $this->Product = new Product();
         $this->Category = new Category();
     }
@@ -28,5 +29,9 @@ class HomeController extends Controller
     public function customers()
     {
         return view('admin.pages.customer');
+    }
+    public function forgot()
+    {
+        return view('users.pages.forgot');
     }
 }

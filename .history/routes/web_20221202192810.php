@@ -25,7 +25,7 @@ Route::get('/', function () {
 })->name('user_home'); // Trang home guests
 
 //Route admin
-Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
+Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'home'])->name('admin_home'); //trang home admin
 
     //route product
