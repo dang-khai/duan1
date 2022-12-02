@@ -7,6 +7,7 @@ use App\Http\Requests\RegisterRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -25,8 +26,9 @@ class RegisterController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
-        $user = $request->only('email', 'password');
-        Auth::attempt($user);
-        return redirect('/');
+        return redirect()->route('user_home');
+    }
+    public function login(Request $request)
+    {
     }
 }
