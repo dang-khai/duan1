@@ -548,6 +548,7 @@ class ComposerStaticInitb4423ca9bf0a32727f73eb5e4b512aa3
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Middleware\\checkIsAdmin' => __DIR__ . '/../..' . '/app/Http/Middleware/checkIsAdmin.php',
         'App\\Http\\Requests\\CategoryValidate' => __DIR__ . '/../..' . '/app/Http/Requests/CategoryValidate.php',
         'App\\Http\\Requests\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/LoginRequest.php',
         'App\\Http\\Requests\\ProductValidate' => __DIR__ . '/../..' . '/app/Http/Requests/ProductValidate.php',

@@ -33,6 +33,7 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\ValidateSignature' => $baseDir . '/app/Http/Middleware/ValidateSignature.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Http\\Middleware\\checkIsAdmin' => $baseDir . '/app/Http/Middleware/checkIsAdmin.php',
     'App\\Http\\Requests\\CategoryValidate' => $baseDir . '/app/Http/Requests/CategoryValidate.php',
     'App\\Http\\Requests\\LoginRequest' => $baseDir . '/app/Http/Requests/LoginRequest.php',
     'App\\Http\\Requests\\ProductValidate' => $baseDir . '/app/Http/Requests/ProductValidate.php',
