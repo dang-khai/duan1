@@ -66,7 +66,7 @@ Route::get('/product', function () {
     return view('users.pages.product');
 });
 
-Route::get('/test-verify', function () {
+Route::get('/test-verifi', function () {
     return view('users.pages.login');
 })->middleware('verified');
 
