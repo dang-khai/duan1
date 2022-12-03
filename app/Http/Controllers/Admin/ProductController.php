@@ -59,6 +59,7 @@ class ProductController extends Controller
                     'url' => $imageName
                 ]);
             }
+            toast('Add image successfully', 'success')->autoClose(1500);
             return redirect()->back();
         }
     }
