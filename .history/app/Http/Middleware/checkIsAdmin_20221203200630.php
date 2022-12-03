@@ -29,6 +29,5 @@ class checkIsAdmin
         } else {
             return redirect('/login'); // chưa đăng nhập -> login
         }
-        return $next($request);
     }
 }

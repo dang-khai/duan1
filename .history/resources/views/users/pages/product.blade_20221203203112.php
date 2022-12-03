@@ -218,11 +218,11 @@
 
         const searchInput = document.querySelector(".search");
         let searchValue = "";
-
+        let newCar = [];
 
         searchInput.addEventListener("input", function(e) {
-            let newCar = [];
             let searchValue = e.target.value;
+        
             newCar = arrCar.filter((item) =>
                 item.tenXe
                 .toLowerCase()
@@ -231,8 +231,8 @@
             );
             console.log(newCar);
             if (searchValue) {
-
-            }
+                arrCar = newCar;
+            } 
             // else {
             //     arrCar = [{
             //             tenXe: "Tesla Model 3 Stanrdard Range Plus",
@@ -278,18 +278,14 @@
             //         },
             //     ];
             // }
-            if (newCar) {
-                displayCar(newCar);
-            }
+            displayCar();
         });
-        displayCar(arrCar);
 
-        function displayCar(arrCar = [], namSX_arr = [], hangXe_arr = []) {
-            console.log(arrCar.length);
+        function displayCar(namSX_arr = [], hangXe_arr = []) {
             var list1 = document.getElementById("list1");
 
             list1.innerHTML = "";
-            if (arrCar.length < 0) return false;
+
             for (i = 0; i < arrCar.length; i++) {
                 ten = arrCar[i].tenXe;
                 hinh = arrCar[i].hinhXe;
@@ -351,6 +347,7 @@
             }
         }
 
+        displayCar();
 
         function chooseCar() {
             // Xem user chọn năm nào => namSX_arr

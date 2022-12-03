@@ -188,8 +188,8 @@
                                                     <label class="form-label">Trạng thái</label>
                                                     <select class="form-select" aria-label="Default select example"
                                                         name="status">
-                                                        <option selected value="0">Xe mới</option>
-                                                        <option value="1">Xe cũ</option>
+                                                        <option selected value="Xe mới">Xe mới</option>
+                                                        <option value="Xe cũ">Xe cũ</option>
                                                     </select>
                                                     @error('status')
                                                         <p class="text-danger">{{ $message }}</p>

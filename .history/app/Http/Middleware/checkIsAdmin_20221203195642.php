@@ -26,9 +26,7 @@ class checkIsAdmin
             } else {
                 return redirect('/'); // Không phải admin -> trang home
             }
-        } else {
+        } else
             return redirect('/login'); // chưa đăng nhập -> login
-        }
-        return $next($request);
     }
 }

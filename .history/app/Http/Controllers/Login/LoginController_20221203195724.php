@@ -23,7 +23,7 @@ class LoginController extends Controller
             'password' => $request->password
         ];
         if (Auth::attempt($arr)) {
-            return redirect()->intended();
+            return redirect()->route('user_home');
         } else {
             return back()->withErrors(['login_error' => 'Email hoặc mật khẩu không đúng']);
         }

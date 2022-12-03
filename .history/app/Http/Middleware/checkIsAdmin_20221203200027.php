@@ -21,14 +21,12 @@ class checkIsAdmin
         if (Auth::check()) {
             // Admin -> role = 1
             //user -> role = 0
-            if (Auth::user()->role == '1') {
+            if (Auth::user()->role == 1) {
                 return $next($request);
             } else {
                 return redirect('/'); // Không phải admin -> trang home
             }
-        } else {
+        } else
             return redirect('/login'); // chưa đăng nhập -> login
-        }
-        return $next($request);
     }
 }

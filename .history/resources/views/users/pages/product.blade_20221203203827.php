@@ -218,7 +218,7 @@
 
         const searchInput = document.querySelector(".search");
         let searchValue = "";
-
+        
 
         searchInput.addEventListener("input", function(e) {
             let newCar = [];
@@ -231,8 +231,8 @@
             );
             console.log(newCar);
             if (searchValue) {
-
-            }
+                
+            } 
             // else {
             //     arrCar = [{
             //             tenXe: "Tesla Model 3 Stanrdard Range Plus",
@@ -278,18 +278,17 @@
             //         },
             //     ];
             // }
-            if (newCar) {
+            if(newCar){
                 displayCar(newCar);
             }
         });
         displayCar(arrCar);
-
-        function displayCar(arrCar = [], namSX_arr = [], hangXe_arr = []) {
+        function displayCar(arrCar=[],namSX_arr = [], hangXe_arr = []) {
             console.log(arrCar.length);
             var list1 = document.getElementById("list1");
 
             list1.innerHTML = "";
-            if (arrCar.length < 0) return false;
+            if(arrCar.length<0) return false;
             for (i = 0; i < arrCar.length; i++) {
                 ten = arrCar[i].tenXe;
                 hinh = arrCar[i].hinhXe;
@@ -351,6 +350,7 @@
             }
         }
 
+        displayCar();
 
         function chooseCar() {
             // Xem user chọn năm nào => namSX_arr
