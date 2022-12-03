@@ -28,7 +28,7 @@ class ProductCollection extends JsonResource
             'year' => $this->year,
             'color' => $this->color,
             'description' => $this->description,
-            'status' => $this->status == '0' ? 'Xe mới' : 'Xe cũ',
+            'status' => $this->status,
             'price' => $this->price,
             'img' => DB::table('image')->where('id_product', $this->id)->get('url'),
         ];
