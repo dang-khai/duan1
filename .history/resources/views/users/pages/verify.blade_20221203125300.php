@@ -3,8 +3,9 @@
 @section('title', 'Verify Email')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/product-car.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/product-car.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('css/new-car.css') }}">
     <style>
         footer {
             position: fixed;
@@ -40,13 +41,12 @@
         }
 
         .btn-submit {
-            padding: 10px;
+            padding: 5px;
             background: #12232e;
             color: #fff;
             font-size: 14px;
             border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
         }
     </style>
 @endsection

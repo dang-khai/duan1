@@ -77,7 +77,8 @@
                         {{ Auth::user()->name }}
                     </a>
                     <div id="drop-down-login-user" class="drop-down-login-user">
-                        <div class="drop-down-login-user-ar1"></div>
+                        <div class="drop-down-login-user-ar1">
+                        </div>
                         <div class="drop-down-login-user-content">
                             <img class="ic_login_user" src="{{ asset('icon/user-profile-square.svg') }}" alt="">
                             <p class="name-login-user">{{ Auth::user()->name }}</p>

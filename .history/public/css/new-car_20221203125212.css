@@ -752,7 +752,6 @@ header {
     position: absolute;
     top: 30px;
     right: -30px;
-    z-index: 99 !important;
 }
 
 .login-language_header .drop-down-login-user-ar1 {

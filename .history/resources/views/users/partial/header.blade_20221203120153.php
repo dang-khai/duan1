@@ -29,10 +29,54 @@
                             </a>
                         @endif
                     @else
-                        <a class="login" style="cursor: pointer">
+                        <a onclick="showLoginUser()" id="login-user" class="login-user">
+                            <img class="ic_login" src="{{ asset('icon/bx_bxs-user.svg') }}" alt="">
                             {{ Auth::user()->name }}
                         </a>
-                        <div class="logout">
+                        <div id="drop-down-login-user" class="drop-down-login-user">
+                            <div class="drop-down-login-user-ar1">
+                            </div>
+                            <div class="drop-down-login-user-content">
+                                <img class="ic_login_user" src="icon/user-profile-square.svg" alt="">
+                                <p class="name-login-user">{{ Auth::user()->name }}</p>
+                                <hr>
+                                <a href="" class="manage-account">
+                                    <img src="icon/Setting_fill.svg" alt="">
+                                    <p class="text-manage-account">
+                                        Quản lý tài khoản
+                                    </p>
+                                </a>
+                                <a href="" class="manage-account">
+                                    <img src="icon/message-chat-01.svg" alt="">
+                                    <p class="text-manage-account">
+                                        Tin nhắn với đại lý
+                                    </p>
+                                </a>
+                                <a href="" class="manage-account">
+                                    <img src="icon/Bell_fill.svg" alt="">
+                                    <p class="text-manage-account">
+                                        Thông báo dành cho bạn
+                                    </p>
+                                </a>
+                                <a href="" class="manage-account">
+                                    <img src="icon/Message_alt_fill.svg" alt="">
+                                    <p class="text-manage-account">
+                                        Hộp thư hỗ trợ
+                                    </p>
+                                </a>
+                                <a class="manage-account"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <img src="icon/logout-02.svg" alt="">
+                                    <p class="text-manage-account">
+                                        Đăng xuất
+                                    </p>
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </div>
+                        {{-- <div class="logout">
                             <a class="login" style="cursor: pointer"
                                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 Đăng xuất
@@ -40,7 +84,7 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
                                 @csrf
                             </form>
-                        </div>
+                        </div> --}}
                     @endguest
                     <div class="language">
                         <img class="ic_language" src="icon/clarity_world-line.svg" alt="">
@@ -72,81 +116,10 @@
                         </a>
                     @endif
                 @else
-                    <a onclick="showLoginUser()" id="login-user" class="login-user">
-                        <img class="ic_login" src="{{ asset('icon/bx_bxs-user.svg') }}" alt="">
+                    <a class="login" style="cursor: pointer">
                         {{ Auth::user()->name }}
                     </a>
-                    <div id="drop-down-login-user" class="drop-down-login-user">
-                        <div class="drop-down-login-user-ar1"></div>
-                        <div class="drop-down-login-user-content">
-                            <img class="ic_login_user" src="{{ asset('icon/user-profile-square.svg') }}" alt="">
-                            <p class="name-login-user">{{ Auth::user()->name }}</p>
-                            <hr>
-                            <a href="" class="manage-account">
-                                <img src="{{ asset('icon/Setting_fill.svg') }}" alt="">
-                                <p class="text-manage-account">
-                                    Quản lý tài khoản
-                                </p>
-                            </a>
-                            <a href="" class="manage-account">
-                                <img src="{{ asset('icon/message-chat-01.svg') }}" alt="">
-                                <p class="text-manage-account">
-                                    Tin nhắn với đại lý
-                                </p>
-                            </a>
-                            <a href="" class="manage-account">
-                                <img src="{{ asset('icon/Bell_fill.svg') }}" alt="">
-                                <p class="text-manage-account">
-                                    Thông báo dành cho bạn
-                                </p>
-                            </a>
-                            <a href="" class="manage-account">
-                                <img src="{{ asset('icon/Message_alt_fill.svg') }}" alt="">
-                                <p class="text-manage-account">
-                                    Hộp thư hỗ trợ
-                                </p>
-                            </a>
-                            <a class="manage-account"
-                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                <img src="{{ asset('icon/logout-02.svg') }}" alt="">
-                                <p class="text-manage-account">
-                                    Đăng xuất
-                                </p>
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
-                                @csrf
-                            </form>
-                        </div>
-                    </div>
-                    <script>
-                        function showLoginUser() {
-                            document
-                                .getElementById("drop-down-login-user")
-                                .classList.toggle("show");
-                        }
-                        window.onclick = function(event) {
-                            if (!event.target.matches(".login-user")) {
-                                var dropdowns =
-                                    document.getElementsByClassName(
-                                        "drop-down-login-user"
-                                    );
-                                var i;
-                                for (i = 0; i < dropdowns.length; i++) {
-                                    var openDropdown = dropdowns[i];
-                                    if (
-                                        openDropdown.classList.contains(
-                                            "show"
-                                        )
-                                    ) {
-                                        openDropdown.classList.remove(
-                                            "show"
-                                        );
-                                    }
-                                }
-                            }
-                        };
-                    </script>
-                    {{-- <div class="logout">
+                    <div class="logout">
                         <a class="login" style="cursor: pointer"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             Đăng xuất
@@ -154,7 +127,7 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
                             @csrf
                         </form>
-                    </div> --}}
+                    </div>
                 @endguest
                 <div class="language">
                     <img class="ic_language" src="icon/clarity_world-line.svg" alt="">

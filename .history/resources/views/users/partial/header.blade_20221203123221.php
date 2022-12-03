@@ -72,7 +72,7 @@
                         </a>
                     @endif
                 @else
-                    <a onclick="showLoginUser()" id="login-user" class="login-user">
+                    <a onclick="showLoginUser()" id="login-user" class="login-user" href="#">
                         <img class="ic_login" src="{{ asset('icon/bx_bxs-user.svg') }}" alt="">
                         {{ Auth::user()->name }}
                     </a>

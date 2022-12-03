@@ -172,8 +172,8 @@ header {
     line-height: 17px;
     display: flex;
     align-items: center;
-    width: calc(19% + 30px);
-    justify-content: flex-end;
+    width: 19%;
+    justify-content: space-between;
     gap: 30px;
 }
 
@@ -208,32 +208,31 @@ header {
 
 /* Drop down login user start */
 
-.login-language_header .login-user {
+.login-language_header .login-user{
     text-decoration: none;
-    color: #ffffff;
+    color: #FFFFFF;
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-.login-language_header .login-user .ic_login {
+.login-language_header .login-user .ic_login{
     width: 24px;
     height: 24px;
 }
 
-.login-language_header {
-    position: relative;
+.login-language_header{
+    position:relative;
 }
 
-.login-language_header .drop-down-login-user {
+.login-language_header .drop-down-login-user{
     display: none;
     position: absolute;
     top: 30px;
     right: -30px;
-    z-index: 99 !important;
 }
 
-.login-language_header .drop-down-login-user-ar1 {
+.login-language_header .drop-down-login-user-ar1{
     width: 0;
     height: 0;
     border-bottom: 15px solid #fff;
@@ -244,7 +243,7 @@ header {
     transform: translateX(-50%);
 }
 
-.login-language_header .drop-down-login-user-content {
+.login-language_header .drop-down-login-user-content{
     width: 311px;
     padding: 24px;
     background-color: #fff;
@@ -252,7 +251,7 @@ header {
     box-shadow: 0 0 5px 0 gray;
 }
 
-.drop-down-login-user-content .ic_login_user {
+.drop-down-login-user-content .ic_login_user{
     width: 40px;
     height: 40px;
     object-fit: cover;
@@ -261,20 +260,21 @@ header {
     transform: translateX(-50%);
 }
 
-.drop-down-login-user-content .name-login-user {
+.drop-down-login-user-content .name-login-user{
     font-size: 18px;
     text-align: center;
     font-weight: 800;
     margin-top: 10px;
     color: black;
+
 }
 
-.drop-down-login-user-content hr {
+.drop-down-login-user-content hr{
     margin-top: 10px;
     margin-bottom: 15px;
 }
 
-.drop-down-login-user-content .manage-account {
+.drop-down-login-user-content .manage-account{
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -286,24 +286,26 @@ header {
     cursor: pointer;
 }
 
-.drop-down-login-user-content .manage-account:hover {
+.drop-down-login-user-content .manage-account:hover{
     background-color: #007bc728;
     border-radius: 5px;
 }
 
-.drop-down-login-user-content .manage-account img {
+.drop-down-login-user-content .manage-account img{
     width: 24px;
     height: 24px;
     object-fit: cover;
 }
 
-.drop-down-login-user-content .manage-account .text-manage-account {
+.drop-down-login-user-content .manage-account .text-manage-account{
     margin-left: 7px;
 }
 
-.login-language_header .show {
+
+.login-language_header .show{
     display: block;
 }
+
 
 /* Drop down login user end */
 
@@ -1834,6 +1836,7 @@ footer {
 }
 
 /* end code phần footer */
+
 
 /* Responsive Media Query Start */
 

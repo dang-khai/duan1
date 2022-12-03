@@ -47,6 +47,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
+            font-variant: small-caps;
         }
     </style>
 @endsection

@@ -72,12 +72,13 @@
                         </a>
                     @endif
                 @else
-                    <a onclick="showLoginUser()" id="login-user" class="login-user">
+                    <a onclick="showLoginUser()" id="login-user" class="login-user" href="#">
                         <img class="ic_login" src="{{ asset('icon/bx_bxs-user.svg') }}" alt="">
                         {{ Auth::user()->name }}
                     </a>
                     <div id="drop-down-login-user" class="drop-down-login-user">
-                        <div class="drop-down-login-user-ar1"></div>
+                        <div class="drop-down-login-user-ar1">
+                        </div>
                         <div class="drop-down-login-user-content">
                             <img class="ic_login_user" src="{{ asset('icon/user-profile-square.svg') }}" alt="">
                             <p class="name-login-user">{{ Auth::user()->name }}</p>
