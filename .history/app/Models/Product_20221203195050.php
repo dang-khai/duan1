@@ -23,22 +23,15 @@ class Product extends Model
         return DB::table('product')->insert($input);
     }
 
-    public function deleteProduct($id)
-    {
+    public function deleteProduct($id){
         return DB::table('product')->where('id', '=', $id)->delete();
     }
 
-    public function updateProduct($id, $input)
-    {
+    public function updateProduct($id, $input){
         return DB::table('product')->where('id', '=', $id)->update($input);
     }
 
-    public function images()
-    {
+    public function images(){
         return $this->hasMany(Image::class, 'id_product');
-    }
-    public function category()
-    {
-        return $this->belongsTo(Category::class);
     }
 }

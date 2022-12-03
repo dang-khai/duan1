@@ -17,18 +17,13 @@ class Category extends Model
     {
         return DB::table('category')->get();
     }
-
+    
     public function addCate($input)
     {
         return DB::table('category')->insert($input);
     }
 
-    public function deleteCategory($id)
-    {
+    public function deleteCategory($id){
         return DB::table('category')->where('id', '=', $id)->delete();
-    }
-    public function image()
-    {
-        return $this->hasManyThrough(Product::class, Image::class, 'id_product', 'id_product');
     }
 }

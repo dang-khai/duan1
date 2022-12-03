@@ -13,13 +13,12 @@ class Image extends Model
     protected $table = "image";
     public $timestamps = false;
 
-    public function addImage($input)
-    {
+    public function addImage($input){
         return DB::table('image')->insert($input);
     }
 
-    public function product()
-    {
+    public function product(){
         return $this->belongsTo(Product::class, 'id_product');
     }
+    
 }

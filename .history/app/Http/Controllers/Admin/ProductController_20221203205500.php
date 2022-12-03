@@ -70,9 +70,9 @@ class ProductController extends Controller
         if ($this->Product->deleteProduct($id)) {
             // return redirect('admin/product')->with('success', 'Delete Successfully');
             toast('Delete product successfully!', 'success')->autoClose(1500);
-            return redirect('admin/product');
+            return redirect('admin.product');
         } else {
-            return redirect('admin/product')->with('error', 'unsuccessfully');
+            return redirect('admin.product')->with('error', 'unsuccessfully');
         }
     }
 

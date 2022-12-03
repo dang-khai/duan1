@@ -83,10 +83,10 @@
                             <p class="name-login-user">{{ Auth::user()->name }}</p>
                             <hr>
                             @if (Auth::user()->role == '1')
-                                <a href="{{ route('admin_home') }}" class="manage-account">
+                                <a href="" class="manage-account">
                                     <img src="{{ asset('icon/Setting_fill.svg') }}" alt="">
                                     <p class="text-manage-account">
-                                        Quản lý
+                                        Quản lý tài khoản
                                     </p>
                                 </a>
                             @endif
