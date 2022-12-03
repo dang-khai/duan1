@@ -29,6 +29,9 @@ class Category extends Model
     }
     public function image()
     {
-        return $this->hasManyThrough(Product::class, Image::class, 'id_product', 'id_product');
+        return $this->hasManyThrough(Image::class, Product::class , 'id_cate', 'id_product');
+    }
+    public function products(){
+        return $this->hasMany(product::class, 'id_cate');
     }
 }

@@ -10,6 +10,9 @@ use App\Models\Category;
 use App\Models\Image;
 use App\Http\Requests\ProductValidate;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Http\Resources\ProductCollection as ProductResources;
+use App\Http\Resources\CategoryCollection as CategoryResources;
+
 
 class ProductApiController extends Controller
 {
@@ -28,15 +31,12 @@ class ProductApiController extends Controller
     public function index()
     {
         // api hiện product và cate
-        $product = Product::get();
-        $cate = Category::get();
-        $product->map(function($product) {
-            $product->img = [];
-            return $product;
-        });
-        $img = Image::get();
-        // $arr = ['product' => $product, 'cate' => $cate];
-        // return response()->json($product, 200);
+        $product = Product::all();
+        $arr = [
+            'message' => 'Danh sách sản phẩm',
+            'data' => ProductResources::collection($product),
+         ];
+        return response()->json($arr, 200);
     }
 
     /**
