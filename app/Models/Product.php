@@ -10,7 +10,7 @@ class Product extends Model
 {
     use HasFactory;
     protected $table = 'product';
-    protected $fillable = ['id', 'id_cate', 'name', 'year', 'color', 'description', 'price'];
+    protected $fillable = ['id', 'id_cate', 'name', 'year', 'color', 'description', 'status',  'price'];
     public $timestamps = false;
 
     public function getAllProducts()

@@ -84,6 +84,7 @@ class ProductController extends Controller
             'name' => $request->name,
             'year' => $request->year,
             'color' => $request->color,
+            'status' => $request->status,
             'description' => $request->description,
             'price' => $request->price,
         ];

@@ -31,6 +31,7 @@ class ProductValidate extends FormRequest
             'id_cate' => 'required',
             'year' => 'required',
             'color' => 'required',
+            'status' => 'required',
             'description' => 'required',
             'price' => 'required',
         ];
@@ -43,6 +44,7 @@ class ProductValidate extends FormRequest
             'id_cate.required' => 'Loại required',
             'year.required' => 'Year is required',
             'color.required' => 'color is required',
+            'status.required' => 'color is required',
             'description.required' => 'description is required',
             'price.required' => 'price is required',
         ];

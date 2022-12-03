@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Image;
 use App\Http\Requests\ProductValidate;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -21,15 +22,21 @@ class ProductApiController extends Controller
     public function __construct()
     {
         $this->Product = new Product();
+        $this->Image = new Image();
         $this->Category = new Category();
     }
     public function index()
     {
         // api hiện product và cate
-        $product = $this->Product->getAllProducts();
-        $cate = $this->Category->getAllCate();
-        $arr = ['product' => $product, 'cate' => $cate];
-        return response()->json($arr, 200);
+        $product = Product::get();
+        $cate = Category::get();
+        $product->map(function($product) {
+            $product->img = [];
+            return $product;
+        });
+        $img = Image::get();
+        // $arr = ['product' => $product, 'cate' => $cate];
+        // return response()->json($product, 200);
     }
 
     /**
