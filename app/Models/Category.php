@@ -27,9 +27,9 @@ class Category extends Model
     {
         return DB::table('category')->where('id', '=', $id)->delete();
     }
-    public function image()
+    public function allImageCate()
     {
-        return $this->hasManyThrough(Image::class, Product::class , 'id_cate', 'id_product');
+        return $this->hasManyThrough(Image::class, Product::class, 'id_cate', 'id_product');
     }
     public function products(){
         return $this->hasMany(product::class, 'id_cate');

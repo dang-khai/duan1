@@ -8,6 +8,8 @@ use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductValidate;
+use Illuminate\Support\Facades\Storage;
+
 
 class CategoryController extends Controller
 {
@@ -46,6 +48,11 @@ class CategoryController extends Controller
     }
 
     public function deleteCategory($id){
+        $img = Category::find($id)->allImageCate;
+        foreach ($img as $img) {
+            $url = $img->url;
+            Storage::disk('public')->delete($url);
+        };
         if(DB::table('category')->where('id', '=', $id)->delete()){
             toast('Delete category successfully!','success')->autoClose(1500);
             return back();
