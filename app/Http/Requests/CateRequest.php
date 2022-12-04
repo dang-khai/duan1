@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CategoryValidate extends FormRequest
+class CateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class CategoryValidate extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,14 @@ class CategoryValidate extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name_cate' => 'required || unique:category', 
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'name_cate.unique' => 'Danh mục đã tồn tại',
+            
         ];
     }
 }

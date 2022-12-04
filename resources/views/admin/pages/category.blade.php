@@ -1,4 +1,3 @@
-<div class="d-flex justify-content-between align-item-center">
     @extends('admin.layouts.master')
 
     @section('title', 'Category')
@@ -6,20 +5,27 @@
     @section('css')
         <!-- link css -->
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        @if (count($errors) > 0)
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#addCateModal').modal('show');
+            });
+        </script>
+    @endif
     @endsection
-
+   
     @section('content')
         <section>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCateModal">
                 Thêm danh mục sản phẩm
             </button>
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="addCateModal" tabindex="-1" aria-labelledby="addModal" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Thêm danh mục</h5>
+                            <h5 class="modal-title" id="addModal">Thêm danh mục</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -29,6 +35,9 @@
                                     <label class="form-label">Tên danh mục</label>
                                     <input type="text" class="form-control" name="name_cate">
                                 </div>
+                                @error('name_cate')
+                                <p class="text-danger">{{ $message }}</p>
+                                @enderror
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-primary">Save changes</button>
                             </form>
@@ -97,4 +106,3 @@
         </table>
     @endsection
 
-</div> 

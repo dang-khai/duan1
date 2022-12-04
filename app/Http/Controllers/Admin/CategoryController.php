@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductValidate;
+use App\Http\Requests\CateRequest;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -26,11 +27,10 @@ class CategoryController extends Controller
         return view('admin.pages.category', compact('data', 'stt'));
     }
 
-    public function addCategory(Request $request){
-        $input = ['name_cate' => $request->name_cate];
-        // $input = $request->all();
-        // dd($input);
-        if(DB::table('category')->insert($input)){
+    public function addCategory(CateRequest $request){
+        $input = $request->validated();
+        $addCate = DB::table('category')->insert($input);
+        if($addCate){
             toast('Add Category successfully!','success')->autoClose(1500);
             return back();
         }

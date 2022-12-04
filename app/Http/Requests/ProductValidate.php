@@ -3,9 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Contracts\Validation\Validator;
-use Illuminate\Http\Exceptions\HttpResponseException;
-use Illuminate\Validation\ValidationException;
+
 
 class ProductValidate extends FormRequest
 {
@@ -27,7 +25,7 @@ class ProductValidate extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
+            'name' => 'required || unique:product',
             'id_cate' => 'required',
             'year' => 'required',
             'color' => 'required',
@@ -41,6 +39,7 @@ class ProductValidate extends FormRequest
     {
         return [
             'name.required' => 'Name is required',
+            'name.unique' => 'Tên sản phẩm đã tồn tại',
             'id_cate.required' => 'Loại required',
             'year.required' => 'Year is required',
             'color.required' => 'color is required',

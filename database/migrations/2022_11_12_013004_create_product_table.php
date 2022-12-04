@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_cate');
             $table->foreign('id_cate')->references('id')->on('category')->onDelete('cascade');
-            $table->string('name');
+            $table->string('name')->unique();
             $table->string('year');
             $table->string('color');
             $table->string('description');
