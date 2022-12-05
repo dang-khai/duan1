@@ -36,11 +36,8 @@ class CategoryController extends Controller
         }
     }
 
-    public function editCategory(Request $request) {
-        $id = $request->id;
-        $input = [
-            'name_cate' => $request->name_cate,
-        ];
+    public function editCategory(CateRequest $request) {
+        $input = $request->validated();
         if(DB::table('category')->where('id', '=', $id)->update($input)){
             toast('Change category successfully!','success')->autoClose(1500);
             return back();

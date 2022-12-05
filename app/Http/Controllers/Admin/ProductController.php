@@ -10,7 +10,7 @@ use App\Models\Image;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductValidate;
 use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Support\Facades\File;
 class ProductController extends Controller
 {
     public function __construct()
@@ -64,6 +64,24 @@ class ProductController extends Controller
         }
     }
 
+    public function edit_product(ProductValidate $request)
+    {
+        // $product = Product::find($request->id);
+        // dd($request->file('images'));
+        // if($product->has('images')){
+        //     foreach($product->file('images') as $img){
+        //         $imageName = $request->name . '-image-' . time() . rand(1, 1000) . '.' . $img->extension();
+        //         $image->move($img, $imageName);
+        //     }
+        // }
+        
+        $input = $request->validated();
+        if (DB::table('product')->where('id', $request->id)->update($input)) {
+            toast('Change product successfully!', 'success')->autoClose(1500);
+            return back();
+        };
+    }
+
     public function deleteProduct($id)
     {
         $this->deleteAllImage($id);
@@ -75,25 +93,6 @@ class ProductController extends Controller
             return redirect('admin/product')->with('error', 'unsuccessfully');
         }
     }
-
-    public function edit_product(ProductValidate $request)
-    {
-        $input = [
-            'id' => $request->id,
-            'id_cate' => $request->id_cate,
-            'name' => $request->name,
-            'year' => $request->year,
-            'color' => $request->color,
-            'status' => $request->status,
-            'description' => $request->description,
-            'price' => $request->price,
-        ];
-        if ($this->Product->updateProduct($request->id, $input)) {
-            toast('Change product successfully!', 'success')->autoClose(1500);
-            return back();
-        };
-    }
-
     public function image($id)
     {
         $product = Product::find($id);

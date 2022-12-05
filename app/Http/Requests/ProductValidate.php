@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
+use Illuminate\Validation\Rule;
 
 class ProductValidate extends FormRequest
 {
@@ -25,7 +25,7 @@ class ProductValidate extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required || unique:product',
+            'name' => ['required', Rule::unique('product')->ignore($this->id)], 
             'id_cate' => 'required',
             'year' => 'required',
             'color' => 'required',
