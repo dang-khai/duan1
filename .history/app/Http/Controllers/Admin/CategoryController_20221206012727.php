@@ -27,34 +27,31 @@ class CategoryController extends Controller
         return view('admin.pages.category', compact('data', 'stt'));
     }
 
-    public function addCategory(CateRequest $request)
-    {
+    public function addCategory(CateRequest $request){
         $input = $request->validated();
         $addCate = DB::table('category')->insert($input);
-        if ($addCate) {
-            toast('Add Category successfully!', 'success')->autoClose(1500);
+        if($addCate){
+            toast('Add Category successfully!','success')->autoClose(1500);
             return back();
         }
     }
 
-    public function editCategory(CateRequest $request)
-    {
+    public function editCategory(CateRequest $request) {
         $input = $request->validated();
-        if (DB::table('category')->where('id', '=', $request->id)->update($input)) {
-            toast('Change category successfully!', 'success')->autoClose(1500);
+        if(DB::table('category')->where('id', '=', $id)->update($input)){
+            toast('Change category successfully!','success')->autoClose(1500);
             return back();
         };
     }
 
-    public function deleteCategory($id)
-    {
+    public function deleteCategory($id){
         $img = Category::find($id)->allImageCate;
         foreach ($img as $img) {
             $url = $img->url;
             Storage::disk('public')->delete($url);
         };
-        if (DB::table('category')->where('id', '=', $id)->delete()) {
-            toast('Delete category successfully!', 'success')->autoClose(1500);
+        if(DB::table('category')->where('id', '=', $id)->delete()){
+            toast('Delete category successfully!','success')->autoClose(1500);
             return back();
         }
     }
