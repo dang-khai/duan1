@@ -16,7 +16,7 @@ class CategoryCollection extends ProductCollection
     public function toArray($request)
     {
         return [
-            // 'id' => $this->id,
+            'id' => $this->id,
             'name_cate' => $this->name_cate,
         ];
     }

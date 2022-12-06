@@ -5,9 +5,6 @@
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="{{ asset('css/new-car.css') }}">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.4.1/pagination.min.js"
-        integrity="sha512-NAdccRMVn3sVmdDRqumi7Uwgmr9WP1CYjcaISdFTqhXiiwEkC8xP9++3YsoU/rcDU3KBdqVRjN/HbKK5dBSJOg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}
     {{-- <script src="https://github.com/jquery/jquery/blob/master/src/css/hiddenVisibleSelectors.js"></script> --}}
     {{-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript"></script> --}}
@@ -238,7 +235,55 @@
                 .trim()
                 .includes(searchValue.toLowerCase().trim())
             );
+            console.log(newCar);
+            if (searchValue) {
 
+            }
+            // else {
+            //     arrCar = [{
+            //             tenXe: "Tesla Model 3 Stanrdard Range Plus",
+            //             giaXe: 1410,
+            //             hinhXe: "./img/Tesla.png",
+            //             hangXe: "Telsa",
+            //             namSX: "2021",
+            //         },
+            //         {
+            //             tenXe: "FordFord F-250 Super Duly",
+            //             giaXe: 2042,
+            //             hinhXe: "./img/Ford.png",
+            //             hangXe: "Ford",
+            //             namSX: "2022",
+            //         },
+            //         {
+            //             tenXe: "Honda Pilot Touring 7-Passenger",
+            //             giaXe: 1076,
+            //             hinhXe: "./img/Honda.png",
+            //             hangXe: "Honda",
+            //             namSX: "2022",
+            //         },
+            //         {
+            //             tenXe: "Chevrolet Equinox LS",
+            //             giaXe: 447,
+            //             hinhXe: "./img/Chevrolet.png",
+            //             hangXe: "Chevrolet",
+            //             namSX: "2017",
+            //         },
+            //         {
+            //             tenXe: "Kia Sorento S",
+            //             giaXe: 740,
+            //             hinhXe: "./img/Kia.png",
+            //             hangXe: "Kia",
+            //             namSX: "2021",
+            //         },
+            //         {
+            //             tenXe: "Mini Clubman Cooper S",
+            //             giaXe: 891,
+            //             hinhXe: "./img/Mini_Cooper.png",
+            //             hangXe: "Audi",
+            //             namSX: "2022",
+            //         },
+            //     ];
+            // }
             if (newCar) {
                 displayCar(newCar);
             }
@@ -253,10 +298,10 @@
             if (arrCar.length < 0) return false;
             for (i = 0; i < arrCar.length; i++) {
                 ten = arrCar[i].tenXe;
-                hinh = arrCar[i].hinhXe[0]['url'];
+                hinh = arrCar[i].hinhXe;
                 gia = arrCar[i].giaXe;
                 nam = arrCar[i].namSX;
-                hang = arrCar[i].hangXe.name_cate;
+                hang = arrCar[i].hangXe;
                 if (namSX_arr.length > 0) {
                     if (namSX_arr.includes(nam) == false) continue;
                     // Bỏ qua xe không có năm sản xuất trùng;
@@ -267,8 +312,8 @@
                 // Bỏ qua xe không cùng hãng;
                 countCarDisplay++;
                 list1.innerHTML += `
-      <a class="product-card" href="/product/details?id={id}">
-              <img src="{{ asset('storage') }}/${hinh}">
+      <div class="product-card">
+              <img src="${hinh}">
               <div class="product-info">
                   <div class="product-new">
                       <span>Xe mới</span>
@@ -277,7 +322,7 @@
                       <span>${ten}</span>
                   </div>
                   <div class="product-price">
-                      <span>₫${gia}</span>
+                      <span>₫${gia} triệu</span>
                   </div>
                   <div class="product-location">
                       <span>Quận 1, TP HCM</span>
@@ -308,7 +353,7 @@
                       <span>(12 đánh giá)</span>
                   </div>
               </div>
-          </a>`;
+          </div>`;
             }
         }
 

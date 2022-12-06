@@ -5,9 +5,6 @@
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="{{ asset('css/new-car.css') }}">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.4.1/pagination.min.js"
-        integrity="sha512-NAdccRMVn3sVmdDRqumi7Uwgmr9WP1CYjcaISdFTqhXiiwEkC8xP9++3YsoU/rcDU3KBdqVRjN/HbKK5dBSJOg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}
     {{-- <script src="https://github.com/jquery/jquery/blob/master/src/css/hiddenVisibleSelectors.js"></script> --}}
     {{-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript"></script> --}}
@@ -277,7 +274,7 @@
                       <span>${ten}</span>
                   </div>
                   <div class="product-price">
-                      <span>₫${gia}</span>
+                      <span>₫${gia} triệu</span>
                   </div>
                   <div class="product-location">
                       <span>Quận 1, TP HCM</span>
