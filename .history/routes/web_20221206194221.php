@@ -58,7 +58,7 @@ Auth::routes(['login' => false, 'register' => false, 'verify' => true]);
 
 Route::get('/home', [HomeController_user::class, 'index'])->name('home'); //Trang home guests and users
 
-Route::get('/product/details', function () {
+Route::get('/product/details?id={id}', function () {
     return view('users.pages.product-detail');
 });
 

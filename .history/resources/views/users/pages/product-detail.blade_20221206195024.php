@@ -36,7 +36,7 @@
             </span>
             <div class="image-show-product"
                 style="
-                    background-image: url('{{ url('img/2022_Hyundai_Elantra_Hybrid.jpg') }}');
+                    background-image: url('img/2022_Hyundai_Elantra_Hybrid.jpg');
                 ">
             </div>
         </div>
@@ -44,33 +44,33 @@
             <div class="list-img-show">
                 <div class="img-show-mini"
                     style="
-                        background-image: url('{{ url('img/2022_Hyundai_Elantra_Hybrid.jpg') }}');
+                        background-image: url('img/2022_Hyundai_Elantra_Hybrid.jpg');
                     ">
                 </div>
                 <div class="img-show-mini"
                     style="
-                        background-image: url('{{ url('img/car-on-a-forest-path-photo.jpg') }}');
+                        background-image: url('img/car-on-a-forest-path-photo.jpg');
                     ">
                 </div>
-                <div class="img-show-mini" style="background-image: url('{{ url('img/customer.png') }}')"></div>
+                <div class="img-show-mini" style="background-image: url('img/customer.png')"></div>
                 <div class="img-show-mini"
                     style="
-                        background-image: url('{{ url('img/hinh-anh-xe-lamborghini-dep-nhat-34.jpg') }}');
-                    ">
-                </div>
-                <div class="img-show-mini"
-                    style="
-                        background-image: url('{{ url('img/hinh-anh-xe-oto-dep-3.jpg') }}');
+                        background-image: url('img/hinh-anh-xe-lamborghini-dep-nhat-34.jpg');
                     ">
                 </div>
                 <div class="img-show-mini"
                     style="
-                        background-image: url('{{ url('img/pexels-pixabay-358070.jpg') }}');
+                        background-image: url('img/hinh-anh-xe-oto-dep-3.jpg');
                     ">
                 </div>
                 <div class="img-show-mini"
                     style="
-                        background-image: url('{{ url('img/suv-automobile-driving-through-foggy-and-rainy-forest-road-CAVF75458.jpg') }}');
+                        background-image: url('img/pexels-pixabay-358070.jpg');
+                    ">
+                </div>
+                <div class="img-show-mini"
+                    style="
+                        background-image: url('img/suv-automobile-driving-through-foggy-and-rainy-forest-road-CAVF75458.jpg');
                     ">
                 </div>
             </div>
@@ -155,7 +155,7 @@
                                 </span>
                             </div>
                             <div class="box-features">
-                                <img src="{{ asset('icon/check_box.svg') }}" alt="" />
+                                <img src="icon/check_box.svg" alt="" />
                                 <span class="name-box-features">
                                     Màn hình cảm ứng 15 inch
                                 </span>
@@ -299,7 +299,7 @@
                     </div>
                     <div class="vehicle-history">
                         <a href="">Lịch Sử Phương Tiện</a>
-                        <img src="{{ asset('icon/akar-icons_arrow-up-right.svg') }}" alt="" />
+                        <img src="icon/akar-icons_arrow-up-right.svg" alt="" />
                     </div>
                     <div class="reviews-product">
                         <div class="star">
@@ -509,7 +509,7 @@
                     </div>
                     <div class="vehicle-history">
                         <a href="">Lịch Sử Phương Tiện</a>
-                        <img src="{{ asset('icon/akar-icons_arrow-up-right.svg') }}" alt="" />
+                        <img src="icon/akar-icons_arrow-up-right.svg" alt="" />
                     </div>
                     <div class="reviews-product">
                         <div class="star">
@@ -522,7 +522,7 @@
                         <p>(12 Đánh giá)</p>
                     </div>
                     <div class="car-comparison">
-                        <img src="{{ asset('icon/compare_arrows.svg') }}" alt="" />
+                        <img src="{{ aseet('icon/compare_arrows.svg') }}" alt="" />
                         <p>So Sánh Xe</p>
                     </div>
                 </div>

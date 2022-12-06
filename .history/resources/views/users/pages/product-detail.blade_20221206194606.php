@@ -36,7 +36,7 @@
             </span>
             <div class="image-show-product"
                 style="
-                    background-image: url('{{ url('img/2022_Hyundai_Elantra_Hybrid.jpg') }}');
+                    background-image: url('img/2022_Hyundai_Elantra_Hybrid.jpg');
                 ">
             </div>
         </div>
@@ -44,33 +44,33 @@
             <div class="list-img-show">
                 <div class="img-show-mini"
                     style="
-                        background-image: url('{{ url('img/2022_Hyundai_Elantra_Hybrid.jpg') }}');
+                        background-image: url('img/2022_Hyundai_Elantra_Hybrid.jpg');
                     ">
                 </div>
                 <div class="img-show-mini"
                     style="
-                        background-image: url('{{ url('img/car-on-a-forest-path-photo.jpg') }}');
+                        background-image: url('img/car-on-a-forest-path-photo.jpg');
                     ">
                 </div>
-                <div class="img-show-mini" style="background-image: url('{{ url('img/customer.png') }}')"></div>
+                <div class="img-show-mini" style="background-image: url('img/customer.png')"></div>
                 <div class="img-show-mini"
                     style="
-                        background-image: url('{{ url('img/hinh-anh-xe-lamborghini-dep-nhat-34.jpg') }}');
-                    ">
-                </div>
-                <div class="img-show-mini"
-                    style="
-                        background-image: url('{{ url('img/hinh-anh-xe-oto-dep-3.jpg') }}');
+                        background-image: url('img/hinh-anh-xe-lamborghini-dep-nhat-34.jpg');
                     ">
                 </div>
                 <div class="img-show-mini"
                     style="
-                        background-image: url('{{ url('img/pexels-pixabay-358070.jpg') }}');
+                        background-image: url('img/hinh-anh-xe-oto-dep-3.jpg');
                     ">
                 </div>
                 <div class="img-show-mini"
                     style="
-                        background-image: url('{{ url('img/suv-automobile-driving-through-foggy-and-rainy-forest-road-CAVF75458.jpg') }}');
+                        background-image: url('img/pexels-pixabay-358070.jpg');
+                    ">
+                </div>
+                <div class="img-show-mini"
+                    style="
+                        background-image: url('img/suv-automobile-driving-through-foggy-and-rainy-forest-road-CAVF75458.jpg');
                     ">
                 </div>
             </div>
@@ -131,43 +131,43 @@
                     <div class="content-car-features" onclick="this.classList.add('expanded')">
                         <div class="box-content-car-features">
                             <div class="box-features">
-                                <img src="{{ asset('icon/check_box.svg') }}" alt="" />
+                                <img src="icon/check_box.svg" alt="" />
                                 <span class="name-box-features">
                                     Tự động lái
                                 </span>
                             </div>
                             <div class="box-features">
-                                <img src="{{ asset('icon/check_box.svg') }}" alt="" />
+                                <img src="icon/check_box.svg" alt="" />
                                 <span class="name-box-features">
                                     Triệu hồi
                                 </span>
                             </div>
                             <div class="box-features">
-                                <img src="{{ asset('icon/check_box.svg') }}" alt="" />
+                                <img src="icon/check_box.svg" alt="" />
                                 <span class="name-box-features">
                                     Tự đỗ xe
                                 </span>
                             </div>
                             <div class="box-features">
-                                <img src="{{ asset('icon/check_box.svg') }}" alt="" />
+                                <img src="icon/check_box.svg" alt="" />
                                 <span class="name-box-features">
                                     Tự động đổi làn
                                 </span>
                             </div>
                             <div class="box-features">
-                                <img src="{{ asset('icon/check_box.svg') }}" alt="" />
+                                <img src="icon/check_box.svg" alt="" />
                                 <span class="name-box-features">
                                     Màn hình cảm ứng 15 inch
                                 </span>
                             </div>
                             <div class="box-features">
-                                <img src="{{ asset('icon/check_box.svg') }}" alt="" />
+                                <img src="icon/check_box.svg" alt="" />
                                 <span class="name-box-features">
                                     360° Camera
                                 </span>
                             </div>
                             <div class="box-features">
-                                <img src="{{ asset('icon/check_box.svg') }}" alt="" />
+                                <img src="icon/check_box.svg" alt="" />
                                 <span class="name-box-features">
                                     12 Cảm biến siêu âm
                                 </span>
@@ -299,20 +299,20 @@
                     </div>
                     <div class="vehicle-history">
                         <a href="">Lịch Sử Phương Tiện</a>
-                        <img src="{{ asset('icon/akar-icons_arrow-up-right.svg') }}" alt="" />
+                        <img src="icon/akar-icons_arrow-up-right.svg" alt="" />
                     </div>
                     <div class="reviews-product">
                         <div class="star">
-                            <img src="{{ asset('icon/star_product.svg') }}" alt="" />
-                            <img src="{{ asset('icon/star_product.svg') }}" alt="" />
-                            <img src="{{ asset('icon/star_product.svg') }}" alt="" />
-                            <img src="{{ asset('icon/star_product.svg') }}" alt="" />
-                            <img src="{{ asset('icon/star_border_product.svg') }}" alt="" />
+                            <img src="icon/star_product.svg" alt="" />
+                            <img src="icon/star_product.svg" alt="" />
+                            <img src="icon/star_product.svg" alt="" />
+                            <img src="icon/star_product.svg" alt="" />
+                            <img src="icon/star_border_product.svg" alt="" />
                         </div>
                         <p>(12 Đánh giá)</p>
                     </div>
                     <div class="car-comparison">
-                        <img src="{{ asset('icon/compare_arrows.svg') }}" alt="" />
+                        <img src="icon/compare_arrows.svg" alt="" />
                         <p>So Sánh Xe</p>
                     </div>
                 </div>
@@ -322,20 +322,20 @@
                     </h3>
                     <div class="box-agent-information">
                         <div class="avatar-name">
-                            <img src="{{ asset('img/customer.png') }}" alt="" />
+                            <img src="img/customer.png" alt="" />
                             <div class="information-agent">
                                 <p class="name-information">Hai Nguyen</p>
                                 <p class="office-information">Đại lý</p>
                             </div>
                         </div>
                         <div class="phone-agent">
-                            <img src="{{ asset('icon/akar-icons_phone.svg') }}" alt="" />
+                            <img src="icon/akar-icons_phone.svg" alt="" />
                             <p class="phone-number-agent">
                                 +84 823.787.551
                             </p>
                         </div>
                         <div class="email-agent">
-                            <img src="{{ asset('icon/carbon_email.svg') }}" alt="" />
+                            <img src="icon/carbon_email.svg" alt="" />
                             <p class="email-text-agent">nhai68@gmail.com</p>
                         </div>
                     </div>
@@ -509,20 +509,20 @@
                     </div>
                     <div class="vehicle-history">
                         <a href="">Lịch Sử Phương Tiện</a>
-                        <img src="{{ asset('icon/akar-icons_arrow-up-right.svg') }}" alt="" />
+                        <img src="icon/akar-icons_arrow-up-right.svg" alt="" />
                     </div>
                     <div class="reviews-product">
                         <div class="star">
-                            <img src="{{ asset('icon/star_product.svg') }}" alt="" />
-                            <img src="{{ asset('icon/star_product.svg') }}" alt="" />
-                            <img src="{{ asset('icon/star_product.svg') }}" alt="" />
-                            <img src="{{ asset('icon/star_product.svg') }}" alt="" />
-                            <img src="{{ asset('icon/star_border_product.svg') }}" alt="" />
+                            <img src="icon/star_product.svg" alt="" />
+                            <img src="icon/star_product.svg" alt="" />
+                            <img src="icon/star_product.svg" alt="" />
+                            <img src="icon/star_product.svg" alt="" />
+                            <img src="icon/star_border_product.svg" alt="" />
                         </div>
                         <p>(12 Đánh giá)</p>
                     </div>
                     <div class="car-comparison">
-                        <img src="{{ asset('icon/compare_arrows.svg') }}" alt="" />
+                        <img src="icon/compare_arrows.svg" alt="" />
                         <p>So Sánh Xe</p>
                     </div>
                 </div>
