@@ -23,6 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // production routes
 Route::get('/allProduct', [ProductApiController::class, 'index'])->name('apiShowAllproducts');
+Route::get('product/{id}', [ProductApiController::class, 'show'])->name('showProduct');
 Route::post('/addProduct', [ProductApiController::class, 'store'])->name('apiAddproducts');
 Route::delete('/deleteProduct/{id}', [ProductApiController::class, 'destroy'])->name('apiDeleteProduct');
 

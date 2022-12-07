@@ -73,7 +73,12 @@ class ProductApiController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = Product::find($id);
+        $arr = [
+            'message' => 'Danh sách sản phẩm',
+            'data' => new ProductResources($product),
+         ];
+        return response()->json($arr, 200);
     }
 
     /**
