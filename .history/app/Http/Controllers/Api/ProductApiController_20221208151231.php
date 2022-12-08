@@ -35,7 +35,7 @@ class ProductApiController extends Controller
         $arr = [
             'message' => 'Danh sách sản phẩm',
             'data' => ProductResources::collection($product),
-        ];
+         ];
         return response()->json($arr, 200);
     }
 
@@ -77,7 +77,7 @@ class ProductApiController extends Controller
         $arr = [
             'message' => 'Danh sách sản phẩm',
             'data' => new ProductResources($product),
-        ];
+         ];
         return response()->json($arr, 200);
     }
 

@@ -249,7 +249,6 @@
             list1.innerHTML = "";
             if (arrCar.length < 0) return false;
             for (i = 0; i < arrCar.length; i++) {
-                id = arrCar[i].id;
                 ten = arrCar[i].tenXe;
                 hinh = arrCar[i].hinhXe[0]['url'];
                 gia = arrCar[i].giaXe;
@@ -265,7 +264,7 @@
                 // Bỏ qua xe không cùng hãng;
                 countCarDisplay++;
                 list1.innerHTML += `
-      <a class="product-card" href="/product/details?id=${id}">
+      <a class="product-card" href="/product/details?id={id}">
               <img src="{{ asset('storage') }}/${hinh}">
               <div class="product-info">
                   <div class="product-new">
