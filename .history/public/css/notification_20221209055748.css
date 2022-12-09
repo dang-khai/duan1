@@ -1,0 +1,9 @@
+.notification{
+  width: 80%;
+  height: 80vh;
+  background: inherit;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+}
