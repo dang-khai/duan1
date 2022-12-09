@@ -325,7 +325,7 @@
                                     <td>${element.address}</td>
                                     <td>${element.note}</td>
                                     <td style="width:15%">${element.status}</td>
-                                    <td>${element.updated_at}</td>
+                                    <td>09/12/2022</td>
                                 </tr>`;
                 });
                 $('#data').html(html);

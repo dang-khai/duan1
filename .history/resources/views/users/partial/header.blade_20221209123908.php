@@ -93,7 +93,7 @@
                             <a id="your-notification" class="manage-account">
                                 <img src="{{ asset('icon/Bell_fill.svg') }}" alt="">
                                 <p class="text-manage-account">
-                                    Quản lý đơn hàng
+                                    Thông báo dành cho bạn
                                 </p>
                             </a>
                             <a class="manage-account"
@@ -325,7 +325,7 @@
                                     <td>${element.address}</td>
                                     <td>${element.note}</td>
                                     <td style="width:15%">${element.status}</td>
-                                    <td>${element.updated_at}</td>
+                                    <td>09/12/2022</td>
                                 </tr>`;
                 });
                 $('#data').html(html);

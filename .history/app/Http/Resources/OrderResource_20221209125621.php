@@ -21,8 +21,8 @@ class OrderResource extends JsonResource
             'phone' => $this->phone,
             'address' => $this->address,
             'note' => $this->note,
-            'status' => $this->status == 0 ? 'Đang chờ xác nhận' : 'Đã xác nhận',
-            'updated_at' => $this->updated_at == '' ? '' : \Carbon\Carbon::parse($this->updated_at)->format('h:m:s d-m-Y'),
+            'status' => $this->status == 0 ? 'Đang chờ xác nhận' : 'Đã xác nhận thành công',
+            'updated_at' => $this->updated_at,
         ];
     }
 }

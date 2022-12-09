@@ -22,7 +22,7 @@ class OrderResource extends JsonResource
             'address' => $this->address,
             'note' => $this->note,
             'status' => $this->status == 0 ? 'Đang chờ xác nhận' : 'Đã xác nhận',
-            'updated_at' => $this->updated_at == '' ? '' : \Carbon\Carbon::parse($this->updated_at)->format('h:m:s d-m-Y'),
+            'updated_at' => date('H:m:s d-m-Y', strtotime($this->updated_at)),
         ];
     }
 }

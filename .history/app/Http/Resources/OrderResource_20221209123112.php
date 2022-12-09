@@ -20,9 +20,8 @@ class OrderResource extends JsonResource
             'email' => $this->email,
             'phone' => $this->phone,
             'address' => $this->address,
-            'note' => $this->note,
+            'note' => $this->notes,
             'status' => $this->status == 0 ? 'Đang chờ xác nhận' : 'Đã xác nhận',
-            'updated_at' => $this->updated_at == '' ? '' : \Carbon\Carbon::parse($this->updated_at)->format('h:m:s d-m-Y'),
         ];
     }
 }

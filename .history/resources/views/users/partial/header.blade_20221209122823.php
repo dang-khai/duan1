@@ -93,7 +93,7 @@
                             <a id="your-notification" class="manage-account">
                                 <img src="{{ asset('icon/Bell_fill.svg') }}" alt="">
                                 <p class="text-manage-account">
-                                    Quản lý đơn hàng
+                                    Thông báo dành cho bạn
                                 </p>
                             </a>
                             <a class="manage-account"
@@ -284,7 +284,7 @@
 <!-- End code slide-show -->
 <div class="notification close">
     <div class="notification-icon"><i class="fa-solid fa-xmark"></i></div>
-    <h1 class="notification-title">Quản lý đơn hàng</h1>
+    <h1 class="notification-title">Thông báo của bạn</h1>
     <div class="notification-content">
         <table class="table">
             <thead>
@@ -299,12 +299,22 @@
                     <th>Thời gian xác nhận</th>
                 </tr>
             </thead>
-            <tbody id="data"></tbody>
+            <tbody id="data">
+                <tr>
+                    <th>1</th>
+                    <td>Mark</td>
+                    <td>Mark@gmail.com</td>
+                    <td>123456789</td>
+                    <td>46 Dương Quảng Hàm, P.5, Q.Gò Vấp, TP.HCM</td>
+                    <td>Mua xe nha bạn Mua xe nha bạn Mua xe nha bạn Mua xe nha bạn Mua xe nha bạn Mua xe nha bạn </td>
+                    <td>Đã được xác nhận</td>
+                    <td>09/12/2022</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script>
     $(document).ready(function() {
         $.ajax({
@@ -323,9 +333,7 @@
                                     <td>${element.email}</td>
                                     <td style="width:11%">${element.phone}</td>
                                     <td>${element.address}</td>
-                                    <td>${element.note}</td>
                                     <td style="width:15%">${element.status}</td>
-                                    <td>${element.updated_at}</td>
                                 </tr>`;
                 });
                 $('#data').html(html);
