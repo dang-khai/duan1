@@ -269,7 +269,7 @@
               <img src="{{ asset('storage') }}/${hinh}">
               <div class="product-info">
                   <div class="product-new">
-                      <span>${status}</span>
+                      <span>Xe mới</span>
                   </div>
                   <div class="product-name">
                       <span>${ten}</span>
