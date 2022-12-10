@@ -383,8 +383,7 @@
                                         <p style="margin-top: 10px;color:red">{{ $message }}</p>
                                     @enderror
                                 </div>
-                                <input type="text" name="product_id" value="{{ $product->id }}" hidden>
-                                <input type="text" name="user_id" value="{{ Auth::user()->id }}" hidden>
+                                <input type="text" value="{{ $product->id }}" hidden>
                                 {{-- <div class="input-name">
                             <p class="title-input-name">Tiêu đề</p>
                             <select name="" id="">

@@ -19,7 +19,6 @@
     border-radius: 20px;
     padding: 20px;
     color: #fff;
-    position: relative;
 }
 .notification-icon {
     --height: 40px;

@@ -15,8 +15,6 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_user')->references('id')->on('users')->onDelete('cascade');
-            $table->integer('id_product')->references('id')->on('product')->onDelete('cascade');
             $table->string('name');
             $table->string('email');
             $table->string('phone');

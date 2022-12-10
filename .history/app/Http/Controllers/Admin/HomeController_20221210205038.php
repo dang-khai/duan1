@@ -73,7 +73,7 @@ class HomeController extends Controller
             'note' => $request->note,
             'id_user' => $request->user_id,
             'id_product' => $request->product_id,
-            'created_at' => date('Y-m-d H:i:s'),
+            // 'created_at' => $request->created_at,
         ]);
 
         return redirect()->back()->with('success', 'Bạn đã đặt hàng thành công. Hãy hoàn thành việc chuyển khoản đặt cọc để hoàn thành thủ tục');

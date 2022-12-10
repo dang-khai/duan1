@@ -168,7 +168,7 @@
                         <th>Địa chỉ</th>
                         <th>Lời nhắn</th>
                         <th>Trạng thái</th>
-                        <th>Thời gian gửi</th>
+                        <th>Thời gian xác nhận</th>
                     </tr>
                 </thead>
                 <tbody id="data"></tbody>
