@@ -57,44 +57,36 @@
                                                         <div class="mb-3">
                                                             <label class="form-label">Tên sản phẩm</label>
                                                             <input type="text" class="form-control" name="name"
-                                                                value="{{ $product->name }}" disabled>
+                                                                value="{{ $product->name }}">
                                                         </div>
                                                         <div class="mb-3">
                                                             <label class="form-label">Loại</label>
-                                                            <select class="form-select" aria-label="Default select example"
-                                                                name="id_cate" disabled>
-                                                                @foreach ($cates as $cate)
-                                                                    @if ($cate->id == $product->id_cate)
-                                                                        <option value="{{ $cate->id }}">
-                                                                            {{ $cate->name_cate }}</option>
-                                                                    @endif
-                                                                @endforeach
-                                                            </select>
+                                                            <input type="text" class="form-control" name="loai"
+                                                                value="{{ $product->email }}">
                                                         </div>
                                                         <div class="mb-3">
                                                             <label class="form-label">Đời</label>
                                                             <input type="text" class="form-control" name="year"
-                                                                value="{{ $product->year }}" disabled>
+                                                                value="{{ $product->year }}">
                                                         </div>
                                                         <div class="mb-3">
                                                             <label class="form-label">Màu</label>
                                                             <input type="text" class="form-control" name="color"
-                                                                value="{{ $product->color }}" disabled>
+                                                                value="{{ $product->color }}">
                                                         </div>
                                                         <div class="mb-3">
                                                             <label class="form-label">Giá</label>
                                                             <input type="text" class="form-control" name="price"
-                                                                value="{{ $product->price }}" disabled>
+                                                                value="{{ $product->price }}">
                                                         </div>
                                                         <div class="mb-3">
                                                             <label class="form-label">Trạng thái</label>
                                                             <input type="text" class="form-control" name="status"
-                                                                value="{{ $product->status == 0 ? 'Xe mới' : 'Xe cũ' }}"
-                                                                disabled>
+                                                                value="{{ $product->status == 0 ? 'Xe mới' : 'Xe cũ' }}">
                                                         </div>
                                                         <div class="mb-3">
                                                             <label class="form-label">Mô tả</label>
-                                                            <textarea class="form-control" rows="3" name="description" disabled>{{ $product->description }}</textarea>
+                                                            <textarea class="form-control" rows="3" name="description">{{ $product->description }}</textarea>
                                                         </div>
                                                         <button type="button" class="btn btn-secondary"
                                                             data-bs-dismiss="modal">Close</button>

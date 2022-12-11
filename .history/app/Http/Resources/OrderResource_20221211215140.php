@@ -24,7 +24,7 @@ class OrderResource extends JsonResource
             'note' => $this->note,
             'status' => $this->status == 0 ? 'Đang chờ xác nhận' : 'Đã xác nhận',
             'updated_at' => \Carbon\Carbon::parse($this->created_at)->format('d-m-Y'),
-            'sanpham' => new ProductCollection(Product::findOrFail($this->id_product)),
+            // 'sanpham' => new ProductCollection(Product::findOrFail($this->id_product)),
         ];
     }
 }

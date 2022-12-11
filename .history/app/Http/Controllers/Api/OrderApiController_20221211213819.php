@@ -54,13 +54,7 @@ class OrderApiController extends Controller
      */
     public function show($id)
     {
-        $orders = Orders::where('id_user', $id)->get();
-        $arr = [
-            'status' => true,
-            'message' => "Danh sách orders",
-            'data' => OrderResource::collection($orders)
-        ];
-        return response()->json($arr, 200);
+        return redirect()->route('admin_orders');
     }
 
     /**

@@ -54,7 +54,7 @@ class OrderApiController extends Controller
      */
     public function show($id)
     {
-        $orders = Orders::where('id_user', $id)->get();
+        $orders = Orders::all();
         $arr = [
             'status' => true,
             'message' => "Danh sách orders",

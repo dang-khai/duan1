@@ -2,14 +2,14 @@
     <div class="container">
         <header>
             <div id="menu_header_mobile" class="menu_header_mobile">
-                <img src="{{ asset('icon/bx_bx-menu.svg') }}" alt="">
+                <img src="icon/bx_bx-menu.svg" alt="">
             </div>
             <div id="menu-header-mobile-select" class="menu-header-mobile-select">
-                <img id="clear-menu-mobile" class="clear" src="{{ asset('icon/clear.svg') }}" alt="">
+                <img id="clear-menu-mobile" class="clear" src="icon/clear.svg" alt="">
                 <div class="mobile-link-mxh">
-                    <a href=""><img src="{{ asset('icon/facebook.svg') }}" alt=""></a>
-                    <a href=""><img src="{{ asset('icon/instagram.svg') }}" alt=""></a>
-                    <a href=""><img src="{{ asset('icon/youtube.svg') }}" alt=""></a>
+                    <a href=""><img src="icon/facebook.svg" alt=""></a>
+                    <a href=""><img src="icon/instagram.svg" alt=""></a>
+                    <a href=""><img src="icon/youtube.svg" alt=""></a>
                 </div>
                 <ul>
                     <li><a href="{{ route('product') }}">Xe mới</a></li>
@@ -43,18 +43,16 @@
                         </div>
                     @endguest
                     <div class="language">
-                        <img class="ic_language" src="{{ asset('icon/clarity_world-line.svg') }}" alt="">
+                        <img class="ic_language" src="icon/clarity_world-line.svg" alt="">
                         VIE
-                        <img class="ic_language-2" src="{{ asset('icon/akar-icons_chevron-down.svg') }}"
-                            alt="">
+                        <img class="ic_language-2" src="icon/akar-icons_chevron-down.svg" alt="">
                     </div>
                 </div>
 
             </div>
-            <a class="logo_header" href="{{ route('user_home') }}"><img src="{{ asset('img/car_logo2.png') }}"
-                    alt=""></a>
+            <a class="logo_header" href="{{ route('user_home') }}"><img src="img/car_logo2.png" alt=""></a>
             <div class="notification_mobile">
-                <img src="{{ asset('icon/codicon_bell-dot.svg') }}" alt="">
+                <img src="icon/codicon_bell-dot.svg" alt="">
             </div>
             <ul class="menu_header">
                 <li><a href="{{ route('product') }}">Xe mới</a></li>
@@ -62,8 +60,7 @@
                 <li><a href="#">Đấu giá xe</a></li>
                 <li><a href="#">Bán xe</a></li>
                 <li><a class="drop-down" href="#">
-                        <p>Kinh nghiệm</p> <img class="ic_exp" src="{{ asset('icon/akar-icons_chevron-down.svg') }}"
-                            alt="">
+                        <p>Kinh nghiệm</p> <img class="ic_exp" src="icon/akar-icons_chevron-down.svg" alt="">
                     </a> </li>
             </ul>
             <div class="login-language_header">
@@ -139,20 +136,152 @@
                             }
                         };
                     </script>
+                    {{-- <div class="logout">
+                        <a class="login" style="cursor: pointer"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            Đăng xuất
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
+                            @csrf
+                        </form>
+                    </div> --}}
                 @endguest
                 <div class="language">
-                    <img class="ic_language" src="{{ asset('icon/clarity_world-line.svg') }}" alt="">
+                    <img class="ic_language" src="icon/clarity_world-line.svg" alt="">
                     VIE
-                    <img class="ic_language-2" src="{{ asset('icon/akar-icons_chevron-down.svg') }}" alt="">
+                    <img class="ic_language-2" src="icon/akar-icons_chevron-down.svg" alt="">
                 </div>
             </div>
         </header>
     </div>
 </div>
 
-<script src="{{ asset('js/menu-mobile-show.js') }}"></script>
+<script src="js/menu-mobile-show.js"></script>
 
 <!-- End code header -->
+
+<div class="slideshow-container">
+    <div class="switch-button">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <div class="mySlides ">
+        <div class="img-slideshow" style="background-image: url('img/1.png');"></div>
+    </div>
+
+    <div class="mySlides ">
+        <div class="img-slideshow" style="background-image: url('img/2.png');"></div>
+    </div>
+
+    <div class="mySlides ">
+        <div class="img-slideshow" style="background-image: url('img/3.png');"></div>
+    </div>
+
+    <div class="mySlides ">
+        <div class="img-slideshow" style="background-image: url('img/4.png');"></div>
+    </div>
+
+    <script src="js/slideshow.js"></script>
+
+</div>
+
+<!-- Start code filter -->
+
+<div class="container-filter">
+    <div class="filter container">
+        <form action="" method="post">
+            <div id="select-car" class="select-car">
+                <a class="all-car text-select-car active-text-select-car">Tất cả</a>
+
+                <a class="new-car text-select-car">Xe mới</a>
+
+                <a class="old-car text-select-car">Xe cũ</a>
+
+            </div>
+            <div class="search-model-brand">
+                <input type="search" class="search" placeholder="Tìm kiếm">
+                <select class="model" name="" id="">
+                    <option value="">Dòng xe</option>
+                </select>
+                <select class="brand" name="" id="">
+                    <option value="">Hãng xe</option>
+                </select>
+            </div>
+            <div class="location-price-submit">
+                <input type="text" name="" id="" class="location" placeholder="Địa điểm">
+                <div class="price">
+                    <div class="values">
+                        <span class="text-note-price">Mức Giá </span> <br>
+                        <span class="text-range">₫.<span id="range1">0</span> - ₫<span
+                                id="range2">100</span></span>
+                    </div>
+                    <div class="scroll-bar">
+                        <div class="slider-track">
+                            <input type="range" min="0" max="9000" value="0" id="slider-1"
+                                oninput="slideOne()">
+                            <input type="range" min="0" max="9000" value="9000" id="slider-2"
+                                oninput="slideTwo()">
+                        </div>
+                    </div>
+                </div>
+                <button class="submit" type="submit">Tìm kiếm</button>
+            </div>
+        </form>
+        <script src="js/scroll-bar.js"></script>
+        <script src="js/select-car-active.js"></script>
+    </div>
+</div>
+
+
+<div class="container">
+    <form action="" method="post">
+        <div class="search-filter-mobile">
+            <input type="search" class="search-mobile" placeholder="Tìm kiếm">
+            <img src="icon/filter-icon.svg" alt="">
+        </div>
+    </form>
+</div>
+
+<!-- End code filter -->
+
+<!-- Start code slide show mobile -->
+
+<div class="container">
+    <div class="slideshow-container-mobile">
+        <div class="switch-button-mobile">
+            <span class="dot-mobile" onclick="currentSlideMobile(1)"></span>
+            <span class="dot-mobile" onclick="currentSlideMobile(2)"></span>
+            <span class="dot-mobile" onclick="currentSlideMobile(3)"></span>
+            <span class="dot-mobile" onclick="currentSlideMobile(4)"></span>
+        </div>
+
+        <div class="mySlides-mobile ">
+            <div class="img-slideshow-mobile" style="background-image: url('img/1.png');"></div>
+        </div>
+
+        <div class="mySlides-mobile ">
+            <div class="img-slideshow-mobile" style="background-image: url('img/2.png');"></div>
+        </div>
+
+        <div class="mySlides-mobile ">
+            <div class="img-slideshow-mobile" style="background-image: url('img/3.png');"></div>
+        </div>
+
+        <div class="mySlides-mobile ">
+            <div class="img-slideshow-mobile" style="background-image: url('img/4.png');"></div>
+        </div>
+
+        <script src="js/slideshow-mobile.js"></script>
+
+    </div>
+</div>
+
+<!-- End code slide show mobile -->
+
+<!-- End code slide-show -->
 @if (Auth::check())
     <div class="notification-box close">
         <div class="notification">
@@ -199,12 +328,11 @@
                                     <th scope="row">${index++}</th>
                                     <td>${element.name}</td>
                                     <td>${element.email}</td>
-                                    <td>${element.phone}</td>
-                                    <td>${element.sanpham['tenXe']}</td>
-                                    <td>${element.sanpham['hangXe']['name_cate']}</td>
-                                    <td>${element.sanpham['color']}</td>
-                                    <td>${element.sanpham['giaXe']}</td>
-                                    <td>${element.status}</td>
+                                    <td style="width:11%">${element.phone}</td>
+                                    <td style="width:11%">${element.sanpham['tenXe']}</td>
+                                    <td>${element.address}</td>
+                                    <td>${element.note}</td>
+                                    <td style="width:15%">${element.status}</td>
                                     <td>${element.updated_at}</td>
                                 </tr>`;
                     });

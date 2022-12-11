@@ -199,7 +199,7 @@
                                     <th scope="row">${index++}</th>
                                     <td>${element.name}</td>
                                     <td>${element.email}</td>
-                                    <td>${element.phone}</td>
+                                    <td style="width:11%">${element.phone}</td>
                                     <td>${element.sanpham['tenXe']}</td>
                                     <td>${element.sanpham['hangXe']['name_cate']}</td>
                                     <td>${element.sanpham['color']}</td>

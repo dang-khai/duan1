@@ -27,9 +27,8 @@ class HomeController extends Controller
     {
         $orders = Orders::all();
         $products = Product::all();
-        $cates = Category::all();
         $index = 1;
-        return view('admin.pages.order', compact('orders', 'index', 'products', 'cates'));
+        return view('admin.pages.order', compact('orders', 'index', 'products'));
     }
     public function customers()
     {

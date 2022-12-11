@@ -36,10 +36,10 @@
                             @if ($order->id_product == $product->id)
                                 <form>
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#editModal{{ $product->id }}">Sản phẩm</button>
+                                        data-bs-target="#editModal{{ $order->id_product }}">Sản phẩm</button>
                                     <section>
                                         <!-- Modal edit -->
-                                        <div class="modal fade" id="editModal{{ $product->id }}" tabindex="-1"
+                                        <div class="modal fade" id="editModal{{ $order->id_product }}" tabindex="-1"
                                             aria-labelledby="" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -52,49 +52,44 @@
                                                         <!-- sửa sp -->
                                                         <div class="mb-3">
                                                             <input type="hidden" class="form-control" name="id"
-                                                                value="{{ $product->id }}">
+                                                                value="{{ $order->id_product }}">
                                                         </div>
                                                         <div class="mb-3">
                                                             <label class="form-label">Tên sản phẩm</label>
                                                             <input type="text" class="form-control" name="name"
-                                                                value="{{ $product->name }}" disabled>
+                                                                value="{{ $order->name }}">
                                                         </div>
                                                         <div class="mb-3">
-                                                            <label class="form-label">Loại</label>
-                                                            <select class="form-select" aria-label="Default select example"
-                                                                name="id_cate" disabled>
-                                                                @foreach ($cates as $cate)
-                                                                    @if ($cate->id == $product->id_cate)
-                                                                        <option value="{{ $cate->id }}">
-                                                                            {{ $cate->name_cate }}</option>
-                                                                    @endif
-                                                                @endforeach
-                                                            </select>
+                                                            <label class="form-label">Email</label>
+                                                            <input type="text" class="form-control" name="loai"
+                                                                value="{{ $order->email }}">
                                                         </div>
                                                         <div class="mb-3">
                                                             <label class="form-label">Đời</label>
                                                             <input type="text" class="form-control" name="year"
-                                                                value="{{ $product->year }}" disabled>
+                                                                value="{{ $order->phone }}">
                                                         </div>
                                                         <div class="mb-3">
                                                             <label class="form-label">Màu</label>
                                                             <input type="text" class="form-control" name="color"
-                                                                value="{{ $product->color }}" disabled>
+                                                                value="{{ $order->address }}">
                                                         </div>
                                                         <div class="mb-3">
                                                             <label class="form-label">Giá</label>
                                                             <input type="text" class="form-control" name="price"
-                                                                value="{{ $product->price }}" disabled>
+                                                                value="{{ $order->note }}">
                                                         </div>
                                                         <div class="mb-3">
                                                             <label class="form-label">Trạng thái</label>
-                                                            <input type="text" class="form-control" name="status"
-                                                                value="{{ $product->status == 0 ? 'Xe mới' : 'Xe cũ' }}"
-                                                                disabled>
+                                                            <select class="form-select" aria-label="Default select example"
+                                                                name="status">
+                                                                <option selected value="0">Xe mới</option>
+                                                                <option value="1">Xe cũ</option>
+                                                            </select>
                                                         </div>
                                                         <div class="mb-3">
                                                             <label class="form-label">Mô tả</label>
-                                                            <textarea class="form-control" rows="3" name="description" disabled>{{ $product->description }}</textarea>
+                                                            <textarea class="form-control" rows="3" name="description">{{ $order->status }}</textarea>
                                                         </div>
                                                         <button type="button" class="btn btn-secondary"
                                                             data-bs-dismiss="modal">Close</button>

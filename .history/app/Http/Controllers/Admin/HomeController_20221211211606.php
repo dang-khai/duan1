@@ -26,10 +26,11 @@ class HomeController extends Controller
     public function orders()
     {
         $orders = Orders::all();
-        $products = Product::all();
-        $cates = Category::all();
+        $productId = $orders->id_product;
+        $product = Product::find($productId);
+        $id_product = $product->id_product;
         $index = 1;
-        return view('admin.pages.order', compact('orders', 'index', 'products', 'cates'));
+        return view('admin.pages.order', compact('orders', 'index', 'product'));
     }
     public function customers()
     {

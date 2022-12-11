@@ -26,10 +26,8 @@ class HomeController extends Controller
     public function orders()
     {
         $orders = Orders::all();
-        $products = Product::all();
-        $cates = Category::all();
         $index = 1;
-        return view('admin.pages.order', compact('orders', 'index', 'products', 'cates'));
+        return view('admin.pages.order', compact('orders', 'index'));
     }
     public function customers()
     {
@@ -93,6 +91,6 @@ class HomeController extends Controller
     {
         $order = Orders::find($id);
         $order->delete();
-        return redirect()->route('admin_orders')->with('toast_success', 'Xóa orders thành công');
+        return redirect()->route('orders')->with('toast_success', 'Xóa orders thành công');
     }
 }

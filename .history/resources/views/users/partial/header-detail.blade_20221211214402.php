@@ -166,10 +166,8 @@
                             <th>Tên</th>
                             <th>Email</th>
                             <th>Số điện thoại</th>
-                            <th>Tên Xe</th>
-                            <th>Hãng Xe</th>
-                            <th>Màu Xe</th>
-                            <th>Giá Tiền</th>
+                            <th>Địa chỉ</th>
+                            <th>Lời nhắn</th>
                             <th>Trạng thái</th>
                             <th>Thời gian gửi</th>
                         </tr>
@@ -194,17 +192,14 @@
                     let html = '';
                     let index = 1;
                     list.forEach(element => {
-                        console.log(element.sanpham);
                         html += `<tr>
                                     <th scope="row">${index++}</th>
                                     <td>${element.name}</td>
                                     <td>${element.email}</td>
-                                    <td>${element.phone}</td>
-                                    <td>${element.sanpham['tenXe']}</td>
-                                    <td>${element.sanpham['hangXe']['name_cate']}</td>
-                                    <td>${element.sanpham['color']}</td>
-                                    <td>${element.sanpham['giaXe']}</td>
-                                    <td>${element.status}</td>
+                                    <td style="width:11%">${element.phone}</td>
+                                    <td>${element.address}</td>
+                                    <td>${element.note}</td>
+                                    <td style="width:15%">${element.status}</td>
                                     <td>${element.updated_at}</td>
                                 </tr>`;
                     });

@@ -331,7 +331,7 @@
                                     @enderror
                                 </div>
                                 <input type="text" name="product_id" value="{{ $product->id }}" hidden>
-                                <input type="text" name="user_id" value="999" hidden>
+                                <input type="text" name="user_id" value="{{ Auth::user()->id }}" hidden>
                                 {{-- <div class="input-name">
                                 <p class="title-input-name">Tiêu đề</p>
                                 <select name="" id="">
