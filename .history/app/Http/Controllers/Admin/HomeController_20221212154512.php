@@ -74,7 +74,7 @@ class HomeController extends Controller
             'created_at' => date('Y-m-d H:i:s'),
         ]);
 
-        return redirect()->back()->with('success', 'Bạn đã đặt hàng thành công. Hãy hoàn thành việc chuyển khoản đặt cọc vào tài khoản XXXX-XXXX-XXX để hoàn thành thủ tục. Từ 2 đến 3 tháng xe về thì công ty sẽ liên hệ cho bạn. Xin chân thành cảm ơn');
+        return redirect()->back()->with('success', 'Bạn đã đặt hàng thành công. Hãy hoàn thành việc chuyển khoản đặt cọc vào tài khoản XXXX-XXXX-XXX để hoàn thành thủ tục. Từ 2 đến 3 tháng xe về thì công ty sẽ liên hệ cho bạn.');
     }
 
     public function update($id)
