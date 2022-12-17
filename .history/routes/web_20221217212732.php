@@ -57,15 +57,15 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::post('/users/delete/{id}', [UserController::class, 'delete'])->name('admin.users.delete'); // delete user admin
     Route::get('/orders', [HomeController::class, 'orders'])->name('admin_orders'); //trang orders admin
 
-    Route::post('/orders/id-{id}', [HomeController::class, 'update'])->name('admin.orders.update'); // post sửa hóa đơn admin
-    Route::post('/orders/delete-{id}', [HomeController::class, 'delete'])->name('admin.orders.delete'); // post xóa hóa đơn admin
+    Route::post('/orders/id-{id}', [HomeController::class, 'update'])->name('admin.orders.update');
+    Route::post('/orders/delete-{id}', [HomeController::class, 'delete'])->name('admin.orders.delete');
 });
 Route::post('/orders', [HomeController::class, 'postOrder'])->name('orders');
 Auth::routes(['login' => false, 'register' => false, 'verify' => true]);
 
-Route::get('/home', [HomeController_user::class, 'index'])->name('home'); //Trang chủ
+Route::get('/home', [HomeController_user::class, 'index'])->name('home'); //Trang home guests and users
 
-Route::get('/product/{slug}/id-{id}', [HomeController::class, 'showProductDetails'])->name('product.details'); //Trang chi tiết sản phẩm
+Route::get('/product/{slug}/id-{id}', [HomeController::class, 'showProductDetails'])->name('product.details'); //Trang product details
 
 Route::get('/product', function () {
     return view('users.pages.product');
@@ -76,7 +76,7 @@ Route::get('/test-verify', function () {
 })->middleware('verified'); // test verify email
 
 //route login và register
-Route::get('/login', [LoginController::class, 'ShowFormLogin'])->name('get.login'); // get login
-Route::post('/login', [LoginController::class, 'PostLogin'])->name('post.login'); // post login
-Route::get('/register', [RegisterController::class, 'ShowFormRegister'])->name('get.register'); // get register
-Route::post('/register', [RegisterController::class, 'PostRegister'])->name('post.register'); // post register
+Route::get('/login', [LoginController::class, 'ShowFormLogin'])->name('get.login');
+Route::post('/login', [LoginController::class, 'PostLogin'])->name('post.login');
+Route::get('/register', [RegisterController::class, 'ShowFormRegister'])->name('get.register');
+Route::post('/register', [RegisterController::class, 'PostRegister'])->name('post.register');

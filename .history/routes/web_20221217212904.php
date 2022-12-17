@@ -76,7 +76,7 @@ Route::get('/test-verify', function () {
 })->middleware('verified'); // test verify email
 
 //route login và register
-Route::get('/login', [LoginController::class, 'ShowFormLogin'])->name('get.login'); // get login
-Route::post('/login', [LoginController::class, 'PostLogin'])->name('post.login'); // post login
-Route::get('/register', [RegisterController::class, 'ShowFormRegister'])->name('get.register'); // get register
-Route::post('/register', [RegisterController::class, 'PostRegister'])->name('post.register'); // post register
+Route::get('/login', [LoginController::class, 'ShowFormLogin'])->name('get.login');
+Route::post('/login', [LoginController::class, 'PostLogin'])->name('post.login');
+Route::get('/register', [RegisterController::class, 'ShowFormRegister'])->name('get.register');
+Route::post('/register', [RegisterController::class, 'PostRegister'])->name('post.register');
