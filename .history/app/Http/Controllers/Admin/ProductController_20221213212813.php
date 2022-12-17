@@ -67,8 +67,18 @@ class ProductController extends Controller
 
     public function edit_product(ProductValidate $request)
     {
+        // $product = Product::find($request->id);
+        // dd($request->file('images'));
+        // if($product->has('images')){
+        //     foreach($product->file('images') as $img){
+        //         $imageName = $request->name . '-image-' . time() . rand(1, 1000) . '.' . $img->extension();
+        //         $image->move($img, $imageName);
+        //     }
+        // }
+
         $input = $request->validated();
         DB::table('product')->where('id', $request->id)->update($input);
+        // toast('Change product successfully!', 'success')->autoClose(1500);
         return redirect()->back()->with('toast_success', 'Change product successfully!');
     }
 
