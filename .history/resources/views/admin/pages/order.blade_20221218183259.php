@@ -9,6 +9,11 @@
         .all-btn {
             display: flex;
             gap: 5px;
+            font-size: 14px;
+        }
+
+        .all-btn button {
+            font-size: 14px;
         }
     </style>
 @endsection

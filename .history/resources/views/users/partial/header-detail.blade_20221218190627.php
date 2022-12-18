@@ -157,7 +157,7 @@
     <div class="notification-box close">
         <div class="notification">
             <div class="notification-icon"><i class="fa-solid fa-xmark"></i></div>
-            <h1 class="notification-title">Đơn hàng của bạn</h1>
+            <h1 class="notification-title">Thông báo của bạn</h1>
             <div class="notification-content">
                 <table class="table">
                     <thead>
@@ -192,11 +192,10 @@
                 dataType: 'JSON',
                 success: function(data) {
                     let list = data.data;
-                    if (list.length > 0) {
-                        let html = '';
-                        let index = 1;
-                        list.forEach(element => {
-                            html += `<tr>
+                    let html = '';
+                    let index = 1;
+                    list.forEach(element => {
+                        html += `<tr>
                                     <th scope="row">${index++}</th>
                                     <td>${element.name}</td>
                                     <td>${element.email}</td>
@@ -208,14 +207,8 @@
                                     <td>${element.status}</td>
                                     <td>${element.updated_at}</td>
                                 </tr>`;
-                        });
-                        $('#data').html(html);
-                    } else {
-                        $('#nothing').html('Bạn không có đơn hàng nào').css({
-                            'text-align': 'center',
-                            'padding': '10px 0',
-                        });
-                    }
+                    });
+                    $('#data').html(html);
                 }
             })
         });

@@ -5,12 +5,6 @@
 @section('css')
     <!-- link css -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <style>
-        .all-btn {
-            display: flex;
-            gap: 5px;
-        }
-    </style>
 @endsection
 
 @section('content')
@@ -36,7 +30,7 @@
                     <td style="width:11%">{{ $order->phone }}</td>
                     <td>{{ $order->address }}</td>
                     <td>{{ $order->status == 0 ? 'Đang chờ xác nhận' : 'Đã xác nhận' }}</td>
-                    <td class="all-btn">
+                    <td style="display:flex;gap:5px;">
                         @foreach ($products as $product)
                             @if ($order->id_product == $product->id)
                                 <form>
@@ -115,9 +109,9 @@
                             <form id="update-{{ $order->id }}" action="{{ route('admin.orders.update', $order->id) }}"
                                 method="post">
                                 @csrf
-                                <button class="btn btn-primary"
+                                <a class="btn btn-primary"
                                     onclick="event.preventDefault(); document.getElementById('update-{{ $order->id }}').submit();">Xác
-                                    nhận</button>
+                                    nhận</a>
                             </form>
                         @endif
                         <form action="{{ route('admin.orders.delete', $order->id) }}" method="post">

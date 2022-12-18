@@ -6,9 +6,8 @@
     <!-- link css -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <style>
-        .all-btn {
-            display: flex;
-            gap: 5px;
+        td {
+            font-size: 14px;
         }
     </style>
 @endsection
@@ -115,9 +114,9 @@
                             <form id="update-{{ $order->id }}" action="{{ route('admin.orders.update', $order->id) }}"
                                 method="post">
                                 @csrf
-                                <button class="btn btn-primary"
+                                <a class="btn btn-primary"
                                     onclick="event.preventDefault(); document.getElementById('update-{{ $order->id }}').submit();">Xác
-                                    nhận</button>
+                                    nhận</a>
                             </form>
                         @endif
                         <form action="{{ route('admin.orders.delete', $order->id) }}" method="post">

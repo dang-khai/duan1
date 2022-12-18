@@ -54,8 +54,9 @@ class UserController extends Controller
     //Hàm xóa tài khoản
     public function delete($id)
     {
-        $user = User::find($id);
-        Orders::where('id_user', $user->id)->delete();
+        $user = User::find($id)->first();
+        $order = Orders::where('id_user', $user->id)->get();
+        $order->delete();
         $user->delete();
         return redirect()->route('admin.users')->with('toast_success', 'Xóa tài khoản thành công');
     }

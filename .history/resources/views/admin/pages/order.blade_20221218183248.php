@@ -6,9 +6,18 @@
     <!-- link css -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <style>
+        /* td {
+            font-size: 14px;
+        } */
+
         .all-btn {
             display: flex;
             gap: 5px;
+            font-size: 14px;
+        }
+
+        .all-btn button {
+            font-size: 14px;
         }
     </style>
 @endsection

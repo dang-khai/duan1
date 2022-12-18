@@ -55,7 +55,7 @@ class UserController extends Controller
     public function delete($id)
     {
         $user = User::find($id);
-        Orders::where('id_user', $user->id)->delete();
+        $order = Orders::where('id_user', $user->id)->get();
         $user->delete();
         return redirect()->route('admin.users')->with('toast_success', 'Xóa tài khoản thành công');
     }

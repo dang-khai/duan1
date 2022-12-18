@@ -157,7 +157,7 @@
     <div class="notification-box close">
         <div class="notification">
             <div class="notification-icon"><i class="fa-solid fa-xmark"></i></div>
-            <h1 class="notification-title">Đơn hàng của bạn</h1>
+            <h1 class="notification-title">Thông báo của bạn</h1>
             <div class="notification-content">
                 <table class="table">
                     <thead>
