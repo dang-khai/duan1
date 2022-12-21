@@ -15,11 +15,101 @@
             <div id="select-new-old-car-filter" class="select-more">
                 <a onclick="filterSelection('newcarfilter')" class="new-car select-new-old-car active-new-old-car">Xe mới</a>
                 <a onclick="filterSelection('oldcarfilter')" class="old-car select-new-old-car">Xe cũ</a>
-                <a class="more-car" href="{{ route('product') }}">Xem thêm <img src="icon/arrow-right-more.svg"
-                        alt=""></a>
+                <a class="more-car" href="">Xem thêm <img src="icon/arrow-right-more.svg" alt=""></a>
             </div>
-            <div class="car-product" id="car-data">
-                {{-- <a href="" class="car-box newcarfilter">
+            <div class="car-product">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        $.ajax({
+                            url: "{{ route('apiShowAllproducts') }}",
+                            type: 'GET',
+                            cache: false,
+                            dataType: 'JSON',
+                            success: function(data) {
+                                let list = data.data;
+                                list.forEach(element => {
+                                    <
+                                    a href = ""
+                                    class = "car-box newcarfilter" >
+                                        <
+                                        div class = "img-car-box-product"
+                                    style = "background-image: url('img/Rectangle\ 98.png');" > < /div> <
+                                        div class = "info-car" >
+                                        <
+                                        p class = "status" >
+                                        Xe mới <
+                                        /p> <
+                                        p class = "name-car" >
+                                        Tesla Model 3 Standard Range Plus <
+                                        /p> <
+                                        p class = "price-car" > ₫1 tỷ 410 triệu <
+                                        /p> <
+                                        p class = "address-car" >
+                                        Quận 1, TP HCM <
+                                        /p> <
+                                        div class = "year-drive" >
+                                        <
+                                        div class = "year" >
+                                        <
+                                        img src = "icon/iwwa_year.svg"
+                                    alt = "" >
+                                        <
+                                        p > 2021 < /p> <
+                                        /div> <
+                                        div class = "drive" >
+                                        <
+                                        img src = "icon/tabler_steering-wheel.svg"
+                                    alt = "" >
+                                        <
+                                        p > Rear - wheel Drive < /p> <
+                                        /div> <
+                                        /div> <
+                                        div class = "energy-seat" >
+                                        <
+                                        div class = "energy" >
+                                        <
+                                        img src = "icon/clarity_fuel-line.svg"
+                                    alt = "" >
+                                        <
+                                        p > Điện < /p> <
+                                        /div> <
+                                        div class = "seat" >
+                                        <
+                                        img src = "icon/bi_people.svg"
+                                    alt = "" >
+                                        <
+                                        p > 5 chỗ < /p> <
+                                        /div> <
+                                        /div> <
+                                        div class = "line" > < /div> <
+                                        div class = "reviews" >
+                                        <
+                                        img src = "icon/star.svg"
+                                    alt = "" >
+                                        <
+                                        img src = "icon/star.svg"
+                                    alt = "" >
+                                        <
+                                        img src = "icon/star.svg"
+                                    alt = "" >
+                                        <
+                                        img src = "icon/star.svg"
+                                    alt = "" >
+                                        <
+                                        img src = "icon/star_border.svg"
+                                    alt = "" >
+                                        <
+                                        p > (12 Đánh giá) < /p> <
+                                        /div> <
+                                        /div> <
+                                        /a>
+                                });
+                            }
+                        })
+                    });
+                </script>
+                <a href="" class="car-box newcarfilter">
                     <div class="img-car-box-product" style="background-image: url('img/Rectangle\ 98.png');"></div>
                     <div class="info-car">
                         <p class="status">
@@ -346,7 +436,7 @@
                             <p>(12 Đánh giá)</p>
                         </div>
                     </div>
-                </a> --}}
+                </a>
 
             </div>
             <script src="js/filter-recommended-car.js"></script>
@@ -416,8 +506,8 @@
                     </div>
                 </div>
                 <a href="" class="car-box-2">
-                    <div class="img-car-box-product-2" style="background-image: url('img/car-on-a-forest-path-photo.jpg');">
-                    </div>
+                    <div class="img-car-box-product-2"
+                        style="background-image: url('img/car-on-a-forest-path-photo.jpg');"></div>
                     <div class="info-car-2">
                         <p class="status-2">
                             Xe mới
@@ -481,35 +571,34 @@
                 <a href="" class="box-news-reviews-1">
                     <img src="img/2022_Hyundai_Elantra_Hybrid.jpg" alt="">
                     <div class="date-bnr1">
-                        <p>20/12/2022</p>
+                        <p>28/06/2021</p>
                     </div>
                     <div class="content-bnr1">
                         <p class="title-cbnr1">
-                            Mercedes-AMG GT2 ra mắt toàn cầu
+                            Etiam Eget
                         </p>
                         <p class="text-cbnr1">
-                            Mẫu xe Mercedes-AMG GT2 vừa được giới thiệu đến công chúng và là chiếc xe đua mạnh nhất của
-                            hãng.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget praesent
                         </p>
                         <div class="poster-by">
                             <img src="img/top-hinh-nen-sieu-xe-57.jpg" alt="">
-                            <p>Theo Ngọc Hoàng</p>
+                            <p>By Carla Baptista</p>
                         </div>
                     </div>
                 </a>
                 <div class="box-news-reviews-2">
                     <a href="" class="box-1-bnr2">
-                        <img src="img/Tesla.png" alt="">
+                        <img src="img/customer.png" alt="">
                         <div class="content-b1bnr2">
                             <p class="title-cb1bnr2">
-                                Giá xe Mitsubishi Outlander
+                                A New Car
                             </p>
                             <p class="text-cb1bnr2">
-                                Cập nhật giá niêm yết và lăn bánh xe Mitsubishi Outlander đầy đủ các phiên bản.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </p>
                             <div class="poster-by">
                                 <img src="img/top-hinh-nen-sieu-xe-57.jpg" alt="">
-                                <p>Theo Nhật Hạ - 15/12/2022</p>
+                                <p>By Carla Baptista - 28/06/2021</p>
                             </div>
                         </div>
                     </a>
@@ -517,14 +606,14 @@
                         <img src="img/Rectangle 98.png" alt="">
                         <div class="content-b1bnr2">
                             <p class="title-cb1bnr2">
-                                Giá xe Suzuki XL7
+                                A New Car
                             </p>
                             <p class="text-cb1bnr2">
-                                Cập nhật giá xe Suzuki XL7 niêm yết và lăn bánh mới nhất đầy đủ các phiên bản.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </p>
                             <div class="poster-by">
                                 <img src="img/top-hinh-nen-sieu-xe-57.jpg" alt="">
-                                <p>Theo Nhật Hạ - 13/12/2022</p>
+                                <p>By Carla Baptista - 28/06/2021</p>
                             </div>
                         </div>
                     </a>
@@ -546,9 +635,8 @@
                 <div class="content-box-au">
                     <div class="box-1-cta ">
                         <p class="text-b1cta">
-                            AutoHunt là trang web hàng đầu Việt Nam về lĩnh vực ô tô. Cung cấp thông tin về giá xe ô tô, thị
-                            trường ô tô trong và ngoài nước. Danh sách các đại lý ô tô, các xưởng dịch vụ sửa chữa xe hơi
-                            các hãng xe trên cả nước để người đọc có thể tham khảo
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget praesent gravida sed rutrum
+                            suspendisse eu.
                         </p>
                         <div class="ctn-1-b1cta">
                             <div class="b-c1b">
@@ -615,11 +703,11 @@
                 Lựa Chọn Dịch Vụ
             </h2>
             <div class="select-service-selection">
-                <a class=" box-select-ss" href="{{ route('product') }}">
+                <a class=" box-select-ss" href="">
                     <img src="icon/ion_car-sport-outline.svg" alt="">
                     <p>Mua xe mới</p>
                 </a>
-                <a class=" box-select-ss" href="{{ route('product') }}">
+                <a class=" box-select-ss" href="">
                     <img src="icon/la_car.svg" alt="">
                     <p>Mua xe cũ</p>
                 </a>
@@ -646,18 +734,18 @@
                 <div class="arrow-testimonial"></div>
                 <div class="content-btestimonial container">
                     <img class="arrow-cbtest" src="icon/Polygon.svg" alt="">
-                    <img class="picture-customer" src="img/hinh-nen-sieu-xe.jpg" alt="">
+                    <img class="picture-customer" src="img/customer.png" alt="">
                     <div class="text-content-btestimonial">
                         <p class="name-customer">
-                            Hữu Đô Nguyễn
+                            Omar Mango
                         </p>
                         <p class="role-tcb">
                             Khách hàng
                         </p>
                         <p class="text-tcb">
-                            Hệ thống phanh có tác dụng giảm tốc độ và dừng xe khi cần thiết để đảm bảo an toàn giao thông
-                            khi lưu thông trên đường. Chính vì vậy chúng ta cần sử dụng hệ thống này thật hiệu quả và nêm
-                            thường xuyên kiểm tra bảo dưỡng nhằm đảm bảo tình trạng hoạt động của chúng luôn tốt nhất.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel aliquet tortor ut sit sit. Velit
+                            imperdiet integer elementum a scelerisque pulvinar venenatis sodales. Quis nulla euismod feugiat
+                            at interdum in. Venenatis arcu semper lectus quis sit in rhoncus auctor.
                         </p>
                     </div>
                 </div>
@@ -666,18 +754,18 @@
                 <div class="arrow-testimonial"></div>
                 <div class="content-btestimonial container">
                     <img class="arrow-cbtest" src="icon/Polygon.svg" alt="">
-                    <img class="picture-customer" src="img/Mercedes_Benz_Vision_AVTR_36.jpg" alt="">
+                    <img class="picture-customer" src="img/customer.png" alt="">
                     <div class="text-content-btestimonial">
                         <p class="name-customer">
-                            Believe
+                            Omar Mango
                         </p>
                         <p class="role-tcb">
                             Khách hàng
                         </p>
                         <p class="text-tcb">
-                            Thị trường ô tô đang vào mùa "nước rút" với những chương trình ưu đãi lớn nhằm kích cầu doanh số
-                            cuối năm. Đây cũng chính là thời điểm thích hợp để các bác tranh thủ tậu "vợ 2" cho mình. Bài
-                            viết dưới đây sẽ tổng hợp các mẫu hiện đang giảm giá để các bác tiện tham khảo.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel aliquet tortor ut sit sit. Velit
+                            imperdiet integer elementum a scelerisque pulvinar venenatis sodales. Quis nulla euismod feugiat
+                            at interdum in. Venenatis arcu semper lectus quis sit in rhoncus auctor.
                         </p>
                     </div>
                 </div>
@@ -686,17 +774,18 @@
                 <div class="arrow-testimonial"></div>
                 <div class="content-btestimonial container">
                     <img class="arrow-cbtest" src="icon/Polygon.svg" alt="">
-                    <img class="picture-customer" src="img/oto-avatar.jpg" alt="">
+                    <img class="picture-customer" src="img/customer.png" alt="">
                     <div class="text-content-btestimonial">
                         <p class="name-customer">
-                            Sơn Vinh
+                            Omar Mango
                         </p>
                         <p class="role-tcb">
                             Khách hàng
                         </p>
                         <p class="text-tcb">
-                            Thời gian vừa qua, người dùng Honda CR-V liên tục gặp những sự cố khác nhau. Tuy nhiên Honda
-                            CR-V vẫn đạt doanh số khá cao. Vậy các lỗi thường gặp trên Honda CR-V là gì và có nghiêm trọng?
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel aliquet tortor ut sit sit. Velit
+                            imperdiet integer elementum a scelerisque pulvinar venenatis sodales. Quis nulla euismod feugiat
+                            at interdum in. Venenatis arcu semper lectus quis sit in rhoncus auctor.
                         </p>
                     </div>
                 </div>
@@ -705,17 +794,18 @@
                 <div class="arrow-testimonial"></div>
                 <div class="content-btestimonial container">
                     <img class="arrow-cbtest" src="icon/Polygon.svg" alt="">
-                    <img class="picture-customer" src="img/avatar-edc1.jpg" alt="">
+                    <img class="picture-customer" src="img/customer.png" alt="">
                     <div class="text-content-btestimonial">
                         <p class="name-customer">
-                            Khoa NX
+                            Omar Mango
                         </p>
                         <p class="role-tcb">
                             Khách hàng
                         </p>
                         <p class="text-tcb">
-                            VinFast VF e34 là mẫu ô tô điện đầu tiên của thương hiệu Việt, được bán ra thị trường Việt sau
-                            xe máy điện, xe buýt điện nhưng đã nhanh chóng nhận được sự quan tâm của người tiêu dùng Việt.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel aliquet tortor ut sit sit. Velit
+                            imperdiet integer elementum a scelerisque pulvinar venenatis sodales. Quis nulla euismod feugiat
+                            at interdum in. Venenatis arcu semper lectus quis sit in rhoncus auctor.
                         </p>
                     </div>
                 </div>
@@ -724,19 +814,18 @@
                 <div class="arrow-testimonial"></div>
                 <div class="content-btestimonial container">
                     <img class="arrow-cbtest" src="icon/Polygon.svg" alt="">
-                    <img class="picture-customer" src="img/pic_018.jpg" alt="">
+                    <img class="picture-customer" src="img/customer.png" alt="">
                     <div class="text-content-btestimonial">
                         <p class="name-customer">
-                            Hoàng Tuấn
+                            Omar Mango
                         </p>
                         <p class="role-tcb">
                             Khách hàng
                         </p>
                         <p class="text-tcb">
-                            Nếu một buổi sáng trời đông lạnh lẽo, bạn khởi động xe hơi và phía sau xuất hiện làn khói mờ ảo
-                            thì hãy khoan vội lo, đó chỉ là do hơi nước đọng lại trong ống xả bị đốt nóng và bốc hơi. Nhưng
-                            nếu nơi bạn sinh sống khá nóng bức hay xe đang di chuyển trên đường thì việc khói xuất hiện rõ
-                            ràng là không hề ổn.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel aliquet tortor ut sit sit. Velit
+                            imperdiet integer elementum a scelerisque pulvinar venenatis sodales. Quis nulla euismod feugiat
+                            at interdum in. Venenatis arcu semper lectus quis sit in rhoncus auctor.
                         </p>
                     </div>
                 </div>
@@ -818,121 +907,4 @@
     </div>
 
     <!-- Partner image end -->
-@endsection
-
-@section('js')
-    <script>
-        $(document).ready(function() {
-            $.ajax({
-                url: "{{ route('apiShowAllproducts') }}",
-                type: 'GET',
-                cache: false,
-                dataType: 'JSON',
-                success: function(data) {
-                    let list = data.data;
-                    let html = '';
-                    list.forEach(element => {
-                        if (element.status == 'Xe mới') {
-                            html +=
-                                `<a href="/product/${element.slug}/id-${element.id}" class="car-box newcarfilter show-car-box">
-    <div class="img-car-box-product" style="background-image: url('{{ asset('storage') }}/${element.hinhXe[0]['url']}');"></div>
-    <div class="info-car">
-        <p class="status">
-            ${element.status}
-        </p>
-        <p class="name-car">
-            ${element.tenXe}
-        </p>
-        <p class="price-car">
-            ₫${element.giaXe}
-        </p>
-        <p class="address-car">
-            Quận 12, TP HCM
-        </p>
-        <div class="year-drive">
-            <div class="year">
-                <img src="icon/iwwa_year.svg" alt="">
-                <p>${element.namSX}</p>
-            </div>
-            <div class="drive">
-                <img src="icon/tabler_steering-wheel.svg" alt="">
-                <p>Rear-wheel Drive</p>
-            </div>
-        </div>
-        <div class="energy-seat">
-            <div class="energy">
-                <img src="icon/clarity_fuel-line.svg" alt="">
-                <p>Điện</p>
-            </div>
-            <div class="seat">
-                <img src="icon/bi_people.svg" alt="">
-                <p>5 chỗ</p>
-            </div>
-        </div>
-        <div class="line"></div>
-        <div class="reviews">
-            <img src="icon/star.svg" alt="">
-            <img src="icon/star.svg" alt="">
-            <img src="icon/star.svg" alt="">
-            <img src="icon/star.svg" alt="">
-            <img src="icon/star_border.svg" alt="">
-            <p>(12 Đánh giá)</p>
-        </div>
-    </div>
-</a>`
-                        } else {
-                            html +=
-                                `<a href="/product/${element.slug}/id-${element.id}" class="car-box oldcarfilter show-car-box">
-    <div class="img-car-box-product" style="background-image: url('{{ asset('storage') }}/${element.hinhXe[0]['url']}');"></div>
-    <div class="info-car">
-        <p class="status">
-            ${element.status}
-        </p>
-        <p class="name-car">
-            ${element.tenXe}
-        </p>
-        <p class="price-car">
-            ₫${element.giaXe}
-        </p>
-        <p class="address-car">
-            Quận 12, TP HCM
-        </p>
-        <div class="year-drive">
-            <div class="year">
-                <img src="icon/iwwa_year.svg" alt="">
-                <p>${element.namSX}</p>
-            </div>
-            <div class="drive">
-                <img src="icon/tabler_steering-wheel.svg" alt="">
-                <p>Rear-wheel Drive</p>
-            </div>
-        </div>
-        <div class="energy-seat">
-            <div class="energy">
-                <img src="icon/clarity_fuel-line.svg" alt="">
-                <p>Điện</p>
-            </div>
-            <div class="seat">
-                <img src="icon/bi_people.svg" alt="">
-                <p>5 chỗ</p>
-            </div>
-        </div>
-        <div class="line"></div>
-        <div class="reviews">
-            <img src="icon/star.svg" alt="">
-            <img src="icon/star.svg" alt="">
-            <img src="icon/star.svg" alt="">
-            <img src="icon/star.svg" alt="">
-            <img src="icon/star_border.svg" alt="">
-            <p>(12 Đánh giá)</p>
-        </div>
-    </div>
-</a>`
-                        }
-                    });
-                    $('#car-data').html(html);
-                }
-            })
-        });
-    </script>
 @endsection

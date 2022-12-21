@@ -151,7 +151,7 @@
                 </div>
                 <div id="list1"></div>
 
-                {{-- <div class="pagination">
+                <div class="pagination">
                     <button>
                         <span><i class="fa-solid fa-chevron-down fa-rotate-90"></i></span>
                     </button>
@@ -160,7 +160,7 @@
                     <button>
                         <span><i class="fa-solid fa-chevron-down fa-rotate-270"></i></span>
                     </button>
-                </div> --}}
+                </div>
             </div>
         </div>
     </main>

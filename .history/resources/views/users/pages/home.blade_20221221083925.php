@@ -646,7 +646,7 @@
                 <div class="arrow-testimonial"></div>
                 <div class="content-btestimonial container">
                     <img class="arrow-cbtest" src="icon/Polygon.svg" alt="">
-                    <img class="picture-customer" src="img/hinh-nen-sieu-xe.jpg" alt="">
+                    <img class="picture-customer" src="img/customer.png" alt="">
                     <div class="text-content-btestimonial">
                         <p class="name-customer">
                             Hữu Đô Nguyễn
@@ -666,7 +666,7 @@
                 <div class="arrow-testimonial"></div>
                 <div class="content-btestimonial container">
                     <img class="arrow-cbtest" src="icon/Polygon.svg" alt="">
-                    <img class="picture-customer" src="img/Mercedes_Benz_Vision_AVTR_36.jpg" alt="">
+                    <img class="picture-customer" src="img/customer.png" alt="">
                     <div class="text-content-btestimonial">
                         <p class="name-customer">
                             Believe
@@ -686,7 +686,7 @@
                 <div class="arrow-testimonial"></div>
                 <div class="content-btestimonial container">
                     <img class="arrow-cbtest" src="icon/Polygon.svg" alt="">
-                    <img class="picture-customer" src="img/oto-avatar.jpg" alt="">
+                    <img class="picture-customer" src="img/customer.png" alt="">
                     <div class="text-content-btestimonial">
                         <p class="name-customer">
                             Sơn Vinh
@@ -695,8 +695,7 @@
                             Khách hàng
                         </p>
                         <p class="text-tcb">
-                            Thời gian vừa qua, người dùng Honda CR-V liên tục gặp những sự cố khác nhau. Tuy nhiên Honda
-                            CR-V vẫn đạt doanh số khá cao. Vậy các lỗi thường gặp trên Honda CR-V là gì và có nghiêm trọng?
+                            Thời gian vừa qua, người dùng Honda CR-V liên tục gặp những sự cố khác nhau. Tuy nhiên Honda CR-V vẫn đạt doanh số khá cao. Vậy các lỗi thường gặp trên Honda CR-V là gì và có nghiêm trọng?
                         </p>
                     </div>
                 </div>
@@ -705,17 +704,18 @@
                 <div class="arrow-testimonial"></div>
                 <div class="content-btestimonial container">
                     <img class="arrow-cbtest" src="icon/Polygon.svg" alt="">
-                    <img class="picture-customer" src="img/avatar-edc1.jpg" alt="">
+                    <img class="picture-customer" src="img/customer.png" alt="">
                     <div class="text-content-btestimonial">
                         <p class="name-customer">
-                            Khoa NX
+                            Omar Mango
                         </p>
                         <p class="role-tcb">
                             Khách hàng
                         </p>
                         <p class="text-tcb">
-                            VinFast VF e34 là mẫu ô tô điện đầu tiên của thương hiệu Việt, được bán ra thị trường Việt sau
-                            xe máy điện, xe buýt điện nhưng đã nhanh chóng nhận được sự quan tâm của người tiêu dùng Việt.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel aliquet tortor ut sit sit. Velit
+                            imperdiet integer elementum a scelerisque pulvinar venenatis sodales. Quis nulla euismod feugiat
+                            at interdum in. Venenatis arcu semper lectus quis sit in rhoncus auctor.
                         </p>
                     </div>
                 </div>
@@ -724,19 +724,18 @@
                 <div class="arrow-testimonial"></div>
                 <div class="content-btestimonial container">
                     <img class="arrow-cbtest" src="icon/Polygon.svg" alt="">
-                    <img class="picture-customer" src="img/pic_018.jpg" alt="">
+                    <img class="picture-customer" src="img/customer.png" alt="">
                     <div class="text-content-btestimonial">
                         <p class="name-customer">
-                            Hoàng Tuấn
+                            Omar Mango
                         </p>
                         <p class="role-tcb">
                             Khách hàng
                         </p>
                         <p class="text-tcb">
-                            Nếu một buổi sáng trời đông lạnh lẽo, bạn khởi động xe hơi và phía sau xuất hiện làn khói mờ ảo
-                            thì hãy khoan vội lo, đó chỉ là do hơi nước đọng lại trong ống xả bị đốt nóng và bốc hơi. Nhưng
-                            nếu nơi bạn sinh sống khá nóng bức hay xe đang di chuyển trên đường thì việc khói xuất hiện rõ
-                            ràng là không hề ổn.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel aliquet tortor ut sit sit. Velit
+                            imperdiet integer elementum a scelerisque pulvinar venenatis sodales. Quis nulla euismod feugiat
+                            at interdum in. Venenatis arcu semper lectus quis sit in rhoncus auctor.
                         </p>
                     </div>
                 </div>

@@ -646,7 +646,7 @@
                 <div class="arrow-testimonial"></div>
                 <div class="content-btestimonial container">
                     <img class="arrow-cbtest" src="icon/Polygon.svg" alt="">
-                    <img class="picture-customer" src="img/hinh-nen-sieu-xe.jpg" alt="">
+                    <img class="picture-customer" src="img/customer.png" alt="">
                     <div class="text-content-btestimonial">
                         <p class="name-customer">
                             Hữu Đô Nguyễn
@@ -666,7 +666,7 @@
                 <div class="arrow-testimonial"></div>
                 <div class="content-btestimonial container">
                     <img class="arrow-cbtest" src="icon/Polygon.svg" alt="">
-                    <img class="picture-customer" src="img/Mercedes_Benz_Vision_AVTR_36.jpg" alt="">
+                    <img class="picture-customer" src="img/customer.png" alt="">
                     <div class="text-content-btestimonial">
                         <p class="name-customer">
                             Believe
@@ -686,7 +686,7 @@
                 <div class="arrow-testimonial"></div>
                 <div class="content-btestimonial container">
                     <img class="arrow-cbtest" src="icon/Polygon.svg" alt="">
-                    <img class="picture-customer" src="img/oto-avatar.jpg" alt="">
+                    <img class="picture-customer" src="img/customer.png" alt="">
                     <div class="text-content-btestimonial">
                         <p class="name-customer">
                             Sơn Vinh
@@ -705,7 +705,7 @@
                 <div class="arrow-testimonial"></div>
                 <div class="content-btestimonial container">
                     <img class="arrow-cbtest" src="icon/Polygon.svg" alt="">
-                    <img class="picture-customer" src="img/avatar-edc1.jpg" alt="">
+                    <img class="picture-customer" src="img/customer.png" alt="">
                     <div class="text-content-btestimonial">
                         <p class="name-customer">
                             Khoa NX
@@ -724,7 +724,7 @@
                 <div class="arrow-testimonial"></div>
                 <div class="content-btestimonial container">
                     <img class="arrow-cbtest" src="icon/Polygon.svg" alt="">
-                    <img class="picture-customer" src="img/pic_018.jpg" alt="">
+                    <img class="picture-customer" src="img/customer.png" alt="">
                     <div class="text-content-btestimonial">
                         <p class="name-customer">
                             Hoàng Tuấn
