@@ -135,7 +135,7 @@
                                                                 <th scope="col">Màu xe</th>
                                                                 <th scope="col">Giá xe</th>
                                                                 <th scope="col">Trạng thái</th>
-                                                                <th scope="col" style="width:40%">Mô tả</th>
+                                                                <th scope="col">Mô tả</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>

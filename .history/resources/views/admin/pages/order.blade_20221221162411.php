@@ -135,7 +135,7 @@
                                                                 <th scope="col">Màu xe</th>
                                                                 <th scope="col">Giá xe</th>
                                                                 <th scope="col">Trạng thái</th>
-                                                                <th scope="col" style="width:40%">Mô tả</th>
+                                                                <th scope="col">Mô tả</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -152,10 +152,7 @@
                                                                 <td>{{ $product->color }}</td>
                                                                 <td>{{ $product->price }}</td>
                                                                 <td>{{ $product->status == 0 ? 'Xe mới' : 'Xe cũ' }}</td>
-                                                                <td style="display: -webkit-box;-webkit-line-clamp: 3;
-                                                                -webkit-box-orient: vertical;
-                                                                overflow: auto;
-                                                                text-overflow: ellipsis;">{{ $product->description }}</td>
+                                                                <td>{{ $product->description }}</td>
                                                             </tr>
                                                         </tbody>
                                                     </table>

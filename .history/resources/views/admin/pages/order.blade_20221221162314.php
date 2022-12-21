@@ -118,7 +118,7 @@
                                     <!-- Modal -->
                                     <div class="modal fade" id="editModal{{ $product->id }}" tabindex="-1"
                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-xl">
+                                        <div class="modal-dialog modal-fullscreen-sm-down">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h1 class="modal-title fs-5" id="exampleModalLabel">Sản Phẩm</h1>
@@ -135,7 +135,7 @@
                                                                 <th scope="col">Màu xe</th>
                                                                 <th scope="col">Giá xe</th>
                                                                 <th scope="col">Trạng thái</th>
-                                                                <th scope="col" style="width:40%">Mô tả</th>
+                                                                {{-- <th scope="col">Mô tả</th> --}}
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -152,10 +152,7 @@
                                                                 <td>{{ $product->color }}</td>
                                                                 <td>{{ $product->price }}</td>
                                                                 <td>{{ $product->status == 0 ? 'Xe mới' : 'Xe cũ' }}</td>
-                                                                <td style="display: -webkit-box;-webkit-line-clamp: 3;
-                                                                -webkit-box-orient: vertical;
-                                                                overflow: auto;
-                                                                text-overflow: ellipsis;">{{ $product->description }}</td>
+                                                                {{-- <td>{{ $product->description }}</td> --}}
                                                             </tr>
                                                         </tbody>
                                                     </table>

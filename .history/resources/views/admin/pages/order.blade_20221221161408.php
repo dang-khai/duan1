@@ -118,7 +118,7 @@
                                     <!-- Modal -->
                                     <div class="modal fade" id="editModal{{ $product->id }}" tabindex="-1"
                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-xl">
+                                        <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h1 class="modal-title fs-5" id="exampleModalLabel">Sản Phẩm</h1>
@@ -127,37 +127,7 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <table class="table table-striped">
-                                                        <thead>
-                                                            <tr>
-                                                                <th scope="col">Tên xe</th>
-                                                                <th scope="col">Loại xe</th>
-                                                                <th scope="col">Đời xe</th>
-                                                                <th scope="col">Màu xe</th>
-                                                                <th scope="col">Giá xe</th>
-                                                                <th scope="col">Trạng thái</th>
-                                                                <th scope="col" style="width:40%">Mô tả</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <th scope="row">{{ $product->name }}</th>
-                                                                <td>
-                                                                    @foreach ($cates as $cate)
-                                                                        @if ($cate->id == $product->id_cate)
-                                                                            {{ $cate->name_cate }}
-                                                                        @endif
-                                                                    @endforeach
-                                                                </td>
-                                                                <td>{{ $product->year }}</td>
-                                                                <td>{{ $product->color }}</td>
-                                                                <td>{{ $product->price }}</td>
-                                                                <td>{{ $product->status == 0 ? 'Xe mới' : 'Xe cũ' }}</td>
-                                                                <td style="display: -webkit-box;-webkit-line-clamp: 3;
-                                                                -webkit-box-orient: vertical;
-                                                                overflow: auto;
-                                                                text-overflow: ellipsis;">{{ $product->description }}</td>
-                                                            </tr>
-                                                        </tbody>
+                                                        ...
                                                     </table>
                                                 </div>
                                                 <div class="modal-footer">
